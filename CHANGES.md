@@ -1,6 +1,6 @@
 # Tinkerstorm changes
-# Maintained by Tinker (hello@tinker.sl)
-# 2026/09/01 07:49. Confirmed stable with 80634.
+Maintained by Tinker (hello@tinker.sl)
+2026/09/01 07:49. Confirmed stable with 80634.
 
 ## On c++ level
 - indra/newview/llappviewer.cpp line #3564. Changed Windowtitle format to Tinkerstorm - [Username].
