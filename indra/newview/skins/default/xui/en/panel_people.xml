@@ -580,7 +580,7 @@ Learn about [https://community.secondlife.com/knowledgebase/joining-and-particip
         </panel>
 
 <!-- ================================= RECENT tab =========================== -->
-
+<!--
         <panel
          background_opaque="false"
        background_visible="false"
@@ -688,7 +688,7 @@ Learn about [https://community.secondlife.com/knowledgebase/joining-and-particip
              right="-2"
              top_pad="4" />
         </panel>
-
+-->
 <!-- ================================= BLOCKED tab ========================== -->
 
         <panel
