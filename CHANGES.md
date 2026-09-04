@@ -24,6 +24,7 @@ Confirmed stable against all commits up to 2026/09/03 20:00.
 - **skins/default/xui/en/menu_avatar_other.xml** Removed unused context menu items.
 - **skins/default/xui/en/menu_avatar_self.xml** Removed unused context menu items.  
 - **skins/default/xui/en/menu_attachment_self.xml** Removed unused context menu items.
+- **skins/default/xui/en/panel_people.xml** Removed Recent tab.
 
   
 ## Other
