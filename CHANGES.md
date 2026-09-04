@@ -1,6 +1,7 @@
 # Tinkerstorm changes
-Maintained by Tinker (hello@ -- .sl)
-Local build 81670. Confirmed stable against all commits up to 2026/09/03 20:00. 
+Maintained by Tinker (hello@ -- .sl)__
+Local build 81670.__ 
+Confirmed stable against all commits up to 2026/09/03 20:00.
 
 ## On c++ level
 - **indra/newview/llappviewer.cpp** line #3564. Changed Windowtitle format to Tinkerstorm - [Username].
@@ -19,7 +20,12 @@ Local build 81670. Confirmed stable against all commits up to 2026/09/03 20:00.
 - **skins/default/xui/en/floater_profile.xml** Removed Feed and Classified from view.
 - **skins/default/xui/en/floater_fs_im_session.xml** Removed tab toolbar for IM and group chats.
 - **skins/default/xui/en/floater_fs_nearby_chat.xml** Removed tab toolbar for nearby chat.
+- **skins/default/xui/en/menu_object.xml** Removed unused context menu items.
+- **skins/default/xui/en/menu_avatar_other.xml** Removed unused context menu items.
+- **skins/default/xui/en/menu_avatar_self.xml** Removed unused context menu items.  
+- **skins/default/xui/en/menu_attachment_self.xml** Removed unused context menu items.
 
+  
 ## Other
 - **skins/tinkered** My own skin based on LL's FlatUI and Ansastorm Blue elements.
 - **skins/default/textures/legacy/active_voice_tab.tga** Replaced with transparent to remove voice icon on Nearby Chat tab.
