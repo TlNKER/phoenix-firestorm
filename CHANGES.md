@@ -1,6 +1,6 @@
 # Tinkerstorm changes
-Maintained by Tinker (hello@ -- .sl)__
-Local build 81670.__ 
+Maintained by Tinker (hello@ -- .sl) <br />
+Local build 81670.<br />
 Confirmed stable against all commits up to 2026/09/03 20:00.
 
 ## On c++ level
