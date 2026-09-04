@@ -21,14 +21,6 @@
         <menu_item_call.on_enable
          function="Avatar.EnableAddFriend" />
     </menu_item_call>
-    <menu_item_call
-    label="Give Calling Card"
-      name="Give Calling Card">
-         <menu_item_call.on_click
-          function="Avatar.GiveCard" />
-         <menu_item_call.on_enable
-          function="RLV.CanShowName" />
-	</menu_item_call>
 	<menu_item_call
 	 label="Add to Set"
 	 layout="topleft"
@@ -46,22 +38,7 @@
         <menu_item_call.on_enable
          function="RLV.CanShowName" />
     </menu_item_call>
-    <menu_item_call
-     label="Call"
-     name="Call">
-        <menu_item_call.on_click
-         function="Avatar.Call" />
-        <menu_item_call.on_enable
-         function="Avatar.EnableCall" />
-    </menu_item_call>
-      <menu_item_call
-         label="Invite to Group"
-         name="Invite...">
-        <menu_item_call.on_click
-         function="Avatar.InviteToGroup" />
-        <menu_item_call.on_enable
-         function="RLV.CanShowName" />
-      </menu_item_call>
+
    
 <!-- [FS:Chanayane] Compass floater - face towards avatar -->
    <menu_item_separator />
@@ -71,15 +48,9 @@
         <menu_item_call.on_click function="Avatar.FaceTowards" />
         <menu_item_call.on_enable function="Avatar.CanFaceTowards" />
       </menu_item_call>
-   <menu_item_separator />
-<!-- [/FS:Chanayane] -->
 
-     <menu_item_call label="Reset Skeleton"
-       layout="topleft"
-       name="Reset Skeleton">
-       <menu_item_call.on_click
-        function="Avatar.ResetSkeleton" />
-     </menu_item_call>
+
+<!-- [/FS:Chanayane] -->
 
   <menu_item_call label="Reset Skeleton And Animations"
        layout="topleft"
@@ -88,12 +59,6 @@
         function="Avatar.ResetSkeletonAndAnimations" />
   </menu_item_call>
 
-     <menu_item_call label="Reset Mesh LOD"
-       layout="topleft"
-       name="Reset Mesh LOD">
-       <menu_item_call.on_click
-        function="Avatar.ResetMeshLOD" />
-     </menu_item_call>
 
    <menu_item_separator />
    
@@ -151,13 +116,6 @@
             <menu_item_call.on_visible
              function="Advanced.EnableAppearanceToXML"/>
     </menu_item_call>
-	    <menu_item_call
-         label="Zoom In"
-          name="Zoom In">
-        <menu_item_call.on_click
-           function="Tools.LookAtSelection"
-           parameter="zoom" />
-    </menu_item_call>
    <menu_item_call    
      label="Pay"
      name="Pay...">
@@ -189,12 +147,6 @@
       <menu_item_call.on_enable
        function="EnableBridgeFunction" />
     </menu_item_call>
-        <menu_item_call
-         label="Show Textures"
-         name="Debug...">
-            <menu_item_call.on_click
-             function="Avatar.Debug" />
-        </menu_item_call>
 	<menu_item_call 
       enabled="true"
       label="Texture Refresh"
