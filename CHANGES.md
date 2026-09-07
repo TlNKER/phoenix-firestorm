@@ -28,8 +28,8 @@ Confirmed stable against all commits up to 2026/09/07 03:27 SLT.
 - **skins/default/xui/en/menu_avatar_self.xml** Removed unused context menu items.  
 - **skins/default/xui/en/menu_attachment_self.xml** Removed unused context menu items.
 - **skins/default/xui/en/panel_people.xml** Removed Recent tab.
-- **indra/newview/skins/default/xui/en/strings.xml* Updated [APP_NAME].
-
+- **indra/newview/skins/default/xui/en/strings.xml** Updated [APP_NAME].
+- **skins/default/xui/en/floater_about.xml** Updated About floater.
   
 ## Other
 - **skins/tinkered** My own skin based on LL's FlatUI and Ansastorm Blue elements.
