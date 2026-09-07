@@ -1122,7 +1122,7 @@ void LLInventoryPanel::initRootContent()
         // Default case: always add "My Inventory" root first, "Library" root second
         // If we run out of time, this still should create root folders
         buildNewViews(gInventory.getRootFolderID());        // My Inventory
-        buildNewViews(gInventory.getLibraryRootFolderID()); // Library
+     //   buildNewViews(gInventory.getLibraryRootFolderID()); // Library
     }
 }
 
