@@ -1294,7 +1294,11 @@ if ((objectp->getType() == LLAssetType::AT_CATEGORY) &&
     (objectp->getActualType() != LLAssetType::AT_LINK_FOLDER))
 {
     // <TINKER:custom-hidden-folders> Hide specific system folders from view
-    if (objectp->getName() == "#Firestorm")
+    const std::string& cat_name = objectp->getName();
+    if (cat_name == "#Firestorm" ||
+        cat_name == "Calling Cards" ||
+        cat_name == "Current Outfit" ||
+        cat_name == "Favorites")
     {
         return NULL;
     }
