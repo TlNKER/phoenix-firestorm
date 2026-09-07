@@ -1,10 +1,12 @@
 # Tinkerstorm changes
 Maintained by Tinker (hello@ -- .sl) <br />
-Local build 81670.<br />
-Confirmed stable against all commits up to 2026/09/03 20:00.
+Local build 81682.<br />
+Confirmed stable against all commits up to 2026/09/07 02:24 SLT.
 
 ## On c++ level
 - **indra/newview/llappviewer.cpp** line #3564. Changed Windowtitle format to Tinkerstorm - [Username].
+- **indra/newview/llinventorypanel.cpp** line 1125. Hidden Library from inventory floater.
+- **indra/newview/llinventorypanel.cpp** line 1293. Hidden various system folders (#FIRESTORM, Contact Cards, Current Outfit, Favorites) from displaying to the user.
 
 ## On xml level
 - **app_settings/grids.xml** Changed url to my own splash screen.
