@@ -33,8 +33,8 @@
         top="16"
         width="434"
         wrap="true">
-For the latest information about Firestorm, visit 
-https://www.firestormviewer.org
+For the latest information about Tinkerstorm, visit 
+https://tinker.sl/tinkerstorm
       </text>
       <text_editor
         parse_urls="true"
@@ -71,7 +71,7 @@ https://www.firestormviewer.org
         top="16"
         width="489"
         wrap="true">
-Firestorm would not be possible without the decision from Linden Lab to make their Second Life viewer source code available.
+Tinkerstorm would not be possible without the decision from Linden Lab to make their Second Life viewer source code available.
 
 Second Life is brought to you by the Lindens, 
 with open source contributions from:
@@ -85,15 +85,15 @@ with open source contributions from:
        max_length="65536"
        name="contrib_names"
        top_pad="5"
-       width="489"
+       width="476"
        word_wrap="true">
 Dummy Name replaced at run time
       </text_editor>
     </panel>
     <panel
-      height="1250"
+      height="920"
       border="true"
-      label="Firestorm Credits"
+      label="Tinkerstorm Credits"
       help_topic="about_fscredits_tab"
       name="fs_credits_panel">
         <scroll_container
@@ -117,26 +117,26 @@ Dummy Name replaced at run time
              bottom="-1">
                 <text
                  follows="top|left|right"
-                 height="140"
+                 height="102"
                  layout="topleft"
                  left="5"
-                 name="firestorm_intro"
+                 name="Tinkerstorm_intro"
                  top="0"
                  width="450"
                  wrap="true">
-Firestorm is a community development project to improve the SecondLife(tm) Viewer experience. We package contributions from various community developers along with code from Linden Lab and ourselves to bring you a quality, feature-rich viewer experience backed up by a large volunteer support team. Firestorm is brought to you by The Phoenix Firestorm Project, Inc., a non-profit organization.
+Tinkerstorm is a community development project to improve the SecondLife(tm) Viewer experience. We package contributions from various community developers along with code from Linden Lab and ourselves to bring you a quality, feature-rich viewer experience backed up by a large volunteer support team. Tinkerstorm is brought to you by The Phoenix Tinkerstorm Project, Inc., a non-profit organization.
 
-The Firestorm Development Team:
+The Tinkerstorm Development Team:
                 </text>
                 <text
                  enabled="false"
                  follows="top|left"
-                 height="120"
+                 height="80"
                  bg_readonly_color="Transparent"
                  left="5"
                  text_color="LtGray"
                  max_length="65536"
-                 name="firestorm_names"
+                 name="Tinkerstorm_names"
                  top_pad="4"
                  width="450"
                  wrap="true">
@@ -144,19 +144,19 @@ Angeldark Raymaker, Ansariel Hiller, ArminWeatherHax, Arrehn Oberlander, Ayane L
                 </text>
                 <text
                  follows="top|left"
-                 height="30"
+                 height="15"
                  layout="topleft"
                  left="5"
                  name="fs_contrib_intro"
                  top_pad="8"
                  width="450"
                  wrap="true">
-Additional code generously contributed to Firestorm by:
+Additional code generously contributed to Tinkerstorm by:
                 </text>
                 <text
                  enabled="false"
                  follows="top|left"
-                 height="300"
+                 height="215"
                  bg_readonly_color="Transparent"
                  left="5"
                  text_color="LtGray"
@@ -165,23 +165,23 @@ Additional code generously contributed to Firestorm by:
                  top_pad="4"
                  width="450"
                  wrap="true">
-Aira Yumi, Albatroz Hird, Alexie Birman, Andromeda Rage, Angus Boyd, Animats, Armin Weatherwax, Casper Warden, Chalice Yao, Chaser Zaks, Chorazin Allen, Cron Stardust, Damian Zhaoying, Dan Threebeards, Darlcat, Dawa Gurbux, Dax Dupont, Denver Maksim, Dragonborn Forzane, Drake Arconis, Felyza Wishbringer, f0rbidden, Fractured Crystal, Geenz Spad, Gibson Firehawk, Hitomi Tiponi, humbletim, Inusaito Sayori, Jean Severine, Katharine Berry, Kittin Ninetails, Kool Koolhoven, Lance Corrimal, Lassie, Latif Khalifa, Laurent Bechir, Logue Takacs, Magne Metaverse LLC, Magus Freston, Makidoll, Manami Hokkigai, MartinRJ Fayray, McCabe Maxstead, Melancholy Lemon, Melysmile, Mimika Oh, Mister Acacia, MorganMegan, Morgan Pennent, Mysty Saunders, Nagi Michinaga, Name Short, nhede Core, NiranV Dean, Nogardrevlis Lectar, olizinha, OrangeStripyDog, Oren Hurvitz, paperwork, Penny Patton, Peyton Menges, programmtest, Qwerty Venom, rafak360, Rebecca Ashbourne, Revolution Smythe, Romka Swallowtail, Sahkolihaa Contepomi, sal Kaligawa, Samm Florian, Satomi Ahn, Sei Lisa, Sekkmer, Sempervirens Oddfellow, Shin Wasp, Shyotl Kuhr, Sione Lomu, Skills Hak, StarlightShining, Sunset Faulkes, Tapple Gao, Testicular Slingshot, Thickbrick Sleaford, Ubit Umarov, Vaalith Jinn, Vedned Grau, Vincent Sylvester, Whirly Fizzle, Xenhat Liamano, 小滢 Zi Ying, Zwagoth Klaar and others.
+Aira Yumi, Albatroz Hird, Alexie Birman, Andromeda Rage, Angus Boyd, Animats, Armin Weatherwax, Casper Warden, Chalice Yao, Chaser Zaks, Chorazin Allen, Cron Stardust, Damian Zhaoying, Dan Threebeards, Darlcat, Dawa Gurbux, Dax Dupont, Denver Maksim, Dragonborn Forzane, Drake Arconis, Felyza Wishbringer, f0rbidden, Fractured Crystal, Geenz Spad, Gibson Firehawk, Hitomi Tiponi, humbletim, Inusaito Sayori, Jean Severine, Katharine Berry, Kittin Ninetails, Kool Koolhoven, Lance Corrimal, Lassie, Latif Khalifa, Laurent Bechir, Logue Takacs, Magne Metaverse LLC, Magus Freston, Makidoll, Manami Hokkigai, MartinRJ Fayray, McCabe Maxstead, Melancholy Lemon, Melysmile, Mimika Oh, Mister Acacia, MorganMegan, Morgan Pennent, Mysty Saunders, Nagi Michinaga, Name Short, nhede Core, NiranV Dean, Nogardrevlis Lectar, olizinha, OrangeStripyDog, Oren Hurvitz, paperwork, Penny Patton, Peyton Menges, programmtest, Qwerty Venom, rafak360, Rebecca Ashbourne, Revolution Smythe, Romka Swallowtail, Sahkolihaa Contepomi, sal Kaligawa, Samm Florian, Satomi Ahn, Sei Lisa, Sekkmer, Sempervirens Oddfellow, Shin Wasp, Shyotl Kuhr, Sione Lomu, Skills Hak, StarlightShining, Sunset Faulkes, Tapple Gao, Testicular Slingshot, Thickbrick Sleaford, Ubit Umarov, Vaalith Jinn, Vincent Sylvester, Whirly Fizzle, Xenhat Liamano, 小滢 Zi Ying, Zwagoth Klaar and others.
                 </text>
                 <text
                  follows="top|left"
-                 height="45"
+                 height="35"
                  layout="topleft"
                  left="5"
                  name="fs_support_intro"
                  top_pad="8"
                  width="450"
                  wrap="true">
-Special thanks to our Firestorm Support Team, Beta Testers, wiki editors, educators and translators:
+Special thanks to our Tinkerstorm Support Team, Beta Testers, wiki editors, educators and translators:
                 </text>
                 <text
                  enabled="false"
                  follows="top|left"
-                 height="320"
+                 height="275"
                  bg_readonly_color="Transparent"
                  left="5"
                  text_color="LtGray"
@@ -194,14 +194,14 @@ Afrika Burton, Albatroz Hird, Alexru Resident, alison Seesaw, AnaLucia Loon, Ang
                 </text>
                 <text
                  follows="top|left"
-                 height="100"
+                 height="78"
                  layout="topleft"
                  left="5"
                  name="fs_art_intro"
                  top_pad="8"
                  width="450"
                  wrap="true">
-Firestorm includes Starlight, modified for Firestorm. It is provided by residents for residents, with the intention of providing an alternative, brighter, and hopefully easier to use interface. For further details see &lt;nolink&gt;https://wiki.secondlife.com/wiki/Viewer_Skins/Starlight&lt;/nolink&gt;.
+Tinkerstorm includes Starlight, modified for Tinkerstorm. It is provided by residents for residents, with the intention of providing an alternative, brighter, and hopefully easier to use interface. For further details see &lt;nolink&gt;https://wiki.secondlife.com/wiki/Viewer_Skins/Starlight&lt;/nolink&gt;.
 
 UI Artists and Designers:
                 </text>
@@ -237,7 +237,7 @@ Adam Frisby, Alexandrea Fride, DarkAgent Baphomet, David Rowe, Digital Scribe, D
        max_length="65536"
        name="licenses_editor"
        top="16"
-       width="489"
+       width="474"
        word_wrap="true">
 3Dconnexion SDK Copyright (C) 1992-2009 3Dconnexion
 APR Copyright (C) 2011 The Apache Software Foundation
