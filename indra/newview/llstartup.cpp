@@ -5015,6 +5015,12 @@ bool process_login_success_response(U32 &first_sim_size_x, U32 &first_sim_size_y
     {
         gAgent.mMOTD.assign(FSData::instance().getOpenSimMOTD());
     }
+
+    // <TINKER:custom-motd> Override MOTD with fixed text regardless of source
+    gAgent.mMOTD.assign("Did you know that Tinker is heir to the throne?");
+    // </TINKER:custom-motd>
+
+    
 #endif
     // </FS:Techwolf Lupindo>
 
