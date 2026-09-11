@@ -184,13 +184,6 @@
          help_topic="preferences_ui_extras_tab"
          name="ui" />
         <panel
-         class="panel_preference_skins"
-         filename="panel_preferences_skins.xml"
-         label="Skins"
-         layout="topleft"
-         help_topic="preferences_skins_tab"
-         name="skins" />
-        <panel
          class="panel_preference_crashreports"
          filename="panel_preferences_crashreports.xml"
          label="Crash Reports"
@@ -200,17 +193,10 @@
         <panel
          class="panel_preference_firestorm"
          filename="panel_preferences_firestorm.xml"
-         label="Firestorm"
+         label="Tinkerstorm"
          layout="topleft"
          help_topic="preferences_firestorm_tab"
          name="firestorm" />
-        <panel
-         class="panel_preference_opensim"
-         filename="panel_preferences_opensim.xml"
-         label="Opensim"
-         layout="topleft"
-         help_topic="preferences_opensim_tab"
-         name="opensim" />
         <panel
          class="panel_preference_backup"
          filename="panel_preferences_backup.xml"
