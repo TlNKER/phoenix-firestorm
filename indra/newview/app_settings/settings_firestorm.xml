@@ -1,6 +1,18 @@
 <llsd>
 <map>
 
+    <key>FSCloudColorPreset</key>
+    <map>
+      <key>Comment</key>
+      <string>Tinkerstorm: color preset for the avatar loading/bakefail "cloud" particle effect (Green, Blue, Red, Pink).</string>
+      <key>Persist</key>
+      <integer>1</integer>
+      <key>Type</key>
+      <string>String</string>
+      <key>Value</key>
+      <string>Pink</string>
+    </map>
+
     <key>ShowNetStats</key>
     <map>
       <key>Comment</key>
