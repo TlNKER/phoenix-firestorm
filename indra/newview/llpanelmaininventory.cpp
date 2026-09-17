@@ -82,6 +82,11 @@ const std::string FAVORITES("Favorites");
 
 static LLPanelInjector<LLPanelMainInventory> t_inventory("panel_main_inventory");
 
+// <FS:Tinkerstorm> Forward declaration; defined further down, connected once
+// from postBuild() below.
+static void onShowLibraryFolderPrefChanged(const LLSD& new_value);
+// </FS:Tinkerstorm>
+
 ///----------------------------------------------------------------------------
 /// LLFloaterInventoryFinder
 ///----------------------------------------------------------------------------
@@ -297,6 +302,22 @@ bool LLPanelMainInventory::postBuild()
         mResortActivePanel = true;
     }
     mActivePanel = mAllItemsPanel;
+
+    // <FS:Tinkerstorm> Preferences > Extras "Show Library" checkbox live-apply
+    // Some skins don't expose the inventory gear menu's "Show Library" toggle
+    // at all, so this connects the settings-changed signal that keeps every
+    // open inventory window in sync with the Preferences checkbox instead.
+    // postBuild() runs once per inventory floater/panel opened, so guard the
+    // connection with a static bool to only ever connect it once per session.
+    {
+        static bool sLibraryFolderSignalConnected = false;
+        if (!sLibraryFolderSignalConnected)
+        {
+            gSavedSettings.getControl("FSShowLibraryFolder")->getSignal()->connect(boost::bind(&onShowLibraryFolderPrefChanged, _2));
+            sLibraryFolderSignalConnected = true;
+        }
+    }
+    // </FS:Tinkerstorm>
 
     mRecentPanel = getChild<LLInventoryPanel>(RECENT_ITEMS);
     if (mRecentPanel)
@@ -1238,6 +1259,26 @@ void LLPanelMainInventory::updateFilterDropdown(const LLInventoryFilter* filter)
     mFilterComboBox->setValue(controlName);
 }
 // </FS:Zi> Filter dropdown
+
+ // <FS:Tinkerstorm> Preferences > Extras "Show Library" checkbox
+ // Mirrors LLPanelMainInventory::onCommandMultiSelect's "toggle_library"
+ // handling, but reachable from Preferences (some skins, like Tinkerstorm's,
+ // don't show the inventory gear-menu button row at all). Applies live to
+ // every currently open inventory window, not just one panel instance.
+ static void onShowLibraryFolderPrefChanged(const LLSD& new_value)
+ {
+     bool visible = new_value.asBoolean();
+     LLFloaterReg::const_instance_list_t& inst_list = LLFloaterReg::getFloaterList("inventory");
+     for (LLFloaterReg::const_instance_list_t::const_iterator iter = inst_list.begin(); iter != inst_list.end(); ++iter)
+     {
+         LLPanelMainInventory* main_panel = dynamic_cast<LLPanelMainInventory*>(*iter);
+         if (main_panel && main_panel->getAllItemsPanel())
+         {
+             main_panel->getAllItemsPanel()->setLibraryFolderVisible(visible);
+         }
+     }
+ }
+ // </FS:Tinkerstorm>
 
  //static
  bool LLPanelMainInventory::incrementalFind(LLFolderViewItem* first_item, const char *find_text, bool backward)

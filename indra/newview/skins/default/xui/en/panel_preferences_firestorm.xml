@@ -275,6 +275,17 @@
              name="cloud_pink"
              value="Pink" />
         </combo_box>
+        <check_box
+         top_pad="12"
+         control_name="FSShowLibraryFolder"
+         follows="left|top"
+         height="16"
+         initial_value="true"
+         name="FSShowLibraryFolder"
+         label="Show Library folder in Inventory"
+         left="10"
+         width="500"
+         tool_tip="Shows or hides the Library root folder in the Inventory floater. Applies immediately, no restart needed. Useful for skins that don't have the Inventory gear-menu button to toggle this."/>
     </panel>
 
 
