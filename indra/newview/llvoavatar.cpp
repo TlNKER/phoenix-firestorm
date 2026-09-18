@@ -1301,9 +1301,9 @@ void LLVOAvatar::cleanupClass()
 {
 }
 
-// <FS:Tinkerstorm> forward decl - defined below, after initCloud() uses it
-static void onCloudColorPresetChanged(const LLSD& new_value);
-// </FS:Tinkerstorm>
+// <FS:TP> [FIRE-36987] forward decl - defined below, after initCloud() uses it
+static void onCloudColorChanged(const LLSD& new_value);
+// </FS:TP>
 
 LLPartSysData LLVOAvatar::sCloud;
 void LLVOAvatar::initCloud()
@@ -1343,64 +1343,45 @@ void LLVOAvatar::initCloud()
     llifstream in_file_muted(filename.c_str());
     // </FS:ND>
 
-    // <FS:Tinkerstorm> Selectable avatar loading/bakefail cloud color
-    // Apply whichever preset is currently saved, on top of whatever cloud.xml
-    // just loaded above, then keep re-applying live if the user changes the
-    // preference later (no restart needed - see applyCloudColorPreset()).
-    applyCloudColorPreset(gSavedSettings.getString("FSCloudColorPreset"));
-    gSavedSettings.getControl("FSCloudColorPreset")->getSignal()->connect(
-        boost::bind(&onCloudColorPresetChanged, _2));
-    // </FS:Tinkerstorm>
+    // <FS:TP> [FIRE-36987] Selectable avatar loading/bakefail cloud color
+    // Apply whatever start/end colors are currently saved, on top of
+    // whatever cloud.xml just loaded above, then keep re-applying live if
+    // the user changes either preference later (no restart needed - see
+    // applyCloudColor()).
+    applyCloudColor();
+    gSavedSettings.getControl("FSCloudColorStart")->getSignal()->connect(
+        boost::bind(&onCloudColorChanged, _2));
+    gSavedSettings.getControl("FSCloudColorEnd")->getSignal()->connect(
+        boost::bind(&onCloudColorChanged, _2));
+    // </FS:TP>
 }
 
-// <FS:Tinkerstorm> Selectable avatar loading/bakefail cloud color
+// <FS:TP> [FIRE-36987] Selectable avatar loading/bakefail cloud color
 // Plain-function signal handler - gSavedSettings control signals pass
 // (LLControlVariable* control, const LLSD& new_value, const LLSD& old_value);
-// this just pulls the string out of new_value for applyCloudColorPreset().
-static void onCloudColorPresetChanged(const LLSD& new_value)
+// the new_value itself isn't used since both colors need re-reading either
+// way, so just re-apply from gSavedSettings directly.
+static void onCloudColorChanged(const LLSD& new_value)
 {
-    LLVOAvatar::applyCloudColorPreset(new_value.asString());
+    LLVOAvatar::applyCloudColor();
 }
 
-void LLVOAvatar::applyCloudColorPreset(const std::string& preset)
+void LLVOAvatar::applyCloudColor()
 {
     // Same alpha envelope (0.1 -> 0.9) and burst/scale/pattern as the
-    // stock Firestorm cloud.xml - only the hue changes between presets, so
-    // switching colors doesn't change the shape/behavior of the effect.
-    LLColor4 start_color;
-    LLColor4 end_color;
-
-    if (preset == "Green")
-    {
-        start_color = LLColor4(0.000f, 1.000f, 0.000f, 0.1f);
-        end_color   = LLColor4(0.526f, 0.944f, 0.526f, 0.9f);
-    }
-    else if (preset == "Blue")
-    {
-        start_color = LLColor4(0.000f, 0.483f, 1.000f, 0.1f);
-        end_color   = LLColor4(0.526f, 0.728f, 0.944f, 0.9f);
-    }
-    else if (preset == "Red")
-    {
-        start_color = LLColor4(1.000f, 0.000f, 0.000f, 0.1f);
-        end_color   = LLColor4(0.944f, 0.526f, 0.526f, 0.9f);
-    }
-    else if (preset == "Pink")
-    {
-        start_color = LLColor4(1.000f, 0.000f, 0.502f, 0.1f);
-        end_color   = LLColor4(0.945f, 0.522f, 0.714f, 0.9f);
-    }
-    else
-    {
-        // Unknown/empty preset - leave whatever initCloud() just loaded
-        // from cloud.xml alone rather than guessing.
-        return;
-    }
+    // stock Firestorm cloud.xml - only the start/end hues are user
+    // configurable, so changing colors doesn't change the shape/behavior
+    // of the effect. Alpha is intentionally not exposed to the color
+    // pickers and is forced back to the stock values here.
+    LLColor4 start_color = gSavedSettings.getColor4("FSCloudColorStart");
+    LLColor4 end_color   = gSavedSettings.getColor4("FSCloudColorEnd");
+    start_color.mV[VALPHA] = 0.1f;
+    end_color.mV[VALPHA]   = 0.9f;
 
     sCloud.mPartData.mStartColor = start_color;
     sCloud.mPartData.mEndColor   = end_color;
 }
-// </FS:Tinkerstorm>
+// </FS:TP>
 
 // virtual
 void LLVOAvatar::initInstance()
