@@ -1,0 +1,1890 @@
+Warning: no --id argument or AUTOBUILD_BUILD_ID environment variable specified;
+    using a value from the UTC date and time (262651729), which may not be unique
+ 'C:\Cygwin64\bin\bash.exe' '../scripts/configure_firestorm.sh' '--build' '--version' '--opensim' '--version' '--platform windows'
+       PLATFORM: windows
+            KDU: false
+     FMODSTUDIO: false
+         OPENAL: false
+        OPENSIM: true
+     SINGLEGRID: false
+          HAVOK: false
+            AVX: false
+           AVX2: false
+          TRACY: false
+            LTO: false
+ CRASHREPORTING: false
+      TESTBUILD: false
+        PACKAGE: false
+       VELOPACK: false
+          CLEAN: false
+          BUILD: true
+         CONFIG: false
+          NINJA: false
+         VSCODE: false
+ COMPILER CACHE: false
+       PASSTHRU: 
+          BTYPE: Release
+       Logging to /cygdrive/c/FS_Build/phoenix-firestorm/build-vc170-64/logs/build_windows.log
+Setting environment variables for Visual Studio...
+Versioning...
+/cygdrive/c/FS_Build/phoenix-firestorm /cygdrive/c/FS_Build/phoenix-firestorm/build-vc170-64
+Channel: Firestorm-private-dandelion
+Version: 7.2.5.81729 [4811a6fc93]
+/cygdrive/c/FS_Build/phoenix-firestorm/build-vc170-64
+Building windows...
+MSBuild version 17.14.51+25f168cee for .NET Framework
+Build started 9/22/2026 7:29:07 PM.
+
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" on node 1 (Build target(s)).
+ValidateSolutionConfiguration:
+  Building solution configuration "Release|x64".
+ValidateProjects:
+  The project "ALL_BUILD" is not selected for building in solution configuration "Release|x64".
+  The project "viewer" is not selected for building in solution configuration "Release|x64".
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (1) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\ZERO_CHECK.vcxproj" (4) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+FinalizeBuildStatus:
+  Deleting file "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Touching "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\ZERO_CHECK.vcxproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj.metaproj" (5) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj.metaproj" (5) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\stage_third_party_libs.vcxproj.metaproj" (6) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\stage_third_party_libs.vcxproj.metaproj" (6) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\stage_third_party_libs.vcxproj" (7) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\stage_third_party_libs\stage_th.68DDF180.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\stage_third_party_libs\stage_th.68DDF180.tlog\unsuccessfulbuild".
+FinalizeBuildStatus:
+  Deleting file "x64\Release\stage_third_party_libs\stage_th.68DDF180.tlog\unsuccessfulbuild".
+  Touching "x64\Release\stage_third_party_libs\stage_th.68DDF180.tlog\stage_third_party_libs.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\stage_third_party_libs.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\stage_third_party_libs.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj.metaproj" (5) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj" (8) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llcommon.dir\Release\llcommon.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llcommon.dir\Release\llcommon.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llcommon.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\Release\llcommon.lib
+FinalizeBuildStatus:
+  Deleting file "llcommon.dir\Release\llcommon.tlog\unsuccessfulbuild".
+  Touching "llcommon.dir\Release\llcommon.tlog\llcommon.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcommon\llcommon.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\llcorehttp.vcxproj.metaproj" (9) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\llcorehttp.vcxproj.metaproj" (9) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\llcorehttp.vcxproj" (10) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llcorehttp.dir\Release\llcorehttp.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llcorehttp.dir\Release\llcorehttp.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llcorehttp.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\Release\llcorehttp.lib
+FinalizeBuildStatus:
+  Deleting file "llcorehttp.dir\Release\llcorehttp.tlog\unsuccessfulbuild".
+  Touching "llcorehttp.dir\Release\llcorehttp.tlog\llcorehttp.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\llcorehttp.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcorehttp\llcorehttp.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\llfilesystem.vcxproj.metaproj" (11) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\llfilesystem.vcxproj.metaproj" (11) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\llfilesystem.vcxproj" (12) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llfilesystem.dir\Release\llfilesystem.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llfilesystem.dir\Release\llfilesystem.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llfilesystem.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\Release\llfilesystem.lib
+FinalizeBuildStatus:
+  Deleting file "llfilesystem.dir\Release\llfilesystem.tlog\unsuccessfulbuild".
+  Touching "llfilesystem.dir\Release\llfilesystem.tlog\llfilesystem.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\llfilesystem.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llfilesystem\llfilesystem.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\llmath.vcxproj.metaproj" (13) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\llmath.vcxproj.metaproj" (13) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\llmath.vcxproj" (14) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llmath.dir\Release\llmath.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llmath.dir\Release\llmath.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llmath.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\Release\llmath.lib
+FinalizeBuildStatus:
+  Deleting file "llmath.dir\Release\llmath.tlog\unsuccessfulbuild".
+  Touching "llmath.dir\Release\llmath.tlog\llmath.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\llmath.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmath\llmath.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\llmeshoptimizer.vcxproj.metaproj" (15) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\llmeshoptimizer.vcxproj.metaproj" (15) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\llmeshoptimizer.vcxproj" (16) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llmeshoptimizer.dir\Release\llmeshoptimizer.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llmeshoptimizer.dir\Release\llmeshoptimizer.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llmeshoptimizer.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\Release\llmeshoptimizer.lib
+FinalizeBuildStatus:
+  Deleting file "llmeshoptimizer.dir\Release\llmeshoptimizer.tlog\unsuccessfulbuild".
+  Touching "llmeshoptimizer.dir\Release\llmeshoptimizer.tlog\llmeshoptimizer.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\llmeshoptimizer.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmeshoptimizer\llmeshoptimizer.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\llmessage.vcxproj.metaproj" (17) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\llmessage.vcxproj.metaproj" (17) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\llmessage.vcxproj" (18) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llmessage.dir\Release\llmessage.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llmessage.dir\Release\llmessage.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llmessage.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\Release\llmessage.lib
+FinalizeBuildStatus:
+  Deleting file "llmessage.dir\Release\llmessage.tlog\unsuccessfulbuild".
+  Touching "llmessage.dir\Release\llmessage.tlog\llmessage.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\llmessage.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llmessage\llmessage.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\llplugin.vcxproj.metaproj" (19) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\llplugin.vcxproj.metaproj" (19) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\llplugin.vcxproj" (20) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llplugin.dir\Release\llplugin.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llplugin.dir\Release\llplugin.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llplugin.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\Release\llplugin.lib
+FinalizeBuildStatus:
+  Deleting file "llplugin.dir\Release\llplugin.tlog\unsuccessfulbuild".
+  Touching "llplugin.dir\Release\llplugin.tlog\llplugin.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\llplugin.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\llplugin.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\llxml.vcxproj.metaproj" (21) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\llxml.vcxproj.metaproj" (21) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\llxml.vcxproj" (22) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llxml.dir\Release\llxml.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llxml.dir\Release\llxml.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llxml.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\Release\llxml.lib
+FinalizeBuildStatus:
+  Deleting file "llxml.dir\Release\llxml.tlog\unsuccessfulbuild".
+  Touching "llxml.dir\Release\llxml.tlog\llxml.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\llxml.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llxml\llxml.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (3) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj" (23) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "SLPlugin.dir\Release\SLPlugin.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "SLPlugin.dir\Release\SLPlugin.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+  SLPlugin.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\Release\SLPlugin.exe
+FinalizeBuildStatus:
+  Deleting file "SLPlugin.dir\Release\SLPlugin.tlog\unsuccessfulbuild".
+  Touching "SLPlugin.dir\Release\SLPlugin.tlog\SLPlugin.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llplugin\slplugin\SLPlugin.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (24) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (24) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\llwebrtc.vcxproj.metaproj" (25) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\llwebrtc.vcxproj.metaproj" (25) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\llwebrtc.vcxproj" (26) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llwebrtc.dir\Release\llwebrtc.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llwebrtc.dir\Release\llwebrtc.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+  llwebrtc.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\Release\llwebrtc.dll
+PostBuildEvent:
+  setlocal
+  "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/FS_Build/phoenix-firestorm/build-vc170-64/llwebrtc/Release/llwebrtc.dll C:/FS_Build/phoenix-firestorm/build-vc170-64/sharedlibs/Release
+  if %errorlevel% neq 0 goto :cmEnd
+  :cmEnd
+  endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+  :cmErrorLevel
+  exit /b %1
+  :cmDone
+  if %errorlevel% neq 0 goto :VCEnd
+  :VCEnd
+FinalizeBuildStatus:
+  Deleting file "llwebrtc.dir\Release\llwebrtc.tlog\unsuccessfulbuild".
+  Touching "llwebrtc.dir\Release\llwebrtc.tlog\llwebrtc.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\llwebrtc.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwebrtc\llwebrtc.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (24) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj.metaproj" (27) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj.metaproj" (27) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\media_plugin_base.vcxproj.metaproj" (28) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\media_plugin_base.vcxproj.metaproj" (28) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\media_plugin_base.vcxproj" (29) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "media_plugin_base.dir\Release\media_pl.FF405E0C.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "media_plugin_base.dir\Release\media_pl.FF405E0C.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  media_plugin_base.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\Release\media_plugin_base.lib
+FinalizeBuildStatus:
+  Deleting file "media_plugin_base.dir\Release\media_pl.FF405E0C.tlog\unsuccessfulbuild".
+  Touching "media_plugin_base.dir\Release\media_pl.FF405E0C.tlog\media_plugin_base.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\media_plugin_base.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\base\media_plugin_base.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj.metaproj" (27) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj" (30) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "media_plugin_cef.dir\Release\media_plugin_cef.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "media_plugin_cef.dir\Release\media_plugin_cef.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+  media_plugin_cef.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\Release\media_plugin_cef.dll
+FinalizeBuildStatus:
+  Deleting file "media_plugin_cef.dir\Release\media_plugin_cef.tlog\unsuccessfulbuild".
+  Touching "media_plugin_cef.dir\Release\media_plugin_cef.tlog\media_plugin_cef.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\cef\media_plugin_cef.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (24) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\media_plugin_libvlc.vcxproj.metaproj" (31) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\media_plugin_libvlc.vcxproj.metaproj" (31) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\media_plugin_libvlc.vcxproj" (32) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "media_plugin_libvlc.dir\Release\media_pl.DB934049.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "media_plugin_libvlc.dir\Release\media_pl.DB934049.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+  media_plugin_libvlc.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\Release\media_plugin_libvlc.dll
+FinalizeBuildStatus:
+  Deleting file "media_plugin_libvlc.dir\Release\media_pl.DB934049.tlog\unsuccessfulbuild".
+  Touching "media_plugin_libvlc.dir\Release\media_pl.DB934049.tlog\media_plugin_libvlc.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\media_plugin_libvlc.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\media_plugins\libvlc\media_plugin_libvlc.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (24) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj" (33) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\copy_w_viewer_manifest\copy_w_v.C89F4747.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\copy_w_viewer_manifest\copy_w_v.C89F4747.tlog\unsuccessfulbuild".
+CustomBuild:
+  "The build of 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\a2c0734851d9c5f48c1ebbb9cad65361\copy_touched.bat.rule' depends on 'C:\FS_BUILD\PHOENIX-FIRESTORM\BUILD-VC170-64\NEWVIEW\PACKAGES-INFO.TXT' which is produced by the build of 'C:\FS_Build\phoenix-firestorm\autobuild.xml'. The items cannot be built in parallel."
+  "The build of 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\bafb0bac8486abc7c8d529c2dddeb3d6\copy_w_viewer_manifest.rule' depends on 'C:\FS_BUILD\PHOENIX-FIRESTORM\BUILD-VC170-64\NEWVIEW\RELEASE\COPY_TOUCHED.BAT' which is produced by the build of 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\a2c0734851d9c5f48c1ebbb9cad65361\copy_touched.bat.rule'. The items cannot be built in parallel."
+  Generating packages-info.txt for the about box
+  Performing viewer_manifest copy
+  C:\Python3\python.exe \
+  C:/FS_Build/phoenix-firestorm/indra/newview/viewer_manifest.py --actions=copy --arch=x86_64 --artwork=C:/FS_Build/phoenix-firestorm/indra/newview --bugsplat= --discord= --fmodstudio=ON --openal=ON --tracy=OFF --avx2=ON --build=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview --buildtype=Release --channel=Firestorm-Horizon --configuration=Release --dest=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release --grid=agni --source=C:/FS_Build/phoenix-firestorm/indra/newview --touch=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/copy_touched.bat --versionfile=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/viewer_version.txt --viewer_flavor=oss
+  Source tree: C:\FS_Build\phoenix-firestorm\indra\newview
+  Artwork tree: C:\FS_Build\phoenix-firestorm\indra\newview
+  Build tree: C:\FS_Build\phoenix-firestorm\build-vc170-64\newview
+  Destination tree: C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release
+  Option: source = C:\FS_Build\phoenix-firestorm\indra\newview
+  Option: artwork = C:\FS_Build\phoenix-firestorm\indra\newview
+  Option: build = C:\FS_Build\phoenix-firestorm\build-vc170-64\newview
+  Option: dest = C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release
+  Option: actions = ['copy']
+  Option: arch = x86_64
+  Option: bugsplat = 
+  Option: discord = 
+  Option: fmodstudio = ON
+  Option: openal = ON
+  Option: tracy = OFF
+  Option: avx2 = ON
+  Option: buildtype = Release
+  Option: channel = Firestorm-Horizon
+  Option: configuration = Release
+  Option: grid = None
+  Option: touch = C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/copy_touched.bat
+  Option: versionfile = C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/viewer_version.txt
+  Option: viewer_flavor = oss
+  Option: bundleid = com.secondlife.indra.viewer
+  Option: platform = windows
+  Option: velopack = OFF
+  Option: version = ['7', '2', '5', '81729']
+  ================ Creating base package
+  Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
+  Processing dictionaries => app_settings\dictionaries ... 22 files
+  Processing js => skins/default/html/common/equirectangular\js ... 4 files
+  Processing fonts => fonts ... 11 files
+  Processing xui => skins/default\xui ... 11 files
+  Processing ..\llplugin\slplugin\Release\slplugin.exe => slplugin.exe ... 1 files
+  Processing llwebrtc.dll => llwebrtc.dll ... 1 files
+  Processing glod.dll => glod.dll ... 1 files
+  Processing fmod.dll => fmod.dll ... 1 files
+  Processing OpenAL32.dll => OpenAL32.dll ... 1 files
+  Processing alut.dll => alut.dll ... 1 files
+  Processing openjp2.dll => openjp2.dll ... 1 files
+  Processing msvcp140.dll => msvcp140.dll ... 1 files
+  Processing msvcp140_1.dll => msvcp140_1.dll ... 1 files
+  Processing msvcp140_2.dll => msvcp140_2.dll ... 1 files
+  Processing msvcp140_atomic_wait.dll => msvcp140_atomic_wait.dll ... 1 files
+  Processing msvcp140_codecvt_ids.dll => msvcp140_codecvt_ids.dll ... 1 files
+  Processing vcruntime140.dll => vcruntime140.dll ... 1 files
+  Processing vcruntime140_1.dll => vcruntime140_1.dll ... 1 files
+  Processing vcruntime140_threads.dll => vcruntime140_threads.dll ... 1 files
+  Processing SLVoice.exe => SLVoice.exe ... 1 files
+  Processing vivoxsdk_x64.dll => vivoxsdk_x64.dll ... 1 files
+  Processing ortp_x64.dll => ortp_x64.dll ... 1 files
+  Processing growl.dll => growl.dll ... 1 files
+  Processing growl++.dll => growl++.dll ... 1 files
+  Processing licenses-win32.txt => licenses.txt ... 1 files
+  Processing featuretable.txt => featuretable.txt ... 1 files
+  Processing cube.dae => cube.dae ... 1 files
+  Processing ca-bundle.crt => ca-bundle.crt ... 1 files
+  Processing VivoxAUP.txt => VivoxAUP.txt ... 1 files
+  Processing media_plugin_cef.dll => llplugin\media_plugin_cef.dll ... 1 files
+  Processing media_plugin_libvlc.dll => llplugin\media_plugin_libvlc.dll ... 1 files
+  Processing chrome_elf.dll => llplugin\chrome_elf.dll ... 1 files
+  Processing d3dcompiler_47.dll => llplugin\d3dcompiler_47.dll ... 1 files
+  Processing dxcompiler.dll => llplugin\dxcompiler.dll ... 1 files
+  Processing dxil.dll => llplugin\dxil.dll ... 1 files
+  Processing libcef.dll => llplugin\libcef.dll ... 1 files
+  Processing libEGL.dll => llplugin\libEGL.dll ... 1 files
+  Processing libGLESv2.dll => llplugin\libGLESv2.dll ... 1 files
+  Processing v8_context_snapshot.bin => llplugin\v8_context_snapshot.bin ... 1 files
+  Processing vk_swiftshader.dll => llplugin\vk_swiftshader.dll ... 1 files
+  Processing vk_swiftshader_icd.json => llplugin\vk_swiftshader_icd.json ... 1 files
+  Processing vulkan-1.dll => llplugin\vulkan-1.dll ... 1 files
+  Processing dullahan_host.exe => llplugin\dullahan_host.exe ... 1 files
+  Processing msvcp140.dll => llplugin\msvcp140.dll ... 1 files
+  Processing vcruntime140.dll => llplugin\vcruntime140.dll ... 1 files
+  Processing vcruntime140_1.dll => llplugin\vcruntime140_1.dll ... 1 files
+  Processing chrome_100_percent.pak => llplugin\chrome_100_percent.pak ... 1 files
+  Processing chrome_200_percent.pak => llplugin\chrome_200_percent.pak ... 1 files
+  Processing resources.pak => llplugin\resources.pak ... 1 files
+  Processing icudtl.dat => llplugin\icudtl.dat ... 1 files
+  Processing am.pak => llplugin\locales\am.pak ... 1 files
+  Processing ar.pak => llplugin\locales\ar.pak ... 1 files
+  Processing bg.pak => llplugin\locales\bg.pak ... 1 files
+  Processing bn.pak => llplugin\locales\bn.pak ... 1 files
+  Processing ca.pak => llplugin\locales\ca.pak ... 1 files
+  Processing cs.pak => llplugin\locales\cs.pak ... 1 files
+  Processing da.pak => llplugin\locales\da.pak ... 1 files
+  Processing de.pak => llplugin\locales\de.pak ... 1 files
+  Processing el.pak => llplugin\locales\el.pak ... 1 files
+  Processing en-GB.pak => llplugin\locales\en-GB.pak ... 1 files
+  Processing en-US.pak => llplugin\locales\en-US.pak ... 1 files
+  Processing es-419.pak => llplugin\locales\es-419.pak ... 1 files
+  Processing es.pak => llplugin\locales\es.pak ... 1 files
+  Processing et.pak => llplugin\locales\et.pak ... 1 files
+  Processing fa.pak => llplugin\locales\fa.pak ... 1 files
+  Processing fi.pak => llplugin\locales\fi.pak ... 1 files
+  Processing fil.pak => llplugin\locales\fil.pak ... 1 files
+  Processing fr.pak => llplugin\locales\fr.pak ... 1 files
+  Processing gu.pak => llplugin\locales\gu.pak ... 1 files
+  Processing he.pak => llplugin\locales\he.pak ... 1 files
+  Processing hi.pak => llplugin\locales\hi.pak ... 1 files
+  Processing hr.pak => llplugin\locales\hr.pak ... 1 files
+  Processing hu.pak => llplugin\locales\hu.pak ... 1 files
+  Processing id.pak => llplugin\locales\id.pak ... 1 files
+  Processing it.pak => llplugin\locales\it.pak ... 1 files
+  Processing ja.pak => llplugin\locales\ja.pak ... 1 files
+  Processing kn.pak => llplugin\locales\kn.pak ... 1 files
+  Processing ko.pak => llplugin\locales\ko.pak ... 1 files
+  Processing lt.pak => llplugin\locales\lt.pak ... 1 files
+  Processing lv.pak => llplugin\locales\lv.pak ... 1 files
+  Processing ml.pak => llplugin\locales\ml.pak ... 1 files
+  Processing mr.pak => llplugin\locales\mr.pak ... 1 files
+  Processing ms.pak => llplugin\locales\ms.pak ... 1 files
+  Processing nb.pak => llplugin\locales\nb.pak ... 1 files
+  Processing nl.pak => llplugin\locales\nl.pak ... 1 files
+  Processing pl.pak => llplugin\locales\pl.pak ... 1 files
+  Processing pt-BR.pak => llplugin\locales\pt-BR.pak ... 1 files
+  Processing pt-PT.pak => llplugin\locales\pt-PT.pak ... 1 files
+  Processing ro.pak => llplugin\locales\ro.pak ... 1 files
+  Processing ru.pak => llplugin\locales\ru.pak ... 1 files
+  Processing sk.pak => llplugin\locales\sk.pak ... 1 files
+  Processing sl.pak => llplugin\locales\sl.pak ... 1 files
+  Processing sr.pak => llplugin\locales\sr.pak ... 1 files
+  Processing sv.pak => llplugin\locales\sv.pak ... 1 files
+  Processing sw.pak => llplugin\locales\sw.pak ... 1 files
+  Processing ta.pak => llplugin\locales\ta.pak ... 1 files
+  Processing te.pak => llplugin\locales\te.pak ... 1 files
+  Processing th.pak => llplugin\locales\th.pak ... 1 files
+  Processing tr.pak => llplugin\locales\tr.pak ... 1 files
+  Processing uk.pak => llplugin\locales\uk.pak ... 1 files
+  Processing vi.pak => llplugin\locales\vi.pak ... 1 files
+  Processing zh-CN.pak => llplugin\locales\zh-CN.pak ... 1 files
+  Processing zh-TW.pak => llplugin\locales\zh-TW.pak ... 1 files
+  Processing libvlc.dll => llplugin\libvlc.dll ... 1 files
+  Processing libvlccore.dll => llplugin\libvlccore.dll ... 1 files
+  Processing plugins/ => llplugin\plugins/ ... 367 files
+  Processing compatibility.manifest => slplugin.exe.manifest ... 1 files
+  Processing compatibility.manifest => llplugin\dullahan_host.exe.manifest ... 1 files
+  ================ Created base package  copied_deps
+  touched C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/copy_touched.bat
+FinalizeBuildStatus:
+  Deleting file "x64\Release\copy_w_viewer_manifest\copy_w_v.C89F4747.tlog\unsuccessfulbuild".
+  Touching "x64\Release\copy_w_viewer_manifest\copy_w_v.C89F4747.tlog\copy_w_viewer_manifest.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\copy_w_viewer_manifest.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\copy_win_scripts\copy_win_scripts.vcxproj.metaproj" (34) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\copy_win_scripts\copy_win_scripts.vcxproj.metaproj" (34) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\copy_win_scripts\copy_win_scripts.vcxproj" (35) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "x64\Release\copy_win_scripts\copy_win_scripts.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "x64\Release\copy_win_scripts\copy_win_scripts.tlog\unsuccessfulbuild".
+FinalizeBuildStatus:
+  Deleting file "x64\Release\copy_win_scripts\copy_win_scripts.tlog\unsuccessfulbuild".
+  Touching "x64\Release\copy_win_scripts\copy_win_scripts.tlog\copy_win_scripts.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\copy_win_scripts\copy_win_scripts.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\copy_win_scripts\copy_win_scripts.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\llappearance.vcxproj.metaproj" (36) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\llappearance.vcxproj.metaproj" (36) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\llappearance.vcxproj" (37) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llappearance.dir\Release\llappearance.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llappearance.dir\Release\llappearance.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llappearance.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\Release\llappearance.lib
+FinalizeBuildStatus:
+  Deleting file "llappearance.dir\Release\llappearance.tlog\unsuccessfulbuild".
+  Touching "llappearance.dir\Release\llappearance.tlog\llappearance.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\llappearance.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llappearance\llappearance.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\llaudio.vcxproj.metaproj" (38) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\llaudio.vcxproj.metaproj" (38) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\llaudio.vcxproj" (39) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llaudio.dir\Release\llaudio.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llaudio.dir\Release\llaudio.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llaudio.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\Release\llaudio.lib
+FinalizeBuildStatus:
+  Deleting file "llaudio.dir\Release\llaudio.tlog\unsuccessfulbuild".
+  Touching "llaudio.dir\Release\llaudio.tlog\llaudio.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\llaudio.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llaudio\llaudio.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\llcharacter.vcxproj.metaproj" (40) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\llcharacter.vcxproj.metaproj" (40) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\llcharacter.vcxproj" (41) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llcharacter.dir\Release\llcharacter.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llcharacter.dir\Release\llcharacter.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llcharacter.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\Release\llcharacter.lib
+FinalizeBuildStatus:
+  Deleting file "llcharacter.dir\Release\llcharacter.tlog\unsuccessfulbuild".
+  Touching "llcharacter.dir\Release\llcharacter.tlog\llcharacter.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\llcharacter.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcharacter\llcharacter.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\llimage.vcxproj.metaproj" (42) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\llimage.vcxproj.metaproj" (42) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\llimage.vcxproj" (43) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llimage.dir\Release\llimage.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llimage.dir\Release\llimage.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llimage.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\Release\llimage.lib
+FinalizeBuildStatus:
+  Deleting file "llimage.dir\Release\llimage.tlog\unsuccessfulbuild".
+  Touching "llimage.dir\Release\llimage.tlog\llimage.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\llimage.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimage\llimage.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\llimagej2coj.vcxproj.metaproj" (44) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\llimagej2coj.vcxproj.metaproj" (44) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\llimagej2coj.vcxproj" (45) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llimagej2coj.dir\Release\llimagej2coj.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llimagej2coj.dir\Release\llimagej2coj.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llimagej2coj.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\Release\llimagej2coj.lib
+FinalizeBuildStatus:
+  Deleting file "llimagej2coj.dir\Release\llimagej2coj.tlog\unsuccessfulbuild".
+  Touching "llimagej2coj.dir\Release\llimagej2coj.tlog\llimagej2coj.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\llimagej2coj.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llimagej2coj\llimagej2coj.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\llinventory.vcxproj.metaproj" (46) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\llinventory.vcxproj.metaproj" (46) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\llinventory.vcxproj" (47) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llinventory.dir\Release\llinventory.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llinventory.dir\Release\llinventory.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llinventory.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\Release\llinventory.lib
+FinalizeBuildStatus:
+  Deleting file "llinventory.dir\Release\llinventory.tlog\unsuccessfulbuild".
+  Touching "llinventory.dir\Release\llinventory.tlog\llinventory.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\llinventory.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llinventory\llinventory.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\lllogin.vcxproj.metaproj" (48) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\lllogin.vcxproj.metaproj" (48) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\lllogin.vcxproj" (49) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "lllogin.dir\Release\lllogin.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "lllogin.dir\Release\lllogin.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  lllogin.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\Release\lllogin.lib
+FinalizeBuildStatus:
+  Deleting file "lllogin.dir\Release\lllogin.tlog\unsuccessfulbuild".
+  Touching "lllogin.dir\Release\lllogin.tlog\lllogin.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\lllogin.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\viewer_components\login\lllogin.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\llphysicsextensionsos.vcxproj.metaproj" (50) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\llphysicsextensionsos.vcxproj.metaproj" (50) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\llphysicsextensionsos.vcxproj" (51) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llphysicsextensionsos.dir\Release\llphysic.62438A2B.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llphysicsextensionsos.dir\Release\llphysic.62438A2B.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llphysicsextensionsos.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\Release\llphysicsextensionsos.lib
+FinalizeBuildStatus:
+  Deleting file "llphysicsextensionsos.dir\Release\llphysic.62438A2B.tlog\unsuccessfulbuild".
+  Touching "llphysicsextensionsos.dir\Release\llphysic.62438A2B.tlog\llphysicsextensionsos.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\llphysicsextensionsos.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llphysicsextensionsos\llphysicsextensionsos.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\llprimitive.vcxproj.metaproj" (52) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\llprimitive.vcxproj.metaproj" (52) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\llprimitive.vcxproj" (53) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llprimitive.dir\Release\llprimitive.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llprimitive.dir\Release\llprimitive.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llprimitive.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\Release\llprimitive.lib
+FinalizeBuildStatus:
+  Deleting file "llprimitive.dir\Release\llprimitive.tlog\unsuccessfulbuild".
+  Touching "llprimitive.dir\Release\llprimitive.tlog\llprimitive.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\llprimitive.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llprimitive\llprimitive.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\llrender.vcxproj.metaproj" (54) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\llrender.vcxproj.metaproj" (54) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\llrender.vcxproj" (55) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llrender.dir\Release\llrender.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llrender.dir\Release\llrender.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llrender.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\Release\llrender.lib
+FinalizeBuildStatus:
+  Deleting file "llrender.dir\Release\llrender.tlog\unsuccessfulbuild".
+  Touching "llrender.dir\Release\llrender.tlog\llrender.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\llrender.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llrender\llrender.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\llui.vcxproj.metaproj" (56) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\llui.vcxproj.metaproj" (56) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\llui.vcxproj" (57) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llui.dir\Release\llui.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llui.dir\Release\llui.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llui.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\Release\llui.lib
+FinalizeBuildStatus:
+  Deleting file "llui.dir\Release\llui.tlog\unsuccessfulbuild".
+  Touching "llui.dir\Release\llui.tlog\llui.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\llui.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llui\llui.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\llwindow.vcxproj.metaproj" (58) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\llwindow.vcxproj.metaproj" (58) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\llwindow.vcxproj" (59) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llwindow.dir\Release\llwindow.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llwindow.dir\Release\llwindow.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llwindow.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\Release\llwindow.lib
+FinalizeBuildStatus:
+  Deleting file "llwindow.dir\Release\llwindow.tlog\unsuccessfulbuild".
+  Touching "llwindow.dir\Release\llwindow.tlog\llwindow.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\llwindow.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llwindow\llwindow.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (2) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj" (60) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "firestorm-bin.dir\Release\firestorm-bin.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "firestorm-bin.dir\Release\firestorm-bin.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\phoenix-firestorm\build-vc170-64\newview" /I"C:\FS_Build\phoenix-firestorm\indra\llaudio" /I"C:\FS_Build\phoenix-firestorm\indra\llcommon" /I"C:\FS_Build\phoenix-firestorm\indra\llmath" /I"C:\FS_Build\phoenix-firestorm\indra\llmeshoptimizer" /I"C:\FS_Build\phoenix-firestorm\indra\llmessage" /I"C:\FS_Build\phoenix-firestorm\indra\llfilesystem" /I"C:\FS_Build\phoenix-firestorm\indra\llcorehttp" /I"C:\FS_Build\phoenix-firestorm\indra\llxml" /I"C:\FS_Build\phoenix-firestorm\indra\llcharacter" /I"C:\FS_Build\phoenix-firestorm\indra\llimage" /I"C:\FS_Build\phoenix-firestorm\indra\llinventory" /I"C:\FS_Build\phoenix-firestorm\indra\llplugin" /I"C:\FS_Build\phoenix-firestorm\indra\llprimitive" /I"C:\FS_Build\phoenix-firestorm\indra\llrender" /I"C:\FS_Build\phoenix-firestorm\indra\llwindow" /I"C:\FS_Build\phoenix-firestorm\indra\llphysicsextensionsos" /I"C:\FS_Build\phoenix-firestorm\indra\llui" /I"C:\FS_Build\phoenix-firestorm\indra\llwebrtc" /I"C:\FS_Build\phoenix-firestorm\indra\viewer_components\login" /I"C:\FS_Build\phoenix-firestorm\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D OPENSIM /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\phoenix-firestorm\indra\newview\llversioninfo.cpp"
+  llversioninfo.cpp
+  All outputs are up-to-date.
+  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\phoenix-firestorm\build-vc170-64\newview" /I"C:\FS_Build\phoenix-firestorm\indra\llaudio" /I"C:\FS_Build\phoenix-firestorm\indra\llcommon" /I"C:\FS_Build\phoenix-firestorm\indra\llmath" /I"C:\FS_Build\phoenix-firestorm\indra\llmeshoptimizer" /I"C:\FS_Build\phoenix-firestorm\indra\llmessage" /I"C:\FS_Build\phoenix-firestorm\indra\llfilesystem" /I"C:\FS_Build\phoenix-firestorm\indra\llcorehttp" /I"C:\FS_Build\phoenix-firestorm\indra\llxml" /I"C:\FS_Build\phoenix-firestorm\indra\llcharacter" /I"C:\FS_Build\phoenix-firestorm\indra\llimage" /I"C:\FS_Build\phoenix-firestorm\indra\llinventory" /I"C:\FS_Build\phoenix-firestorm\indra\llplugin" /I"C:\FS_Build\phoenix-firestorm\indra\llprimitive" /I"C:\FS_Build\phoenix-firestorm\indra\llrender" /I"C:\FS_Build\phoenix-firestorm\indra\llwindow" /I"C:\FS_Build\phoenix-firestorm\indra\llphysicsextensionsos" /I"C:\FS_Build\phoenix-firestorm\indra\llui" /I"C:\FS_Build\phoenix-firestorm\indra\llwebrtc" /I"C:\FS_Build\phoenix-firestorm\indra\viewer_components\login" /I"C:\FS_Build\phoenix-firestorm\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D OPENSIM /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /D "LL_VIEWER_CHANNEL=Firestorm-Horizon" /D LL_VIEWER_VERSION_MAJOR=7 /D LL_VIEWER_VERSION_MINOR=2 /D LL_VIEWER_VERSION_PATCH=5 /D LL_VIEWER_VERSION_BUILD=81729 /D "FS_VIEWER_VERSION_GITHASH=\"4811a6fc93\"" /D "LLBUILD_CONFIG=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\phoenix-firestorm\indra\newview\llappviewerwin32.cpp" "C:\FS_Build\phoenix-firestorm\indra\newview\llvelopack.cpp"
+  llappviewerwin32.cpp
+  llvelopack.cpp
+ResourceCompile:
+  All outputs are up-to-date.
+PreLinkEvent:
+  Verifying message template - See http://wiki.secondlife.com/wiki/Template_verifier.py
+  setlocal
+  C:\Python3\python.exe C:/FS_Build/phoenix-firestorm/indra/../scripts/template_verifier.py --mode=development --cache_master --master_url=https://github.com/secondlife/master-message-template/raw/master/message_template.msg
+  if %errorlevel% neq 0 goto :cmEnd
+  :cmEnd
+  endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+  :cmErrorLevel
+  exit /b %1
+  :cmDone
+  if %errorlevel% neq 0 goto :VCEnd
+  :VCEnd
+  master: https://github.com/secondlife/master-message-template/raw/master/message_template.msg
+  current: C:\FS_Build\phoenix-firestorm\scripts\messages\message_template.msg
+  Message template SHA_1 has not changed.
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release\firestorm-bin.exe" /NOLOGO /LIBPATH:"C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/lib/release" /LIBPATH:"C:/FS_Build/phoenix-firestorm/build-vc170-64/packages/lib/release/Release" /FORCE:MULTIPLE ..\llaudio\Release\llaudio.lib ..\llcharacter\Release\llcharacter.lib ..\llimage\Release\llimage.lib ..\llinventory\Release\llinventory.lib ..\llmessage\Release\llmessage.lib ..\llplugin\Release\llplugin.lib ..\llprimitive\Release\llprimitive.lib ..\llrender\Release\llrender.lib ..\llui\Release\llui.lib ..\llfilesystem\Release\llfilesystem.lib ..\llwindow\Release\llwindow.lib ..\llxml\Release\llxml.lib ..\llmath\Release\llmath.lib ..\llcorehttp\Release\llcorehttp.lib ..\llcommon\Release\llcommon.lib ..\llmeshoptimizer\Release\llmeshoptimizer.lib ..\llwebrtc\Release\llwebrtc.lib ..\viewer_components\login\Release\lllogin.lib ..\llappearance\Release\llappearance.lib ..\packages\lib\release\libvorbisenc.lib ..\packages\lib\release\libvorbisfile.lib ..\packages\lib\release\libvorbis.lib ..\packages\lib\release\libogg.lib ..\packages\lib\release\OpenAL32.lib ..\packages\lib\release\alut.lib ..\packages\lib\release\fmod_vc.lib "..\packages\lib\release\libcollada14dom23-s.lib" ..\packages\lib\release\libxml2.lib Bcrypt.lib ..\packages\lib\release\minizip.lib ..\llphysicsextensionsos\Release\llphysicsextensionsos.lib ..\packages\lib\release\libhunspell.lib ..\packages\lib\release\freetype.lib glu32.lib opengl32.lib ..\llimagej2coj\Release\llimagej2coj.lib ..\packages\lib\release\libpng16.lib ..\packages\lib\release\jpeg.lib ..\packages\lib\release\openjp2.lib opengl32.lib dxguid.lib kernel32.lib odbc32.lib odbccp32.lib oleaut32.lib Vfw32.lib wer.lib winspool.lib imm32.lib comdlg32.lib dxgi.lib d3d9.lib ..\packages\lib\release\meshoptimizer.lib ..\packages\lib\release\libcurl.lib ..\packages\lib\release\libssl.lib ..\packages\lib\release\libcrypto.lib Crypt32.lib ..\packages\lib\release\nghttp2.lib "..\packages\lib\release\apr-1.lib" "..\packages\lib\release\aprutil-1.lib" ..\packages\lib\release\libexpat.lib ..\packages\lib\release\zlib.lib ..\packages\lib\release\libboost_fiber.lib ..\packages\lib\release\libboost_context.lib ..\packages\lib\release\libboost_filesystem.lib ..\packages\lib\release\libboost_program_options.lib ..\packages\lib\release\libboost_thread.lib ..\packages\lib\release\libboost_url.lib ..\packages\lib\release\libboost_wave.lib advapi32.lib shell32.lib ws2_32.lib mswsock.lib psapi.lib winmm.lib netapi32.lib wldap32.lib gdi32.lib user32.lib ole32.lib dbghelp.lib rpcrt4.lib legacy_stdio_definitions.lib ..\packages\lib\release\libndofdev.lib ..\packages\lib\release\openxr_loader.lib ..\packages\lib\release\glod.lib "..\packages\lib\release\discord-rpc.lib" ..\packages\lib\release\growl.lib ..\packages\lib\release\growl++.lib nvapi.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\FS_Build\phoenix-firestorm\indra\tools\manifests\compatibility.manifest" /DEBUG /PDB:"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/firestorm-bin.pdb" /MAP /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"firestorm-bin.dir\Release\firestorm-bin.iobj" /TLBID:1 /IMPLIB:"C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/firestorm-bin.lib" /MACHINE:X64  /machine:x64 /NOEXP /NOIMPLIB /NOEXP /NOIMPLIB /IGNORE:4099 "firestorm-bin.dir\Release\viewerRes.res"
+  "firestorm-bin.dir\Release\cmake_pch.obj"
+  "firestorm-bin.dir\Release\alfloaterregiontracker.obj"
+  "firestorm-bin.dir\Release\animationexplorer.obj"
+  "firestorm-bin.dir\Release\ao.obj"
+  "firestorm-bin.dir\Release\aoengine.obj"
+  "firestorm-bin.dir\Release\aoset.obj"
+  "firestorm-bin.dir\Release\chatbar_as_cmdline.obj"
+  "firestorm-bin.dir\Release\daeexport.obj"
+  "firestorm-bin.dir\Release\dialogstack.obj"
+  "firestorm-bin.dir\Release\exoflickr.obj"
+  "firestorm-bin.dir\Release\exoflickrauth.obj"
+  "firestorm-bin.dir\Release\fsprimfeedauth.obj"
+  "firestorm-bin.dir\Release\exogroupmutelist.obj"
+  "firestorm-bin.dir\Release\floatermedialists.obj"
+  "firestorm-bin.dir\Release\fsareasearch.obj"
+  "firestorm-bin.dir\Release\fsareasearchmenu.obj"
+  "firestorm-bin.dir\Release\fsassetblacklist.obj"
+  "firestorm-bin.dir\Release\fsavatarrenderpersistence.obj"
+  "firestorm-bin.dir\Release\fsavatarsearchmenu.obj"
+  "firestorm-bin.dir\Release\fsblocklistmenu.obj"
+  "firestorm-bin.dir\Release\fschathistory.obj"
+  "firestorm-bin.dir\Release\fschatoptionsmenu.obj"
+  "firestorm-bin.dir\Release\fscommon.obj"
+  "firestorm-bin.dir\Release\fsconsoleutils.obj"
+  "firestorm-bin.dir\Release\fscontactsfriendsmenu.obj"
+  "firestorm-bin.dir\Release\fsdata.obj"
+  "firestorm-bin.dir\Release\fsdroptarget.obj"
+  "firestorm-bin.dir\Release\fsexportperms.obj"
+  "firestorm-bin.dir\Release\fsfloateraddtocontactset.obj"
+  "firestorm-bin.dir\Release\fsfavoritegroups.obj"
+  "firestorm-bin.dir\Release\fsinventorycustomtabs.obj"
+  "firestorm-bin.dir\Release\fsfloaterassetblacklist.obj"
+  "firestorm-bin.dir\Release\fsfloateravataralign.obj"
+  "firestorm-bin.dir\Release\fsfloateravatarrendersettings.obj"
+  "firestorm-bin.dir\Release\fsfloaterbigpreview.obj"
+  "firestorm-bin.dir\Release\fsfloaterblocklist.obj"
+  "firestorm-bin.dir\Release\fsfloatercontacts.obj"
+  "firestorm-bin.dir\Release\fsfloatercontactsetconfiguration.obj"
+  "firestorm-bin.dir\Release\fsfloaterexport.obj"
+  "firestorm-bin.dir\Release\fsfloatergroup.obj"
+  "firestorm-bin.dir\Release\fsfloatergrouptitles.obj"
+  "firestorm-bin.dir\Release\fsgrouptitleregionmgr.obj"
+  "firestorm-bin.dir\Release\fsfloaterimport.obj"
+  "firestorm-bin.dir\Release\fsfloaterim.obj"
+  "firestorm-bin.dir\Release\fsfloaterimcontainer.obj"
+  "firestorm-bin.dir\Release\fsfloaternearbychat.obj"
+  "firestorm-bin.dir\Release\fsfloaterpartialinventory.obj"
+  "firestorm-bin.dir\Release\fsfloaterplacedetails.obj"
+  "firestorm-bin.dir\Release\fsfloaterposer.obj"
+  "firestorm-bin.dir\Release\fsfloaterposestand.obj"
+  "firestorm-bin.dir\Release\fsfloaterprotectedfolders.obj"
+  "firestorm-bin.dir\Release\fsfloaterradar.obj"
+  "firestorm-bin.dir\Release\fsfloatersearch.obj"
+  "firestorm-bin.dir\Release\fsfloatersplashscreensettings.obj"
+  "firestorm-bin.dir\Release\fsfloaterstatistics.obj"
+  "firestorm-bin.dir\Release\fsfloaterstreamtitle.obj"
+  "firestorm-bin.dir\Release\fsfloaterteleporthistory.obj"
+  "firestorm-bin.dir\Release\fsfloatervoicecontrols.obj"
+  "firestorm-bin.dir\Release\fsfloatervolumecontrols.obj"
+  "firestorm-bin.dir\Release\fsfloatervramusage.obj"
+  "firestorm-bin.dir\Release\fsfloaterwearablefavorites.obj"
+  "firestorm-bin.dir\Release\fsfloaterwhitelisthelper.obj"
+  "firestorm-bin.dir\Release\fsjointpose.obj"
+  "firestorm-bin.dir\Release\fskeywords.obj"
+  "firestorm-bin.dir\Release\fslslbridge.obj"
+  "firestorm-bin.dir\Release\fslslbridgerequest.obj"
+  "firestorm-bin.dir\Release\fslslpreproc.obj"
+  "firestorm-bin.dir\Release\fslslpreprocviewer.obj"
+  "firestorm-bin.dir\Release\fsmaniprotatejoint.obj"
+  "firestorm-bin.dir\Release\fsmaniptranslatejoint.obj"
+  "firestorm-bin.dir\Release\fsmoneytracker.obj"
+  "firestorm-bin.dir\Release\fsnamelistavatarmenu.obj"
+  "firestorm-bin.dir\Release\fsnearbychatbarlistener.obj"
+  "firestorm-bin.dir\Release\fsnearbychatcontrol.obj"
+  "firestorm-bin.dir\Release\fsnearbychathub.obj"
+  "firestorm-bin.dir\Release\fsnearbychatvoicemonitor.obj"
+  "firestorm-bin.dir\Release\fsnewitemctrl.obj"
+  "firestorm-bin.dir\Release\fspanelblocklist.obj"
+  "firestorm-bin.dir\Release\fspanelcontactsets.obj"
+  "firestorm-bin.dir\Release\fspanelface.obj"
+  "firestorm-bin.dir\Release\fspanelimcontrolpanel.obj"
+  "firestorm-bin.dir\Release\fspanellogin.obj"
+  "firestorm-bin.dir\Release\fspanelpreferenceuisounds.obj"
+  "firestorm-bin.dir\Release\fspanelprefs.obj"
+  "firestorm-bin.dir\Release\fspanelradar.obj"
+  "firestorm-bin.dir\Release\fsparticipantlist.obj"
+  "firestorm-bin.dir\Release\fspose.obj"
+  "firestorm-bin.dir\Release\fsposeranimator.obj"
+  "firestorm-bin.dir\Release\fsposestate.obj"
+  "firestorm-bin.dir\Release\fsposingmotion.obj"
+  "firestorm-bin.dir\Release\fsradar.obj"
+  "firestorm-bin.dir\Release\fsradarentry.obj"
+  "firestorm-bin.dir\Release\fsradarlistctrl.obj"
+  "firestorm-bin.dir\Release\fsradarmenu.obj"
+  "firestorm-bin.dir\Release\fsregioncross.obj"
+  "firestorm-bin.dir\Release\fsscriptlibrary.obj"
+  "firestorm-bin.dir\Release\fsscrolllistctrl.obj"
+  "firestorm-bin.dir\Release\fsslurlcommand.obj"
+  "firestorm-bin.dir\Release\fsvirtualtrackpad.obj"
+  "firestorm-bin.dir\Release\fsworldmapmessage.obj"
+  "firestorm-bin.dir\Release\lggbeamcolormapfloater.obj"
+  "firestorm-bin.dir\Release\lggbeammapfloater.obj"
+  "firestorm-bin.dir\Release\lggbeammaps.obj"
+  "firestorm-bin.dir\Release\lggbeamscolors.obj"
+  "firestorm-bin.dir\Release\lggcontactsets.obj"
+  "firestorm-bin.dir\Release\lfsimfeaturehandler.obj"
+  "firestorm-bin.dir\Release\llflickrconnect.obj"
+  "firestorm-bin.dir\Release\llfloaterflickr.obj"
+  "firestorm-bin.dir\Release\omnifilter.obj"
+  "firestorm-bin.dir\Release\omnifilterengine.obj"
+  "firestorm-bin.dir\Release\fsprimfeedconnect.obj"
+  "firestorm-bin.dir\Release\fsfloaterprimfeed.obj"
+  "firestorm-bin.dir\Release\llpanelopenregionsettings.obj"
+  "firestorm-bin.dir\Release\llagentwearablesfetch.obj"
+  "firestorm-bin.dir\Release\vjlocalmesh.obj"
+  "firestorm-bin.dir\Release\vjfloaterlocalmesh.obj"
+  "firestorm-bin.dir\Release\fslocalmeshimportbase.obj"
+  "firestorm-bin.dir\Release\vjlocalmeshimportdae.obj"
+  "firestorm-bin.dir\Release\fslocalmeshimportgltf.obj"
+  "firestorm-bin.dir\Release\gltfscenemanager.obj"
+  "firestorm-bin.dir\Release\groupchatlistener.obj"
+  "firestorm-bin.dir\Release\llaccountingcostmanager.obj"
+  "firestorm-bin.dir\Release\llaisapi.obj"
+  "firestorm-bin.dir\Release\llagent.obj"
+  "firestorm-bin.dir\Release\llagentaccess.obj"
+  "firestorm-bin.dir\Release\llagentbenefits.obj"
+  "firestorm-bin.dir\Release\llagentcamera.obj"
+  "firestorm-bin.dir\Release\llagentdata.obj"
+  "firestorm-bin.dir\Release\llagentlanguage.obj"
+  "firestorm-bin.dir\Release\llagentlistener.obj"
+  "firestorm-bin.dir\Release\llagentpicksinfo.obj"
+  "firestorm-bin.dir\Release\llagentpilot.obj"
+  "firestorm-bin.dir\Release\llagentui.obj"
+  "firestorm-bin.dir\Release\llagentwearables.obj"
+  "firestorm-bin.dir\Release\llanimstatelabels.obj"
+  "firestorm-bin.dir\Release\llappcorehttp.obj"
+  "firestorm-bin.dir\Release\llappearancelistener.obj"
+  "firestorm-bin.dir\Release\llappearancemgr.obj"
+  "firestorm-bin.dir\Release\llappviewer.obj"
+  "firestorm-bin.dir\Release\llappviewerlistener.obj"
+  "firestorm-bin.dir\Release\llattachmentsmgr.obj"
+  "firestorm-bin.dir\Release\llaudiosourcevo.obj"
+  "firestorm-bin.dir\Release\llautoreplace.obj"
+  "firestorm-bin.dir\Release\llavataractions.obj"
+  "firestorm-bin.dir\Release\llavatariconctrl.obj"
+  "firestorm-bin.dir\Release\llavatarlist.obj"
+  "firestorm-bin.dir\Release\llavatarlistitem.obj"
+  "firestorm-bin.dir\Release\llavatarrenderinfoaccountant.obj"
+  "firestorm-bin.dir\Release\llavatarrendernotifier.obj"
+  "firestorm-bin.dir\Release\llavatarpropertiesprocessor.obj"
+  "firestorm-bin.dir\Release\llblockedlistitem.obj"
+  "firestorm-bin.dir\Release\llblocklist.obj"
+  "firestorm-bin.dir\Release\llbox.obj"
+  "firestorm-bin.dir\Release\llbrowsernotification.obj"
+  "firestorm-bin.dir\Release\llbuycurrencyhtml.obj"
+  "firestorm-bin.dir\Release\llcallingcard.obj"
+  "firestorm-bin.dir\Release\llchannelmanager.obj"
+  "firestorm-bin.dir\Release\llchatbar.obj"
+  "firestorm-bin.dir\Release\llchathistory.obj"
+  "firestorm-bin.dir\Release\llchatitemscontainerctrl.obj"
+  "firestorm-bin.dir\Release\llchatmsgbox.obj"
+  "firestorm-bin.dir\Release\llchiclet.obj"
+  "firestorm-bin.dir\Release\llchicletbar.obj"
+  "firestorm-bin.dir\Release\llclassifiedinfo.obj"
+  "firestorm-bin.dir\Release\llcofwearables.obj"
+  "firestorm-bin.dir\Release\llcolorswatch.obj"
+  "firestorm-bin.dir\Release\llcommanddispatcherlistener.obj"
+  "firestorm-bin.dir\Release\llcommandhandler.obj"
+  "firestorm-bin.dir\Release\llcommandlineparser.obj"
+  "firestorm-bin.dir\Release\llcommunicationchannel.obj"
+  "firestorm-bin.dir\Release\llcompilequeue.obj"
+  "firestorm-bin.dir\Release\llconfirmationmanager.obj"
+  "firestorm-bin.dir\Release\llcontrolavatar.obj"
+  "firestorm-bin.dir\Release\llconversationlog.obj"
+  "firestorm-bin.dir\Release\llconversationloglist.obj"
+  "firestorm-bin.dir\Release\llconversationloglistitem.obj"
+  "firestorm-bin.dir\Release\llconversationmodel.obj"
+  "firestorm-bin.dir\Release\llconversationview.obj"
+  "firestorm-bin.dir\Release\llcurrencyuimanager.obj"
+  "firestorm-bin.dir\Release\llcylinder.obj"
+  "firestorm-bin.dir\Release\lldateutil.obj"
+  "firestorm-bin.dir\Release\lldebugmessagebox.obj"
+  "firestorm-bin.dir\Release\lldebugview.obj"
+  "firestorm-bin.dir\Release\lldeferredsounds.obj"
+  "firestorm-bin.dir\Release\lldelayedgestureerror.obj"
+  "firestorm-bin.dir\Release\lldirpicker.obj"
+  "firestorm-bin.dir\Release\lldonotdisturbnotificationstorage.obj"
+  "firestorm-bin.dir\Release\lldndbutton.obj"
+  "firestorm-bin.dir\Release\lldrawable.obj"
+  "firestorm-bin.dir\Release\lldrawpool.obj"
+  "firestorm-bin.dir\Release\lldrawpoolalpha.obj"
+  "firestorm-bin.dir\Release\lldrawpoolavatar.obj"
+  "firestorm-bin.dir\Release\lldrawpoolbump.obj"
+  "firestorm-bin.dir\Release\lldrawpoolmaterials.obj"
+  "firestorm-bin.dir\Release\lldrawpoolpbropaque.obj"
+  "firestorm-bin.dir\Release\lldrawpoolsimple.obj"
+  "firestorm-bin.dir\Release\lldrawpoolsky.obj"
+  "firestorm-bin.dir\Release\lldrawpoolterrain.obj"
+  "firestorm-bin.dir\Release\lldrawpooltree.obj"
+  "firestorm-bin.dir\Release\lldrawpoolwater.obj"
+  "firestorm-bin.dir\Release\lldrawpoolwlsky.obj"
+  "firestorm-bin.dir\Release\lldrawpoolwaterexclusion.obj"
+  "firestorm-bin.dir\Release\lldynamictexture.obj"
+  "firestorm-bin.dir\Release\llemote.obj"
+  "firestorm-bin.dir\Release\llenvironment.obj"
+  "firestorm-bin.dir\Release\llestateinfomodel.obj"
+  "firestorm-bin.dir\Release\lleventnotifier.obj"
+  "firestorm-bin.dir\Release\lleventpoll.obj"
+  "firestorm-bin.dir\Release\llexpandabletextbox.obj"
+  "firestorm-bin.dir\Release\llexperiencelog.obj"
+  "firestorm-bin.dir\Release\llexternaleditor.obj"
+  "firestorm-bin.dir\Release\llface.obj"
+  "firestorm-bin.dir\Release\llfasttimerview.obj"
+  "firestorm-bin.dir\Release\llfavoritesbar.obj"
+  "firestorm-bin.dir\Release\llfeaturemanager.obj"
+  "firestorm-bin.dir\Release\llfetchedgltfmaterial.obj"
+  "firestorm-bin.dir\Release\llfilepicker.obj"
+  "firestorm-bin.dir\Release\llfilteredwearablelist.obj"
+  "firestorm-bin.dir\Release\llfirstuse.obj"
+  "firestorm-bin.dir\Release\llflexibleobject.obj"
+  "firestorm-bin.dir\Release\llfloater360capture.obj"
+  "firestorm-bin.dir\Release\llfloaterabout.obj"
+  "firestorm-bin.dir\Release\llfloateravatarwelcomepack.obj"
+  "firestorm-bin.dir\Release\llfloaterbvhpreview.obj"
+  "firestorm-bin.dir\Release\llfloateraddpaymentmethod.obj"
+  "firestorm-bin.dir\Release\llfloaterauction.obj"
+  "firestorm-bin.dir\Release\llfloaterautoreplacesettings.obj"
+  "firestorm-bin.dir\Release\llfloateravatarpicker.obj"
+  "firestorm-bin.dir\Release\llfloateravatarrendersettings.obj"
+  "firestorm-bin.dir\Release\llfloateravatartextures.obj"
+  "firestorm-bin.dir\Release\llfloaterbanduration.obj"
+  "firestorm-bin.dir\Release\llfloaterbeacons.obj"
+  "firestorm-bin.dir\Release\llfloaterbuildoptions.obj"
+  "firestorm-bin.dir\Release\llfloaterbulkpermission.obj"
+  "firestorm-bin.dir\Release\llfloaterbulkupload.obj"
+  "firestorm-bin.dir\Release\llfloaterbump.obj"
+  "firestorm-bin.dir\Release\llfloaterbuy.obj"
+  "firestorm-bin.dir\Release\llfloaterbuycontents.obj"
+  "firestorm-bin.dir\Release\llfloaterbuycurrency.obj"
+  "firestorm-bin.dir\Release\llfloaterbuycurrencyhtml.obj"
+  "firestorm-bin.dir\Release\llfloaterbuyland.obj"
+  "firestorm-bin.dir\Release\llfloatercamera.obj"
+  "firestorm-bin.dir\Release\llfloatercamerapresets.obj"
+  "firestorm-bin.dir\Release\llfloaterchangeitemthumbnail.obj"
+  "firestorm-bin.dir\Release\llfloaterchatmentionpicker.obj"
+  "firestorm-bin.dir\Release\llfloaterchatvoicevolume.obj"
+  "firestorm-bin.dir\Release\llfloaterclassified.obj"
+  "firestorm-bin.dir\Release\llfloatercolorpicker.obj"
+  "firestorm-bin.dir\Release\llfloaterconversationlog.obj"
+  "firestorm-bin.dir\Release\llfloaterconversationpreview.obj"
+  "firestorm-bin.dir\Release\llfloatercreatelandmark.obj"
+  "firestorm-bin.dir\Release\llfloaterdeleteprefpreset.obj"
+  "firestorm-bin.dir\Release\llfloaterdestinations.obj"
+  "firestorm-bin.dir\Release\llfloaterdirectory.obj"
+  "firestorm-bin.dir\Release\llfloaterdisplayname.obj"
+  "firestorm-bin.dir\Release\llfloatereditenvironmentbase.obj"
+  "firestorm-bin.dir\Release\llfloatereditextdaycycle.obj"
+  "firestorm-bin.dir\Release\llfloateremojipicker.obj"
+  "firestorm-bin.dir\Release\llfloaterenvironmentadjust.obj"
+  "firestorm-bin.dir\Release\llfloaterevent.obj"
+  "firestorm-bin.dir\Release\llfloaterexperiencepicker.obj"
+  "firestorm-bin.dir\Release\llfloaterexperienceprofile.obj"
+  "firestorm-bin.dir\Release\llfloaterexperiences.obj"
+  "firestorm-bin.dir\Release\llfloaterfixedenvironment.obj"
+  "firestorm-bin.dir\Release\llfloaterfonttest.obj"
+  "firestorm-bin.dir\Release\llfloaterforgetuser.obj"
+  "firestorm-bin.dir\Release\llfloatergesture.obj"
+  "firestorm-bin.dir\Release\llfloatergltfasseteditor.obj"
+  "firestorm-bin.dir\Release\llfloatergodtools.obj"
+  "firestorm-bin.dir\Release\llfloatergotoline.obj"
+  "firestorm-bin.dir\Release\llfloatergridstatus.obj"
+  "firestorm-bin.dir\Release\llfloatergroupbulkban.obj"
+  "firestorm-bin.dir\Release\llfloatergroupinvite.obj"
+  "firestorm-bin.dir\Release\llfloatergroups.obj"
+  "firestorm-bin.dir\Release\llfloaterhandler.obj"
+  "firestorm-bin.dir\Release\llfloaterhelpbrowser.obj"
+  "firestorm-bin.dir\Release\llfloaterhoverheight.obj"
+  "firestorm-bin.dir\Release\llfloaterhowto.obj"
+  "firestorm-bin.dir\Release\llfloaterhud.obj"
+  "firestorm-bin.dir\Release\llfloaterimagepreview.obj"
+  "firestorm-bin.dir\Release\llfloaterimsessiontab.obj"
+  "firestorm-bin.dir\Release\llfloaterimsession.obj"
+  "firestorm-bin.dir\Release\llfloaterimcontainer.obj"
+  "firestorm-bin.dir\Release\llfloaterinspect.obj"
+  "firestorm-bin.dir\Release\llfloaterinventorysettings.obj"
+  "firestorm-bin.dir\Release\llfloaterinventorythumbnailshelper.obj"
+  "firestorm-bin.dir\Release\llfloaterjoystick.obj"
+  "firestorm-bin.dir\Release\llfloaterlagmeter.obj"
+  "firestorm-bin.dir\Release\llfloaterland.obj"
+  "firestorm-bin.dir\Release\llfloaterlandholdings.obj"
+  "firestorm-bin.dir\Release\llfloaterlinkreplace.obj"
+  "firestorm-bin.dir\Release\llfloaterloadprefpreset.obj"
+  "firestorm-bin.dir\Release\llfloatermarketplacelistings.obj"
+  "firestorm-bin.dir\Release\llfloatermap.obj"
+  "firestorm-bin.dir\Release\llfloatermediasettings.obj"
+  "firestorm-bin.dir\Release\llfloatermemleak.obj"
+  "firestorm-bin.dir\Release\llfloatermodelpreview.obj"
+  "firestorm-bin.dir\Release\llfloatermodeluploadbase.obj"
+  "firestorm-bin.dir\Release\llfloatermyscripts.obj"
+  "firestorm-bin.dir\Release\llfloatermyenvironment.obj"
+  "firestorm-bin.dir\Release\llfloaternamedesc.obj"
+  "firestorm-bin.dir\Release\llfloaternewfeaturenotification.obj"
+  "firestorm-bin.dir\Release\llfloaternotificationsconsole.obj"
+  "firestorm-bin.dir\Release\llfloaternotificationstabbed.obj"
+  "firestorm-bin.dir\Release\llfloaterobjectweights.obj"
+  "firestorm-bin.dir\Release\llfloateropenobject.obj"
+  "firestorm-bin.dir\Release\llfloatersimplesnapshot.obj"
+  "firestorm-bin.dir\Release\llfloaterpathfindingcharacters.obj"
+  "firestorm-bin.dir\Release\llfloaterpathfindingconsole.obj"
+  "firestorm-bin.dir\Release\llfloaterpathfindinglinksets.obj"
+  "firestorm-bin.dir\Release\llfloaterpathfindingobjects.obj"
+  "firestorm-bin.dir\Release\llfloaterpay.obj"
+  "firestorm-bin.dir\Release\fsfloaterperformance.obj"
+  "firestorm-bin.dir\Release\llfloaterperms.obj"
+  "firestorm-bin.dir\Release\llfloaterprofile.obj"
+  "firestorm-bin.dir\Release\llfloaterpreference.obj"
+  "firestorm-bin.dir\Release\llfloaterpreferenceviewadvanced.obj"
+  "firestorm-bin.dir\Release\llfloaterpreviewtrash.obj"
+  "firestorm-bin.dir\Release\llfloaterprofiletexture.obj"
+  "firestorm-bin.dir\Release\llfloaterproperties.obj"
+  "firestorm-bin.dir\Release\llfloaterregiondebugconsole.obj"
+  "firestorm-bin.dir\Release\llfloaterregioninfo.obj"
+  "firestorm-bin.dir\Release\llfloaterreporter.obj"
+  "firestorm-bin.dir\Release\llfloaterregionrestarting.obj"
+  "firestorm-bin.dir\Release\llfloaterregionrestartschedule.obj"
+  "firestorm-bin.dir\Release\llfloatersavecamerapreset.obj"
+  "firestorm-bin.dir\Release\llfloatersaveprefpreset.obj"
+  "firestorm-bin.dir\Release\llfloatersceneloadstats.obj"
+  "firestorm-bin.dir\Release\llfloaterscriptdebug.obj"
+  "firestorm-bin.dir\Release\llfloaterscriptedprefs.obj"
+  "firestorm-bin.dir\Release\llfloaterscriptlimits.obj"
+  "firestorm-bin.dir\Release\llfloaterscriptrecover.obj"
+  "firestorm-bin.dir\Release\llfloatersearch.obj"
+  "firestorm-bin.dir\Release\llfloatersearchreplace.obj"
+  "firestorm-bin.dir\Release\llfloatersellland.obj"
+  "firestorm-bin.dir\Release\llfloatersettingscolor.obj"
+  "firestorm-bin.dir\Release\llfloatersettingsdebug.obj"
+  "firestorm-bin.dir\Release\llfloatersidepanelcontainer.obj"
+  "firestorm-bin.dir\Release\llfloaterslapptest.obj"
+  "firestorm-bin.dir\Release\llfloatersnapshot.obj"
+  "firestorm-bin.dir\Release\llfloaterspellchecksettings.obj"
+  "firestorm-bin.dir\Release\llfloatertelehub.obj"
+  "firestorm-bin.dir\Release\llfloatertestinspectors.obj"
+  "firestorm-bin.dir\Release\llfloatertestlistview.obj"
+  "firestorm-bin.dir\Release\llfloatertools.obj"
+  "firestorm-bin.dir\Release\llfloatertopobjects.obj"
+  "firestorm-bin.dir\Release\llfloatertos.obj"
+  "firestorm-bin.dir\Release\llfloatertoybox.obj"
+  "firestorm-bin.dir\Release\llfloatertranslationsettings.obj"
+  "firestorm-bin.dir\Release\llfloateruipreview.obj"
+  "firestorm-bin.dir\Release\llfloaterurlentry.obj"
+  "firestorm-bin.dir\Release\llfloatervoicevolume.obj"
+  "firestorm-bin.dir\Release\llfloaterwebcontent.obj"
+  "firestorm-bin.dir\Release\llfloaterwhitelistentry.obj"
+  "firestorm-bin.dir\Release\llfloaterwindowsize.obj"
+  "firestorm-bin.dir\Release\llfloaterworldmap.obj"
+  "firestorm-bin.dir\Release\llfolderviewmodelinventory.obj"
+  "firestorm-bin.dir\Release\llfollowcam.obj"
+  "firestorm-bin.dir\Release\llfriendcard.obj"
+  "firestorm-bin.dir\Release\llflyoutcombobtn.obj"
+  "firestorm-bin.dir\Release\llgesturelistener.obj"
+  "firestorm-bin.dir\Release\llgesturemgr.obj"
+  "firestorm-bin.dir\Release\llgiveinventory.obj"
+  "firestorm-bin.dir\Release\llglsandbox.obj"
+  "firestorm-bin.dir\Release\llgltffolderitem.obj"
+  "firestorm-bin.dir\Release\llgltffoldermodel.obj"
+  "firestorm-bin.dir\Release\llgltfmateriallist.obj"
+  "firestorm-bin.dir\Release\llgltfmaterialpreviewmgr.obj"
+  "firestorm-bin.dir\Release\llgroupactions.obj"
+  "firestorm-bin.dir\Release\llgroupiconctrl.obj"
+  "firestorm-bin.dir\Release\llgrouplist.obj"
+  "firestorm-bin.dir\Release\llgroupmgr.obj"
+  "firestorm-bin.dir\Release\llhasheduniqueid.obj"
+  "firestorm-bin.dir\Release\llhints.obj"
+  "firestorm-bin.dir\Release\llhttpretrypolicy.obj"
+  "firestorm-bin.dir\Release\llhudeffect.obj"
+  "firestorm-bin.dir\Release\llhudeffectbeam.obj"
+  "firestorm-bin.dir\Release\llhudeffectlookat.obj"
+  "firestorm-bin.dir\Release\llhudeffectpointat.obj"
+  "firestorm-bin.dir\Release\llhudeffecttrail.obj"
+  "firestorm-bin.dir\Release\llhudeffectblob.obj"
+  "firestorm-bin.dir\Release\llhudeffectresetskeleton.obj"
+  "firestorm-bin.dir\Release\llhudicon.obj"
+  "firestorm-bin.dir\Release\llhudmanager.obj"
+  "firestorm-bin.dir\Release\llhudnametag.obj"
+  "firestorm-bin.dir\Release\llhudobject.obj"
+  "firestorm-bin.dir\Release\llhudrender.obj"
+  "firestorm-bin.dir\Release\llhudtext.obj"
+  "firestorm-bin.dir\Release\llhudview.obj"
+  "firestorm-bin.dir\Release\llimagefiltersmanager.obj"
+  "firestorm-bin.dir\Release\llimhandler.obj"
+  "firestorm-bin.dir\Release\llimprocessing.obj"
+  "firestorm-bin.dir\Release\llimview.obj"
+  "firestorm-bin.dir\Release\llinspect.obj"
+  "firestorm-bin.dir\Release\llinspectavatar.obj"
+  "firestorm-bin.dir\Release\llinspectgroup.obj"
+  "firestorm-bin.dir\Release\llinspectobject.obj"
+  "firestorm-bin.dir\Release\llinspectremoteobject.obj"
+  "firestorm-bin.dir\Release\llinspecttexture.obj"
+  "firestorm-bin.dir\Release\llinspecttoast.obj"
+  "firestorm-bin.dir\Release\llinventorybridge.obj"
+  "firestorm-bin.dir\Release\llinventoryfilter.obj"
+  "firestorm-bin.dir\Release\llinventoryfunctions.obj"
+  "firestorm-bin.dir\Release\llinventorygallery.obj"
+  "firestorm-bin.dir\Release\llinventorygallerymenu.obj"
+  "firestorm-bin.dir\Release\llinventoryicon.obj"
+  "firestorm-bin.dir\Release\llinventoryitemslist.obj"
+  "firestorm-bin.dir\Release\llinventorylistener.obj"
+  "firestorm-bin.dir\Release\llinventorylistitem.obj"
+  "firestorm-bin.dir\Release\llinventorymodel.obj"
+  "firestorm-bin.dir\Release\llinventorymodelbackgroundfetch.obj"
+  "firestorm-bin.dir\Release\llinventoryobserver.obj"
+  "firestorm-bin.dir\Release\llinventorypanel.obj"
+  "firestorm-bin.dir\Release\lljoystickbutton.obj"
+  "firestorm-bin.dir\Release\llkeyconflict.obj"
+  "firestorm-bin.dir\Release\lllandmarkactions.obj"
+  "firestorm-bin.dir\Release\lllandmarklist.obj"
+  "firestorm-bin.dir\Release\lllegacyatmospherics.obj"
+  "firestorm-bin.dir\Release\lllistcontextmenu.obj"
+  "firestorm-bin.dir\Release\lllistview.obj"
+  "firestorm-bin.dir\Release\lllocalbitmaps.obj"
+  "firestorm-bin.dir\Release\lllocalgltfmaterials.obj"
+  "firestorm-bin.dir\Release\lllocationhistory.obj"
+  "firestorm-bin.dir\Release\lllocationinputctrl.obj"
+  "firestorm-bin.dir\Release\lllogchat.obj"
+  "firestorm-bin.dir\Release\llloginhandler.obj"
+  "firestorm-bin.dir\Release\lllogininstance.obj"
+  "firestorm-bin.dir\Release\llmachineid.obj"
+  "firestorm-bin.dir\Release\llmanip.obj"
+  "firestorm-bin.dir\Release\llmaniprotate.obj"
+  "firestorm-bin.dir\Release\llmanipscale.obj"
+  "firestorm-bin.dir\Release\llmaniptranslate.obj"
+  "firestorm-bin.dir\Release\llfloatermarketplace.obj"
+  "firestorm-bin.dir\Release\llmarketplacefunctions.obj"
+  "firestorm-bin.dir\Release\llmarketplacenotifications.obj"
+  "firestorm-bin.dir\Release\llmaterialeditor.obj"
+  "firestorm-bin.dir\Release\llmaterialmgr.obj"
+  "firestorm-bin.dir\Release\llmediactrl.obj"
+  "firestorm-bin.dir\Release\llmediadataclient.obj"
+  "firestorm-bin.dir\Release\llmenuoptionpathfindingrebakenavmesh.obj"
+  "firestorm-bin.dir\Release\llmeshrepository.obj"
+  "firestorm-bin.dir\Release\llmimetypes.obj"
+  "firestorm-bin.dir\Release\llmodelpreview.obj"
+  "firestorm-bin.dir\Release\llmorphview.obj"
+  "firestorm-bin.dir\Release\llmoveview.obj"
+  "firestorm-bin.dir\Release\llmutelist.obj"
+  "firestorm-bin.dir\Release\llnamebox.obj"
+  "firestorm-bin.dir\Release\llnameeditor.obj"
+  "firestorm-bin.dir\Release\llnamelistctrl.obj"
+  "firestorm-bin.dir\Release\llnavigationbar.obj"
+  "firestorm-bin.dir\Release\llfloaterimnearbychat.obj"
+  "firestorm-bin.dir\Release\llfloaterimnearbychathandler.obj"
+  "firestorm-bin.dir\Release\llfloaterimnearbychatlistener.obj"
+  "firestorm-bin.dir\Release\llnearbyvoicemoderation.obj"
+  "firestorm-bin.dir\Release\llnetmap.obj"
+  "firestorm-bin.dir\Release\llnotificationalerthandler.obj"
+  "firestorm-bin.dir\Release\llnotificationgrouphandler.obj"
+  "firestorm-bin.dir\Release\llnotificationhandlerutil.obj"
+  "firestorm-bin.dir\Release\llnotificationhinthandler.obj"
+  "firestorm-bin.dir\Release\llnotificationlistitem.obj"
+  "firestorm-bin.dir\Release\llnotificationlistview.obj"
+  "firestorm-bin.dir\Release\llnotificationmanager.obj"
+  "firestorm-bin.dir\Release\llnotificationofferhandler.obj"
+  "firestorm-bin.dir\Release\llnotificationscripthandler.obj"
+  "firestorm-bin.dir\Release\llnotificationstorage.obj"
+  "firestorm-bin.dir\Release\llnotificationtiphandler.obj"
+  "firestorm-bin.dir\Release\lloutfitgallery.obj"
+  "firestorm-bin.dir\Release\lloutfitslist.obj"
+  "firestorm-bin.dir\Release\lloutfitobserver.obj"
+  "firestorm-bin.dir\Release\lloutputmonitorctrl.obj"
+  "firestorm-bin.dir\Release\llpanelappearancetab.obj"
+  "firestorm-bin.dir\Release\llpanelavatar.obj"
+  "firestorm-bin.dir\Release\llpanelavatartag.obj"
+  "firestorm-bin.dir\Release\llpanelblockedlist.obj"
+  "firestorm-bin.dir\Release\llpanelclassified.obj"
+  "firestorm-bin.dir\Release\llpanelcontents.obj"
+  "firestorm-bin.dir\Release\llpaneldirbrowser.obj"
+  "firestorm-bin.dir\Release\llpaneldirclassified.obj"
+  "firestorm-bin.dir\Release\llpaneldirevents.obj"
+  "firestorm-bin.dir\Release\llpaneldirgroups.obj"
+  "firestorm-bin.dir\Release\llpaneldirland.obj"
+  "firestorm-bin.dir\Release\llpaneldirpeople.obj"
+  "firestorm-bin.dir\Release\llpaneldirplaces.obj"
+  "firestorm-bin.dir\Release\llpaneldirweb.obj"
+  "firestorm-bin.dir\Release\llpaneleditsky.obj"
+  "firestorm-bin.dir\Release\llpaneleditwater.obj"
+  "firestorm-bin.dir\Release\llpaneleditwearable.obj"
+  "firestorm-bin.dir\Release\llpanelemojicomplete.obj"
+  "firestorm-bin.dir\Release\llpanelenvironment.obj"
+  "firestorm-bin.dir\Release\llpaneleventinfo.obj"
+  "firestorm-bin.dir\Release\llpanelexperiencelisteditor.obj"
+  "firestorm-bin.dir\Release\llpanelexperiencelog.obj"
+  "firestorm-bin.dir\Release\llpanelexperiencepicker.obj"
+  "firestorm-bin.dir\Release\llpanelexperiences.obj"
+  "firestorm-bin.dir\Release\llpanelface.obj"
+  "firestorm-bin.dir\Release\llpanelgenerictip.obj"
+  "firestorm-bin.dir\Release\llpanelgroup.obj"
+  "firestorm-bin.dir\Release\llpanelgroupcreate.obj"
+  "firestorm-bin.dir\Release\llpanelgroupbulk.obj"
+  "firestorm-bin.dir\Release\llpanelgroupbulkban.obj"
+  "firestorm-bin.dir\Release\llpanelgroupexperiences.obj"
+  "firestorm-bin.dir\Release\llpanelgroupgeneral.obj"
+  "firestorm-bin.dir\Release\llpanelgroupinvite.obj"
+  "firestorm-bin.dir\Release\llpanelgrouplandmoney.obj"
+  "firestorm-bin.dir\Release\llpanelgroupnotices.obj"
+  "firestorm-bin.dir\Release\llpanelgrouproles.obj"
+  "firestorm-bin.dir\Release\llpanelhome.obj"
+  "firestorm-bin.dir\Release\llpanelland.obj"
+  "firestorm-bin.dir\Release\llpanellandaudio.obj"
+  "firestorm-bin.dir\Release\llpanellandmarkinfo.obj"
+  "firestorm-bin.dir\Release\llpanellandmarks.obj"
+  "firestorm-bin.dir\Release\llpanellandmedia.obj"
+  "firestorm-bin.dir\Release\llpanellogin.obj"
+  "firestorm-bin.dir\Release\llpanelloginlistener.obj"
+  "firestorm-bin.dir\Release\llpanelmaininventory.obj"
+  "firestorm-bin.dir\Release\llpanelmarketplaceinbox.obj"
+  "firestorm-bin.dir\Release\llpanelmarketplaceinboxinventory.obj"
+  "firestorm-bin.dir\Release\llpanelmediasettingsgeneral.obj"
+  "firestorm-bin.dir\Release\llpanelmediasettingspermissions.obj"
+  "firestorm-bin.dir\Release\llpanelmediasettingssecurity.obj"
+  "firestorm-bin.dir\Release\llpanelnearbymedia.obj"
+  "firestorm-bin.dir\Release\llpanelobject.obj"
+  "firestorm-bin.dir\Release\llpanelobjectinventory.obj"
+  "firestorm-bin.dir\Release\llpanelonlinestatus.obj"
+  "firestorm-bin.dir\Release\llpaneloutfitedit.obj"
+  "firestorm-bin.dir\Release\llpaneloutfitsinventory.obj"
+  "firestorm-bin.dir\Release\llpanelpeople.obj"
+  "firestorm-bin.dir\Release\llpanelpeoplemenus.obj"
+  "firestorm-bin.dir\Release\llpanelpermissions.obj"
+  "firestorm-bin.dir\Release\llpanelplaceinfo.obj"
+  "firestorm-bin.dir\Release\llpanelplaceprofile.obj"
+  "firestorm-bin.dir\Release\llpanelplaces.obj"
+  "firestorm-bin.dir\Release\llpanelplacestab.obj"
+  "firestorm-bin.dir\Release\llpanelpresetscamerapulldown.obj"
+  "firestorm-bin.dir\Release\llpanelpresetspulldown.obj"
+  "firestorm-bin.dir\Release\llpanelprimmediacontrols.obj"
+  "firestorm-bin.dir\Release\llpanelprofile.obj"
+  "firestorm-bin.dir\Release\llpanelprofileclassifieds.obj"
+  "firestorm-bin.dir\Release\llpanelprofilepicks.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshot.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshotinventory.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshotlocal.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshotoptions.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshotpostcard.obj"
+  "firestorm-bin.dir\Release\llpanelsnapshotprofile.obj"
+  "firestorm-bin.dir\Release\llpanelteleporthistory.obj"
+  "firestorm-bin.dir\Release\llpaneltiptoast.obj"
+  "firestorm-bin.dir\Release\llpanelpulldown.obj"
+  "firestorm-bin.dir\Release\llpanelvoicedevicesettings.obj"
+  "firestorm-bin.dir\Release\llpanelvolume.obj"
+  "firestorm-bin.dir\Release\llpanelvolumepulldown.obj"
+  "firestorm-bin.dir\Release\llpanelwearing.obj"
+  "firestorm-bin.dir\Release\llparcelselection.obj"
+  "firestorm-bin.dir\Release\llparticipantlist.obj"
+  "firestorm-bin.dir\Release\llpatchvertexarray.obj"
+  "firestorm-bin.dir\Release\llpathfindingcharacter.obj"
+  "firestorm-bin.dir\Release\llpathfindingcharacterlist.obj"
+  "firestorm-bin.dir\Release\llpathfindinglinkset.obj"
+  "firestorm-bin.dir\Release\llpathfindinglinksetlist.obj"
+  "firestorm-bin.dir\Release\llpathfindingmanager.obj"
+  "firestorm-bin.dir\Release\llpathfindingnavmesh.obj"
+  "firestorm-bin.dir\Release\llpathfindingnavmeshstatus.obj"
+  "firestorm-bin.dir\Release\llpathfindingnavmeshzone.obj"
+  "firestorm-bin.dir\Release\llpathfindingobject.obj"
+  "firestorm-bin.dir\Release\llpathfindingobjectlist.obj"
+  "firestorm-bin.dir\Release\llpathfindingpathtool.obj"
+  "firestorm-bin.dir\Release\llpbrterrainfeatures.obj"
+  "firestorm-bin.dir\Release\llpersistentnotificationstorage.obj"
+  "firestorm-bin.dir\Release\llphysicsmotion.obj"
+  "firestorm-bin.dir\Release\llphysicsshapebuilderutil.obj"
+  "firestorm-bin.dir\Release\llpipelinelistener.obj"
+  "firestorm-bin.dir\Release\llplacesinventorybridge.obj"
+  "firestorm-bin.dir\Release\llplacesinventorypanel.obj"
+  "firestorm-bin.dir\Release\llplacesfolderview.obj"
+  "firestorm-bin.dir\Release\llpopupview.obj"
+  "firestorm-bin.dir\Release\llpostcard.obj"
+  "firestorm-bin.dir\Release\llpresetsmanager.obj"
+  "firestorm-bin.dir\Release\llpreview.obj"
+  "firestorm-bin.dir\Release\llpreviewanim.obj"
+  "firestorm-bin.dir\Release\llpreviewgesture.obj"
+  "firestorm-bin.dir\Release\llpreviewnotecard.obj"
+  "firestorm-bin.dir\Release\llpreviewscript.obj"
+  "firestorm-bin.dir\Release\llpreviewsound.obj"
+  "firestorm-bin.dir\Release\llpreviewtexture.obj"
+  "firestorm-bin.dir\Release\llproductinforequest.obj"
+  "firestorm-bin.dir\Release\llprogressview.obj"
+  "firestorm-bin.dir\Release\llrecentpeople.obj"
+  "firestorm-bin.dir\Release\llreflectionmap.obj"
+  "firestorm-bin.dir\Release\llreflectionmapmanager.obj"
+  "firestorm-bin.dir\Release\llheroprobemanager.obj"
+  "firestorm-bin.dir\Release\llregioninfomodel.obj"
+  "firestorm-bin.dir\Release\llregionposition.obj"
+  "firestorm-bin.dir\Release\llremoteparcelrequest.obj"
+  "firestorm-bin.dir\Release\llsaveoutfitcombobtn.obj"
+  "firestorm-bin.dir\Release\llscenemonitor.obj"
+  "firestorm-bin.dir\Release\llsceneview.obj"
+  "firestorm-bin.dir\Release\llscreenchannel.obj"
+  "firestorm-bin.dir\Release\llscripteditor.obj"
+  "firestorm-bin.dir\Release\llscriptfloater.obj"
+  "firestorm-bin.dir\Release\llscrollingpanelparam.obj"
+  "firestorm-bin.dir\Release\llscrollingpanelparambase.obj"
+  "firestorm-bin.dir\Release\llsculptidsize.obj"
+  "firestorm-bin.dir\Release\llsearchableui.obj"
+  "firestorm-bin.dir\Release\llsearchcombobox.obj"
+  "firestorm-bin.dir\Release\llsearchhistory.obj"
+  "firestorm-bin.dir\Release\llsecapi.obj"
+  "firestorm-bin.dir\Release\llsechandler_basic.obj"
+  "firestorm-bin.dir\Release\llselectmgr.obj"
+  "firestorm-bin.dir\Release\llsetkeybinddialog.obj"
+  "firestorm-bin.dir\Release\llsettingspicker.obj"
+  "firestorm-bin.dir\Release\llsettingsvo.obj"
+  "firestorm-bin.dir\Release\llshareavatarhandler.obj"
+  "firestorm-bin.dir\Release\llsidepanelappearance.obj"
+  "firestorm-bin.dir\Release\llsidepanelinventory.obj"
+  "firestorm-bin.dir\Release\llsidepanelinventorysubpanel.obj"
+  "firestorm-bin.dir\Release\llsidepaneliteminfo.obj"
+  "firestorm-bin.dir\Release\llsidepaneltaskinfo.obj"
+  "firestorm-bin.dir\Release\llsidetraypanelcontainer.obj"
+  "firestorm-bin.dir\Release\llskinningutil.obj"
+  "firestorm-bin.dir\Release\llsky.obj"
+  "firestorm-bin.dir\Release\llsnapshotlivepreview.obj"
+  "firestorm-bin.dir\Release\llspatialpartition.obj"
+  "firestorm-bin.dir\Release\llstatslistener.obj"
+  "firestorm-bin.dir\Release\llspeakers.obj"
+  "firestorm-bin.dir\Release\llspeakingindicatormanager.obj"
+  "firestorm-bin.dir\Release\llsplitbutton.obj"
+  "firestorm-bin.dir\Release\llsprite.obj"
+  "firestorm-bin.dir\Release\llstartup.obj"
+  "firestorm-bin.dir\Release\llstartuplistener.obj"
+  "firestorm-bin.dir\Release\llstatusbar.obj"
+  "firestorm-bin.dir\Release\llstylemap.obj"
+  "firestorm-bin.dir\Release\llsurface.obj"
+  "firestorm-bin.dir\Release\llsurfacepatch.obj"
+  "firestorm-bin.dir\Release\llsyntaxid.obj"
+  "firestorm-bin.dir\Release\llsyswellitem.obj"
+  "firestorm-bin.dir\Release\llsyswellwindow.obj"
+  "firestorm-bin.dir\Release\llteleporthistory.obj"
+  "firestorm-bin.dir\Release\llteleporthistorystorage.obj"
+  "firestorm-bin.dir\Release\llterrainpaintmap.obj"
+  "firestorm-bin.dir\Release\lltexturecache.obj"
+  "firestorm-bin.dir\Release\lltexturectrl.obj"
+  "firestorm-bin.dir\Release\lltexturefetch.obj"
+  "firestorm-bin.dir\Release\lltextureinfo.obj"
+  "firestorm-bin.dir\Release\lltextureinfodetails.obj"
+  "firestorm-bin.dir\Release\lltexturestats.obj"
+  "firestorm-bin.dir\Release\lltextureview.obj"
+  "firestorm-bin.dir\Release\llthumbnailctrl.obj"
+  "firestorm-bin.dir\Release\lltinygltfhelper.obj"
+  "firestorm-bin.dir\Release\lltoast.obj"
+  "firestorm-bin.dir\Release\lltoastalertpanel.obj"
+  "firestorm-bin.dir\Release\lltoastgroupnotifypanel.obj"
+  "firestorm-bin.dir\Release\lltoastimpanel.obj"
+  "firestorm-bin.dir\Release\lltoastnotifypanel.obj"
+  "firestorm-bin.dir\Release\lltoastpanel.obj"
+  "firestorm-bin.dir\Release\lltoastscripttextbox.obj"
+  "firestorm-bin.dir\Release\lltoastscriptquestion.obj"
+  "firestorm-bin.dir\Release\lltool.obj"
+  "firestorm-bin.dir\Release\lltoolbarview.obj"
+  "firestorm-bin.dir\Release\lltoolbrush.obj"
+  "firestorm-bin.dir\Release\lltoolcomp.obj"
+  "firestorm-bin.dir\Release\lltooldraganddrop.obj"
+  "firestorm-bin.dir\Release\lltoolface.obj"
+  "firestorm-bin.dir\Release\lltoolfocus.obj"
+  "firestorm-bin.dir\Release\lltoolgrab.obj"
+  "firestorm-bin.dir\Release\lltoolgun.obj"
+  "firestorm-bin.dir\Release\lltoolindividual.obj"
+  "firestorm-bin.dir\Release\lltoolmgr.obj"
+  "firestorm-bin.dir\Release\lltoolmorph.obj"
+  "firestorm-bin.dir\Release\lltoolobjpicker.obj"
+  "firestorm-bin.dir\Release\lltoolpie.obj"
+  "firestorm-bin.dir\Release\lltoolpipette.obj"
+  "firestorm-bin.dir\Release\lltoolplacer.obj"
+  "firestorm-bin.dir\Release\lltoolselect.obj"
+  "firestorm-bin.dir\Release\lltoolselectland.obj"
+  "firestorm-bin.dir\Release\lltoolselectrect.obj"
+  "firestorm-bin.dir\Release\lltracker.obj"
+  "firestorm-bin.dir\Release\lltrackpicker.obj"
+  "firestorm-bin.dir\Release\lltransientdockablefloater.obj"
+  "firestorm-bin.dir\Release\lltransientfloatermgr.obj"
+  "firestorm-bin.dir\Release\lltranslate.obj"
+  "firestorm-bin.dir\Release\lluiavatar.obj"
+  "firestorm-bin.dir\Release\lluilistener.obj"
+  "firestorm-bin.dir\Release\lluploaddialog.obj"
+  "firestorm-bin.dir\Release\llurl.obj"
+  "firestorm-bin.dir\Release\llurldispatcher.obj"
+  "firestorm-bin.dir\Release\llurldispatcherlistener.obj"
+  "firestorm-bin.dir\Release\llurlfloaterdispatchhandler.obj"
+  "firestorm-bin.dir\Release\llurlhistory.obj"
+  "firestorm-bin.dir\Release\llurllineeditorctrl.obj"
+  "firestorm-bin.dir\Release\llurlwhitelist.obj"
+  "firestorm-bin.dir\Release\llversioninfo.obj"
+  "firestorm-bin.dir\Release\llvvmquery.obj"
+  "firestorm-bin.dir\Release\llviewchildren.obj"
+  "firestorm-bin.dir\Release\llviewerassetstats.obj"
+  "firestorm-bin.dir\Release\llviewerassetstorage.obj"
+  "firestorm-bin.dir\Release\llviewerassettype.obj"
+  "firestorm-bin.dir\Release\llviewerassetupload.obj"
+  "firestorm-bin.dir\Release\llviewerattachmenu.obj"
+  "firestorm-bin.dir\Release\llvieweraudio.obj"
+  "firestorm-bin.dir\Release\llviewercamera.obj"
+  "firestorm-bin.dir\Release\llviewerchat.obj"
+  "firestorm-bin.dir\Release\llviewercontrol.obj"
+  "firestorm-bin.dir\Release\llviewercontrollistener.obj"
+  "firestorm-bin.dir\Release\llviewerdisplay.obj"
+  "firestorm-bin.dir\Release\llviewerdisplayname.obj"
+  "firestorm-bin.dir\Release\llviewerfloaterreg.obj"
+  "firestorm-bin.dir\Release\llviewerfoldertype.obj"
+  "firestorm-bin.dir\Release\llviewergenericmessage.obj"
+  "firestorm-bin.dir\Release\llviewergesture.obj"
+  "firestorm-bin.dir\Release\llviewerhelp.obj"
+  "firestorm-bin.dir\Release\llviewerhelputil.obj"
+  "firestorm-bin.dir\Release\llviewerhome.obj"
+  "firestorm-bin.dir\Release\llviewerinventory.obj"
+  "firestorm-bin.dir\Release\llviewerjoint.obj"
+  "firestorm-bin.dir\Release\llviewerjointattachment.obj"
+  "firestorm-bin.dir\Release\llviewerjointmesh.obj"
+  "firestorm-bin.dir\Release\llviewerjoystick.obj"
+  "firestorm-bin.dir\Release\llviewerinput.obj"
+  "firestorm-bin.dir\Release\llviewerlayer.obj"
+  "firestorm-bin.dir\Release\llviewermedia.obj"
+  "firestorm-bin.dir\Release\llviewermedia_streamingaudio.obj"
+  "firestorm-bin.dir\Release\llviewermediafocus.obj"
+  "firestorm-bin.dir\Release\llviewermenu.obj"
+  "firestorm-bin.dir\Release\llviewermenufile.obj"
+  "firestorm-bin.dir\Release\llviewermessage.obj"
+  "firestorm-bin.dir\Release\llviewerobject.obj"
+  "firestorm-bin.dir\Release\llviewerobjectlist.obj"
+  "firestorm-bin.dir\Release\llvieweroctree.obj"
+  "firestorm-bin.dir\Release\llviewerparcelaskplay.obj"
+  "firestorm-bin.dir\Release\llviewerparcelmedia.obj"
+  "firestorm-bin.dir\Release\llviewerparcelmediaautoplay.obj"
+  "firestorm-bin.dir\Release\llviewerparcelmgr.obj"
+  "firestorm-bin.dir\Release\llviewerparceloverlay.obj"
+  "firestorm-bin.dir\Release\llviewerpartsim.obj"
+  "firestorm-bin.dir\Release\llviewerpartsource.obj"
+  "firestorm-bin.dir\Release\llviewerregion.obj"
+  "firestorm-bin.dir\Release\llviewershadermgr.obj"
+  "firestorm-bin.dir\Release\llviewerstats.obj"
+  "firestorm-bin.dir\Release\llviewerstatsrecorder.obj"
+  "firestorm-bin.dir\Release\llviewertexlayer.obj"
+  "firestorm-bin.dir\Release\llviewertexteditor.obj"
+  "firestorm-bin.dir\Release\llviewertexture.obj"
+  "firestorm-bin.dir\Release\llviewertextureanim.obj"
+  "firestorm-bin.dir\Release\llviewertexturelist.obj"
+  "firestorm-bin.dir\Release\llviewerthrottle.obj"
+  "firestorm-bin.dir\Release\llviewerwearable.obj"
+  "firestorm-bin.dir\Release\llviewerwindow.obj"
+  "firestorm-bin.dir\Release\llviewerwindowlistener.obj"
+  "firestorm-bin.dir\Release\llvisualeffect.obj"
+  "firestorm-bin.dir\Release\llvlcomposition.obj"
+  "firestorm-bin.dir\Release\llvlmanager.obj"
+  "firestorm-bin.dir\Release\llvoavatar.obj"
+  "firestorm-bin.dir\Release\llvoavatarself.obj"
+  "firestorm-bin.dir\Release\llvocache.obj"
+  "firestorm-bin.dir\Release\llvograss.obj"
+  "firestorm-bin.dir\Release\llvoicecallhandler.obj"
+  "firestorm-bin.dir\Release\llvoicechannel.obj"
+  "firestorm-bin.dir\Release\llvoiceclient.obj"
+  "firestorm-bin.dir\Release\llvoicevisualizer.obj"
+  "firestorm-bin.dir\Release\llvoicevivox.obj"
+  "firestorm-bin.dir\Release\llvoicewebrtc.obj"
+  "firestorm-bin.dir\Release\llvoinventorylistener.obj"
+  "firestorm-bin.dir\Release\llvopartgroup.obj"
+  "firestorm-bin.dir\Release\llvosky.obj"
+  "firestorm-bin.dir\Release\llvosurfacepatch.obj"
+  "firestorm-bin.dir\Release\llvotree.obj"
+  "firestorm-bin.dir\Release\llvovolume.obj"
+  "firestorm-bin.dir\Release\llvowater.obj"
+  "firestorm-bin.dir\Release\llvowlsky.obj"
+  "firestorm-bin.dir\Release\llwearableitemslist.obj"
+  "firestorm-bin.dir\Release\llwearablelist.obj"
+  "firestorm-bin.dir\Release\llweb.obj"
+  "firestorm-bin.dir\Release\llwebprofile.obj"
+  "firestorm-bin.dir\Release\llwind.obj"
+  "firestorm-bin.dir\Release\llwindowlistener.obj"
+  "firestorm-bin.dir\Release\llwlhandlers.obj"
+  "firestorm-bin.dir\Release\llworld.obj"
+  "firestorm-bin.dir\Release\llworldmap.obj"
+  "firestorm-bin.dir\Release\llworldmapmessage.obj"
+  "firestorm-bin.dir\Release\llworldmipmap.obj"
+  "firestorm-bin.dir\Release\llworldmapview.obj"
+  "firestorm-bin.dir\Release\llxmlrpclistener.obj"
+  "firestorm-bin.dir\Release\llxmlrpctransaction.obj"
+  "firestorm-bin.dir\Release\noise.obj"
+  "firestorm-bin.dir\Release\particleeditor.obj"
+  "firestorm-bin.dir\Release\permissionstracker.obj"
+  "firestorm-bin.dir\Release\pieautohide.obj"
+  "firestorm-bin.dir\Release\piemenu.obj"
+  "firestorm-bin.dir\Release\pieseparator.obj"
+  "firestorm-bin.dir\Release\pieslice.obj"
+  "firestorm-bin.dir\Release\pipeline.obj"
+  "firestorm-bin.dir\Release\qtoolalign.obj"
+  "firestorm-bin.dir\Release\quickprefs.obj"
+  "firestorm-bin.dir\Release\rlvactions.obj"
+  "firestorm-bin.dir\Release\rlvenvironment.obj"
+  "firestorm-bin.dir\Release\rlvcommon.obj"
+  "firestorm-bin.dir\Release\rlveffects.obj"
+  "firestorm-bin.dir\Release\rlvextensions.obj"
+  "firestorm-bin.dir\Release\rlvfloaters.obj"
+  "firestorm-bin.dir\Release\rlvhandler.obj"
+  "firestorm-bin.dir\Release\rlvhelper.obj"
+  "firestorm-bin.dir\Release\rlvinventory.obj"
+  "firestorm-bin.dir\Release\rlvlocks.obj"
+  "firestorm-bin.dir\Release\rlvui.obj"
+  "firestorm-bin.dir\Release\sanitycheck.obj"
+  "firestorm-bin.dir\Release\streamtitledisplay.obj"
+  "firestorm-bin.dir\Release\utilitybar.obj"
+  "firestorm-bin.dir\Release\NACLantispam.obj"
+  "firestorm-bin.dir\Release\NACLfloaterexploresounds.obj"
+  "firestorm-bin.dir\Release\asset.obj"
+  "firestorm-bin.dir\Release\accessor.obj"
+  "firestorm-bin.dir\Release\primitive.obj"
+  "firestorm-bin.dir\Release\animation.obj"
+  "firestorm-bin.dir\Release\llgltfloader.obj"
+  "firestorm-bin.dir\Release\fsgridhandler.obj"
+  "firestorm-bin.dir\Release\fsslurl.obj"
+  "firestorm-bin.dir\Release\llperfstats.obj"
+  "firestorm-bin.dir\Release\fsfloaterdiscord.obj"
+  "firestorm-bin.dir\Release\fsdiscordconnect.obj"
+  "firestorm-bin.dir\Release\growlmanager.obj"
+  "firestorm-bin.dir\Release\growlnotifierwin.obj"
+  "firestorm-bin.dir\Release\llappviewerwin32.obj"
+  "firestorm-bin.dir\Release\llvelopack.obj"
+  "firestorm-bin.dir\Release\llwindebug.obj"
+  Generating code
+  5 of 446281 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1870 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  firestorm-bin.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release\firestorm-bin.exe
+FinalizeBuildStatus:
+  Deleting file "firestorm-bin.dir\Release\firestorm-bin.tlog\unsuccessfulbuild".
+  Touching "firestorm-bin.dir\Release\firestorm-bin.tlog\firestorm-bin.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\firestorm-bin.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (1) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\cmake.vcxproj.metaproj" (61) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\cmake.vcxproj.metaproj" (61) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\cmake.vcxproj" (62) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "cmake.dir\Release\cmake.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "cmake.dir\Release\cmake.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  cmake.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\Release\cmake.lib
+FinalizeBuildStatus:
+  Deleting file "cmake.dir\Release\cmake.tlog\unsuccessfulbuild".
+  Touching "cmake.dir\Release\cmake.tlog\cmake.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\cmake.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\cmake\cmake.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (1) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\llcrashlogger.vcxproj.metaproj" (63) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\llcrashlogger.vcxproj.metaproj" (63) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\llcrashlogger.vcxproj" (64) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "llcrashlogger.dir\Release\llcrashlogger.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "llcrashlogger.dir\Release\llcrashlogger.tlog\unsuccessfulbuild".
+CustomBuild:
+  All outputs are up-to-date.
+ClCompile:
+  All outputs are up-to-date.
+Lib:
+  All outputs are up-to-date.
+  llcrashlogger.vcxproj -> C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\Release\llcrashlogger.lib
+FinalizeBuildStatus:
+  Deleting file "llcrashlogger.dir\Release\llcrashlogger.tlog\unsuccessfulbuild".
+  Touching "llcrashlogger.dir\Release\llcrashlogger.tlog\llcrashlogger.lastbuildstate".
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\llcrashlogger.vcxproj" (default targets).
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\llcrashlogger\llcrashlogger.vcxproj.metaproj" (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (1) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj.metaproj" (65) on node 1 (default targets).
+Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj.metaproj" (65) is building "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj" (66) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Touching "x64\Release\llpackage\llpackage.tlog\unsuccessfulbuild".
+CustomBuild:
+  "The build of 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\bafb0bac8486abc7c8d529c2dddeb3d6\llpackage.rule' depends on 'C:\FS_BUILD\PHOENIX-FIRESTORM\BUILD-VC170-64\NEWVIEW\RELEASE\TOUCHED.BAT' which is produced by the build of 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\a2c0734851d9c5f48c1ebbb9cad65361\touched.bat.rule'. The items cannot be built in parallel."
+  Generating Release/touched.bat
+  C:\Python3\python.exe \
+  C:/FS_Build/phoenix-firestorm/indra/newview/viewer_manifest.py --arch=x86_64 --artwork=C:/FS_Build/phoenix-firestorm/indra/newview --bugsplat= --discord= --fmodstudio=ON --openal=ON --tracy=OFF --velopack=OFF --avx2=ON --build=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview --buildtype=Release --channel=Firestorm-Horizon --configuration=Release --dest=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release --grid=agni --source=C:/FS_Build/phoenix-firestorm/indra/newview --touch=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/touched.bat --versionfile=C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/viewer_version.txt --viewer_flavor=oss
+  Source tree: C:\FS_Build\phoenix-firestorm\indra\newview
+  Artwork tree: C:\FS_Build\phoenix-firestorm\indra\newview
+  Build tree: C:\FS_Build\phoenix-firestorm\build-vc170-64\newview
+  Destination tree: C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release
+  Option: source = C:\FS_Build\phoenix-firestorm\indra\newview
+  Option: artwork = C:\FS_Build\phoenix-firestorm\indra\newview
+  Option: build = C:\FS_Build\phoenix-firestorm\build-vc170-64\newview
+  Option: dest = C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release
+  Option: arch = x86_64
+  Option: bugsplat = 
+  Option: discord = 
+  Option: fmodstudio = ON
+  Option: openal = ON
+  Option: tracy = OFF
+  Option: velopack = OFF
+  Option: avx2 = ON
+  Option: buildtype = Release
+  Option: channel = Firestorm-Horizon
+  Option: configuration = Release
+  Option: grid = None
+  Option: touch = C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/Release/touched.bat
+  Option: versionfile = C:/FS_Build/phoenix-firestorm/build-vc170-64/newview/viewer_version.txt
+  Option: viewer_flavor = oss
+  Option: actions = ['copy', 'package']
+  Option: bundleid = com.secondlife.indra.viewer
+  Option: platform = windows
+  Option: version = ['7', '2', '5', '81729']
+  ================ Creating base package
+  Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
+  Processing dictionaries => app_settings\dictionaries ... 22 files
+  Processing js => skins/default/html/common/equirectangular\js ... 4 files
+  Processing fonts => fonts ... 11 files
+  Processing xui => skins/default\xui ... 11 files
+  Processing *.ini => app_settings\*.ini ... 3 files
+  Processing *.xml => app_settings\*.xml ... 33 files
+  Processing shaders => app_settings\shaders ... 224 files
+  Processing camera => app_settings\camera ... 4 files
+  Processing windlight => app_settings\windlight ... 846 files
+  Processing filters => app_settings\filters ... 30 files
+  Processing beams => app_settings\beams ... 19 files
+  Processing beamsColors => app_settings\beamsColors ... 5 files
+  Processing poses => app_settings\poses ... 9 files
+  Processing static_assets => app_settings\static_assets ... 291 files
+  Processing fs_static_assets => app_settings\fs_static_assets ... 11 files
+  Processing C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\packages-info.txt => app_settings\packages-info.txt ... 1 files
+  Processing *.llm => character\*.llm ... 29 files
+  Processing *.xml => character\*.xml ... 5 files
+  Processing *.tga => character\*.tga ... 62 files
+  Processing *.ttf => fonts\*.ttf ... 45 files
+  Processing *.txt => fonts\*.txt ... 16 files
+  Processing *.xml => fonts\*.xml ... 13 files
+  Processing *.lsltxt => fs_resources\*.lsltxt ... 1 files
+  Processing *.dae => fs_resources\*.dae ... 2 files
+  Processing skins.xml => skins\skins.xml ... 1 files
+  Processing */*.jpg => skins\*/textures\*/*.jpg ... 25 files
+  Processing */*.tga => skins\*/textures\*/*.tga ... 110 files
+  Processing */*.png => skins\*/textures\*/*.png ... 3511 files
+  Processing *.tga => skins\*/textures\*.tga ... 371 files
+  Processing *.j2c => skins\*/textures\*.j2c ... 54 files
+  Processing *.jpg => skins\*/textures\*.jpg ... 1 files
+  Processing *.png => skins\*/textures\*.png ... 66 files
+  Processing textures.xml => skins\*/textures\textures.xml ... 8 files
+  Processing */xui/*/*.xml => skins\*/xui/*/*.xml ... 8222 files
+  Processing */xui/*/widgets/*.xml => skins\*/xui/*/widgets/*.xml ... 342 files
+  Processing */themes/*/colors.xml => skins\*/themes/*/colors.xml ... 18 files
+  Processing */*.tga => skins\*/themes/*/textures\*/*.tga ... 29 files
+  Processing */*.jpg => skins\*/themes/*/textures\*/*.jpg ... 10 files
+  Processing */*.png => skins\*/themes/*/textures\*/*.png ... 8716 files
+  Processing *.tga => skins\*/themes/*/textures\*.tga ... 1134 files
+  Processing *.j2c => skins\*/themes/*/textures\*.j2c ... 181 files
+  Processing *.png => skins\*/themes/*/textures\*.png ... 173 files
+  Processing */*.xml => skins\*/*.xml ... 15 files
+  Processing */*/*.html => skins\*/html\*/*/*.html ... 27 files
+  Processing ..\build_data.json => build_data.json ... 1 files
+  Processing Release/firestorm-bin.exe => FirestormOS-Horizon.exe ... 1 files
+  Processing ..\llplugin\slplugin\Release\slplugin.exe => slplugin.exe ... 1 files
+  Processing llwebrtc.dll => llwebrtc.dll ... 1 files
+  Processing glod.dll => glod.dll ... 1 files
+  Processing fmod.dll => fmod.dll ... 1 files
+  Processing OpenAL32.dll => OpenAL32.dll ... 1 files
+  Processing alut.dll => alut.dll ... 1 files
+  Processing openjp2.dll => openjp2.dll ... 1 files
+  Processing msvcp140.dll => msvcp140.dll ... 1 files
+  Processing msvcp140_1.dll => msvcp140_1.dll ... 1 files
+  Processing msvcp140_2.dll => msvcp140_2.dll ... 1 files
+  Processing msvcp140_atomic_wait.dll => msvcp140_atomic_wait.dll ... 1 files
+  Processing msvcp140_codecvt_ids.dll => msvcp140_codecvt_ids.dll ... 1 files
+  Processing vcruntime140.dll => vcruntime140.dll ... 1 files
+  Processing vcruntime140_1.dll => vcruntime140_1.dll ... 1 files
+  Processing vcruntime140_threads.dll => vcruntime140_threads.dll ... 1 files
+  Processing SLVoice.exe => SLVoice.exe ... 1 files
+  Processing vivoxsdk_x64.dll => vivoxsdk_x64.dll ... 1 files
+  Processing ortp_x64.dll => ortp_x64.dll ... 1 files
+  Processing growl.dll => growl.dll ... 1 files
+  Processing growl++.dll => growl++.dll ... 1 files
+  Processing licenses-win32.txt => licenses.txt ... 1 files
+  Processing featuretable.txt => featuretable.txt ... 1 files
+  Processing cube.dae => cube.dae ... 1 files
+  Processing ca-bundle.crt => ca-bundle.crt ... 1 files
+  Processing VivoxAUP.txt => VivoxAUP.txt ... 1 files
+  Processing media_plugin_cef.dll => llplugin\media_plugin_cef.dll ... 1 files
+  Processing media_plugin_libvlc.dll => llplugin\media_plugin_libvlc.dll ... 1 files
+  Processing chrome_elf.dll => llplugin\chrome_elf.dll ... 1 files
+  Processing d3dcompiler_47.dll => llplugin\d3dcompiler_47.dll ... 1 files
+  Processing dxcompiler.dll => llplugin\dxcompiler.dll ... 1 files
+  Processing dxil.dll => llplugin\dxil.dll ... 1 files
+  Processing libcef.dll => llplugin\libcef.dll ... 1 files
+  Processing libEGL.dll => llplugin\libEGL.dll ... 1 files
+  Processing libGLESv2.dll => llplugin\libGLESv2.dll ... 1 files
+  Processing v8_context_snapshot.bin => llplugin\v8_context_snapshot.bin ... 1 files
+  Processing vk_swiftshader.dll => llplugin\vk_swiftshader.dll ... 1 files
+  Processing vk_swiftshader_icd.json => llplugin\vk_swiftshader_icd.json ... 1 files
+  Processing vulkan-1.dll => llplugin\vulkan-1.dll ... 1 files
+  Processing dullahan_host.exe => llplugin\dullahan_host.exe ... 1 files
+  Processing msvcp140.dll => llplugin\msvcp140.dll ... 1 files
+  Processing vcruntime140.dll => llplugin\vcruntime140.dll ... 1 files
+  Processing vcruntime140_1.dll => llplugin\vcruntime140_1.dll ... 1 files
+  Processing chrome_100_percent.pak => llplugin\chrome_100_percent.pak ... 1 files
+  Processing chrome_200_percent.pak => llplugin\chrome_200_percent.pak ... 1 files
+  Processing resources.pak => llplugin\resources.pak ... 1 files
+  Processing icudtl.dat => llplugin\icudtl.dat ... 1 files
+  Processing am.pak => llplugin\locales\am.pak ... 1 files
+  Processing ar.pak => llplugin\locales\ar.pak ... 1 files
+  Processing bg.pak => llplugin\locales\bg.pak ... 1 files
+  Processing bn.pak => llplugin\locales\bn.pak ... 1 files
+  Processing ca.pak => llplugin\locales\ca.pak ... 1 files
+  Processing cs.pak => llplugin\locales\cs.pak ... 1 files
+  Processing da.pak => llplugin\locales\da.pak ... 1 files
+  Processing de.pak => llplugin\locales\de.pak ... 1 files
+  Processing el.pak => llplugin\locales\el.pak ... 1 files
+  Processing en-GB.pak => llplugin\locales\en-GB.pak ... 1 files
+  Processing en-US.pak => llplugin\locales\en-US.pak ... 1 files
+  Processing es-419.pak => llplugin\locales\es-419.pak ... 1 files
+  Processing es.pak => llplugin\locales\es.pak ... 1 files
+  Processing et.pak => llplugin\locales\et.pak ... 1 files
+  Processing fa.pak => llplugin\locales\fa.pak ... 1 files
+  Processing fi.pak => llplugin\locales\fi.pak ... 1 files
+  Processing fil.pak => llplugin\locales\fil.pak ... 1 files
+  Processing fr.pak => llplugin\locales\fr.pak ... 1 files
+  Processing gu.pak => llplugin\locales\gu.pak ... 1 files
+  Processing he.pak => llplugin\locales\he.pak ... 1 files
+  Processing hi.pak => llplugin\locales\hi.pak ... 1 files
+  Processing hr.pak => llplugin\locales\hr.pak ... 1 files
+  Processing hu.pak => llplugin\locales\hu.pak ... 1 files
+  Processing id.pak => llplugin\locales\id.pak ... 1 files
+  Processing it.pak => llplugin\locales\it.pak ... 1 files
+  Processing ja.pak => llplugin\locales\ja.pak ... 1 files
+  Processing kn.pak => llplugin\locales\kn.pak ... 1 files
+  Processing ko.pak => llplugin\locales\ko.pak ... 1 files
+  Processing lt.pak => llplugin\locales\lt.pak ... 1 files
+  Processing lv.pak => llplugin\locales\lv.pak ... 1 files
+  Processing ml.pak => llplugin\locales\ml.pak ... 1 files
+  Processing mr.pak => llplugin\locales\mr.pak ... 1 files
+  Processing ms.pak => llplugin\locales\ms.pak ... 1 files
+  Processing nb.pak => llplugin\locales\nb.pak ... 1 files
+  Processing nl.pak => llplugin\locales\nl.pak ... 1 files
+  Processing pl.pak => llplugin\locales\pl.pak ... 1 files
+  Processing pt-BR.pak => llplugin\locales\pt-BR.pak ... 1 files
+  Processing pt-PT.pak => llplugin\locales\pt-PT.pak ... 1 files
+  Processing ro.pak => llplugin\locales\ro.pak ... 1 files
+  Processing ru.pak => llplugin\locales\ru.pak ... 1 files
+  Processing sk.pak => llplugin\locales\sk.pak ... 1 files
+  Processing sl.pak => llplugin\locales\sl.pak ... 1 files
+  Processing sr.pak => llplugin\locales\sr.pak ... 1 files
+  Processing sv.pak => llplugin\locales\sv.pak ... 1 files
+  Processing sw.pak => llplugin\locales\sw.pak ... 1 files
+  Processing ta.pak => llplugin\locales\ta.pak ... 1 files
+  Processing te.pak => llplugin\locales\te.pak ... 1 files
+  Processing th.pak => llplugin\locales\th.pak ... 1 files
+  Processing tr.pak => llplugin\locales\tr.pak ... 1 files
+  Processing uk.pak => llplugin\locales\uk.pak ... 1 files
+  Processing vi.pak => llplugin\locales\vi.pak ... 1 files
+  Processing zh-CN.pak => llplugin\locales\zh-CN.pak ... 1 files
+  Processing zh-TW.pak => llplugin\locales\zh-TW.pak ... 1 files
+  Processing libvlc.dll => llplugin\libvlc.dll ... 1 files
+  Processing libvlccore.dll => llplugin\libvlccore.dll ... 1 files
+  Processing plugins/ => llplugin\plugins/ ... 367 files
+  Processing compatibility.manifest => slplugin.exe.manifest ... 1 files
+  Processing compatibility.manifest => llplugin\dullahan_host.exe.manifest ... 1 files
+  Signing configuration is missing. Skipping signing process.
+  Running command: 'C:\Program Files (x86)\NSIS\Unicode\makensis.exe' /V2 'C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\Release\firestorm_setup_tmp.nsi'
+  Traceback (most recent call last):
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\viewer_manifest.py", line 2521, in <module>
+      main(extra=extra_arguments)
+      ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\..\lib\python\indra\util\llmanifest.py", line 261, in main
+      wm.do(*args['actions'])
+      ~~~~~^^^^^^^^^^^^^^^^^^
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\..\lib\python\indra\util\llmanifest.py", line 969, in do
+      method()
+      ~~~~~~^^
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\viewer_manifest.py", line 974, in package_finish
+      self.nsis_package_finish()
+      ~~~~~~~~~~~~~~~~~~~~~~~~^^
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\viewer_manifest.py", line 1193, in nsis_package_finish
+      self.run_command([possible_path, '/V2', self.dst_path_of(tempfile)])
+      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\FS_Build\phoenix-firestorm\indra\newview\..\lib\python\indra\util\llmanifest.py", line 551, in run_command
+      subprocess.check_call(command, **kwds)
+      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+    File "C:\Python3\Lib\subprocess.py", line 415, in check_call
+      retcode = call(*popenargs, **kwargs)
+    File "C:\Python3\Lib\subprocess.py", line 396, in call
+      with Popen(*popenargs, **kwargs) as p:
+           ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Python3\Lib\subprocess.py", line 1039, in __init__
+      self._execute_child(args, executable, preexec_fn, close_fds,
+      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          pass_fds, cwd, env,
+                          ^^^^^^^^^^^^^^^^^^^
+      ...<5 lines>...
+                          gid, gids, uid, umask,
+                          ^^^^^^^^^^^^^^^^^^^^^^
+                          start_new_session, process_group)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Python3\Lib\subprocess.py", line 1553, in _execute_child
+      hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                               # no special security
+                               ^^^^^^^^^^^^^^^^^^^^^
+      ...<4 lines>...
+                               cwd,
+                               ^^^^
+                               startupinfo)
+                               ^^^^^^^^^^^^
+  FileNotFoundError: [WinError 2] The system cannot find the file specified
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): error MSB8066: Custom build for 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\a2c0734851d9c5f48c1ebbb9cad65361\touched.bat.rule;C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\bafb0bac8486abc7c8d529c2dddeb3d6\llpackage.rule' exited with code 1. [C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj]
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj.metaproj" (default targets) -- FAILED.
+Done Building Project "C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+"C:\FS_Build\phoenix-firestorm\build-vc170-64\Firestorm.sln" (Build target) (1) ->
+"C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj.metaproj" (default target) (65) ->
+"C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj" (default target) (66) ->
+(CustomBuild target) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): error MSB8066: Custom build for 'C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\a2c0734851d9c5f48c1ebbb9cad65361\touched.bat.rule;C:\FS_Build\phoenix-firestorm\build-vc170-64\CMakeFiles\bafb0bac8486abc7c8d529c2dddeb3d6\llpackage.rule' exited with code 1. [C:\FS_Build\phoenix-firestorm\build-vc170-64\newview\llpackage.vcxproj]
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:03:46.76
+Build failed!
+ERROR: building configuration {'configure': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'build': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'default': False, 'name': 'ReleaseFS_open'} returned 1
+For more information: try re-running your command with --verbose or --debug
