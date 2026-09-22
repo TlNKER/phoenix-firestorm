@@ -717,6 +717,16 @@ void FSFloaterIM::doToSelected(const LLSD& userdata)
     {
         LLAvatarActions::requestFriendshipDialog(mOtherParticipantUUID);
     }
+    // <FS:Tinkerstorm> Preferences-independent "Request Sysinfo" IM toolbar
+    // button. Sends the literal /reqsysinfo chat command (see
+    // FSData::processRequestForInfo() in fsdata.cpp) - the recipient's
+    // client only actually reacts to it if WE are flagged Support/Developer/
+    // QA in FSData; otherwise it's just an inert line of chat to them.
+    else if (command == "req_sysinfo")
+    {
+        sendMsg("/reqsysinfo");
+    }
+    // </FS:Tinkerstorm>
     else if (command == "history")
     {
         if (gSavedSettings.getBOOL("FSUseBuiltInHistory"))
@@ -949,6 +959,7 @@ bool FSFloaterIM::postBuild()
                 getChild<LLLayoutPanel>("end_call_btn_panel")->setVisible(false);
                 getChild<LLLayoutPanel>("voice_ctrls_btn_panel")->setVisible(false);
                 getChild<LLLayoutPanel>("add_participant_panel")->setVisible(false);
+                getChild<LLLayoutPanel>("req_sysinfo_btn_panel")->setVisible(false); // <FS:Tinkerstorm> P2P-only, same as tp_panel
 
                 LL_DEBUGS("FSFloaterIM") << "LLIMModel::LLIMSession::GROUP_SESSION end" << LL_ENDL;
                 break;
@@ -964,6 +975,7 @@ bool FSFloaterIM::postBuild()
                 getChild<LLLayoutPanel>("pay_panel")->setVisible(false);
                 getChild<LLLayoutPanel>("end_call_btn_panel")->setVisible(false);
                 getChild<LLLayoutPanel>("voice_ctrls_btn_panel")->setVisible(false);
+                getChild<LLLayoutPanel>("req_sysinfo_btn_panel")->setVisible(false); // <FS:Tinkerstorm> P2P-only, same as tp_panel
                 LL_DEBUGS("FSFloaterIM") << "LLIMModel::LLIMSession::ADHOC_SESSION end" << LL_ENDL;
                 break;
             }

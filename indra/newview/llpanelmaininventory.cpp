@@ -1268,13 +1268,22 @@ void LLPanelMainInventory::updateFilterDropdown(const LLInventoryFilter* filter)
  static void onShowLibraryFolderPrefChanged(const LLSD& new_value)
  {
      bool visible = new_value.asBoolean();
+     // "inventory" floaters are LLFloaterSidePanelContainer, not
+     // LLPanelMainInventory directly (see llviewerfloaterreg.cpp) - have to
+     // drill down through the "main_panel" child, same as
+     // LLPanelMainInventory::newFolderWindow() does above.
      LLFloaterReg::const_instance_list_t& inst_list = LLFloaterReg::getFloaterList("inventory");
      for (LLFloaterReg::const_instance_list_t::const_iterator iter = inst_list.begin(); iter != inst_list.end(); ++iter)
      {
-         LLPanelMainInventory* main_panel = dynamic_cast<LLPanelMainInventory*>(*iter);
-         if (main_panel && main_panel->getAllItemsPanel())
+         LLFloaterSidePanelContainer* inventory_container = dynamic_cast<LLFloaterSidePanelContainer*>(*iter);
+         if (!inventory_container)
          {
-             main_panel->getAllItemsPanel()->setLibraryFolderVisible(visible);
+             continue;
+         }
+         LLSidepanelInventory* sidepanel_inventory = dynamic_cast<LLSidepanelInventory*>(inventory_container->findChild<LLPanel>("main_panel", true));
+         if (sidepanel_inventory && sidepanel_inventory->getMainInventoryPanel() && sidepanel_inventory->getMainInventoryPanel()->getAllItemsPanel())
+         {
+             sidepanel_inventory->getMainInventoryPanel()->getAllItemsPanel()->setLibraryFolderVisible(visible);
          }
      }
  }
