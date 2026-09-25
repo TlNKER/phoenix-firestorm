@@ -84,8 +84,8 @@ class LLOutfitTabDateComparator : public LLAccordionCtrl::LLTabComparator
     LOG_CLASS(LLOutfitTabDateComparator);
 
 public:
-    LLOutfitTabDateComparator() {};
-    virtual ~LLOutfitTabDateComparator() {};
+    LLOutfitTabDateComparator() = default;
+    virtual ~LLOutfitTabDateComparator() = default;
 
     /*virtual*/ bool compare(const LLAccordionCtrlTab* tab1, const LLAccordionCtrlTab* tab2) const;
 };
@@ -101,8 +101,8 @@ class LLOutfitTabFavDateComparator : public LLAccordionCtrl::LLTabComparator
     LOG_CLASS(LLOutfitTabFavDateComparator);
 
 public:
-    LLOutfitTabFavDateComparator() {};
-    virtual ~LLOutfitTabFavDateComparator() {};
+    LLOutfitTabFavDateComparator() = default;
+    virtual ~LLOutfitTabFavDateComparator() = default;
 
     /*virtual*/ bool compare(const LLAccordionCtrlTab* tab1, const LLAccordionCtrlTab* tab2) const;
 };
@@ -422,6 +422,12 @@ private:
 
     /*virtual*/ void sortOutfits();
     /*virtual*/ void arrange(); // <FS:Ansariel> Arrange accordions after all have been added
+
+    // <FS:TP> [FIRE-36105] Resort the accordion when a tracked outfit's
+    // contents change, not just when the outfit tab is first added (see
+    // updateAddedCategory() / onOutfitItemsChanged() in the .cpp)
+    void onOutfitItemsChanged(const LLUUID& cat_id);
+    // </FS:TP>
 
     /*virtual*/ void onSetSelectedOutfitByUUID(const LLUUID& outfit_uuid);
 
