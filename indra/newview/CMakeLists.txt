@@ -128,6 +128,7 @@ set(viewer_SOURCE_FILES
     fsfloatergroup.cpp
     fsfloatergrouptitles.cpp
     fsgrouptitleregionmgr.cpp
+    fsfloaterhiddensystemfolders.cpp # <FS:Horizon> Hidden System Folders
     fsfloaterimport.cpp
     fsfloaterim.cpp
     fsfloaterimcontainer.cpp
@@ -138,6 +139,8 @@ set(viewer_SOURCE_FILES
     fsfloaterposestand.cpp
     fsfloaterprotectedfolders.cpp
     fsfloaterradar.cpp
+    fsfloaterregionintel.cpp # <FS:Horizon> Region Intel
+    fsfloaterscriptedattachments.cpp
     fsfloatersearch.cpp
     fsfloatersplashscreensettings.cpp
     fsfloaterstatistics.cpp
@@ -988,6 +991,7 @@ set(viewer_HEADER_FILES
     fsfloatergroup.h
     fsfloatergrouptitles.h
     fsgrouptitleregionmgr.h
+    fsfloaterhiddensystemfolders.h # <FS:Horizon> Hidden System Folders
     fsfloaterimport.h
     fsfloaterim.h
     fsfloaterimcontainer.h
@@ -999,6 +1003,8 @@ set(viewer_HEADER_FILES
     fsfloaterposestand.h
     fsfloaterprotectedfolders.h
     fsfloaterradar.h
+    fsfloaterregionintel.h # <FS:Horizon> Region Intel
+    fsfloaterscriptedattachments.h
     fsfloatersearch.h
     fsfloatersplashscreensettings.h
     fsfloaterstatistics.h

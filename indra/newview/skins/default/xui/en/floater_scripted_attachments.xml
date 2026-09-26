@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- <FS:Horizon> Scan scripted attachments -->
+<floater
+ name="scripted_attachments"
+ title="Scripted Attachments"
+ save_rect="true"
+ save_visibility="true"
+ single_instance="true"
+ reuse_instance="true"
+ layout="topleft"
+ height="320"
+ width="460"
+ min_height="200"
+ min_width="360"
+ can_resize="true">
+  <text
+   follows="left|top|right"
+   height="16"
+   font="SansSerifSmall"
+   left="10"
+   top="6"
+   right="-10"
+   layout="topleft"
+   use_ellipses="true"
+   name="status_text"
+   value="Waiting for scan..." />
+  <scroll_list
+   name="results_list"
+   tool_tip="Scripted attachments found on this avatar, sorted by script time per frame."
+   height="276"
+   right="-10"
+   layout="topleft"
+   follows="all"
+   top_pad="6"
+   left="10"
+   multi_select="false"
+   draw_heading="true"
+   column_padding="0"
+   sort_column="3"
+   sort_ascending="false"
+   search_column="0">
+   <scroll_list.columns
+    name="attachment_name"
+    label="Attachment"
+    dynamic_width="true"/>
+   <scroll_list.columns
+    name="attachment_point"
+    label="Point"
+    width="90"/>
+   <scroll_list.columns
+    name="script_count"
+    label="Scripts"
+    width="55"/>
+   <scroll_list.columns
+    name="script_ms"
+    label="ms/frame"
+    width="70"/>
+  </scroll_list>
+ </floater>
+<!-- </FS:Horizon> -->

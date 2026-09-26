@@ -29,9 +29,11 @@
 
 #include "fscommon.h"
 #include "fslslbridge.h"
+#include "fsfloaterscriptedattachments.h" // <FS:Horizon> Scan scripted attachments
 #include "fslslbridgerequest.h"
 
 #include "apr_base64.h" // For getScriptInfo()
+#include <ctime> // <FS:Horizon> Region Uptime
 #include "llagent.h"
 #include "llappearancemgr.h"
 #include "llattachmentsmgr.h"
@@ -55,7 +57,7 @@
 static const std::string FS_BRIDGE_FOLDER = "#LSL Bridge";
 static const std::string FS_BRIDGE_CONTAINER_FOLDER = "Landscaping";
 static const U32 FS_BRIDGE_MAJOR_VERSION = 2;
-static const U32 FS_BRIDGE_MINOR_VERSION = 29;
+static const U32 FS_BRIDGE_MINOR_VERSION = 31;
 static const U32 FS_MAX_MINOR_VERSION = 99;
 static const std::string UPLOAD_SCRIPT_CURRENT = "EBEDD1D2-A320-43f5-88CF-DD47BBCA5DFB.lsltxt";
 static const std::string FS_STATE_ATTRIBUTE = "state=";
@@ -493,6 +495,145 @@ bool FSLSLBridge::lslToViewer(std::string_view message, const LLUUID& fromID, co
         }
     }
     // </FS:PP>
+
+    // <FS:Horizon> Scripted attachment scan (God Mode tool)
+    else if (tag == "<bridgeScanBegin>")
+    {
+        status = true;
+        size_t tag_size = tag.size();
+        size_t endPos = message.find("</bridgeScanBegin>");
+        if (endPos != std::string::npos)
+        {
+            std::string idString = static_cast<std::string>(message.substr(tag_size, endPos - tag_size));
+            mScanTargetID = LLUUID(idString);
+            mScanResults = LLSD::emptyArray();
+            mScanInProgress = true;
+        }
+    }
+    else if (tag == "<bridgeScanChunk>")
+    {
+        status = true;
+        size_t tag_size = tag.size();
+        size_t endPos = message.find("</bridgeScanChunk>");
+        if (endPos != std::string::npos && mScanInProgress)
+        {
+            std::string chunkString = static_cast<std::string>(message.substr(tag_size, endPos - tag_size));
+            std::istringstream recordStream(chunkString);
+            std::string record;
+            while (std::getline(recordStream, record, ';'))
+            {
+                std::vector<std::string> fields;
+                std::istringstream fieldStream(record);
+                std::string field;
+                while (std::getline(fieldStream, field, '|'))
+                {
+                    fields.push_back(field);
+                }
+                if (fields.size() == 4)
+                {
+                    std::string attName = fields[0];
+                    S32 base64Length = apr_base64_decode_len(attName.c_str());
+                    if (base64Length)
+                    {
+                        std::vector<U8> base64VectorData;
+                        base64VectorData.resize(base64Length);
+                        base64Length = apr_base64_decode_binary(&base64VectorData[0], attName.c_str());
+                        base64VectorData.resize(base64Length);
+                        attName.assign(base64VectorData.begin(), base64VectorData.end());
+                    }
+                    else
+                    {
+                        LL_WARNS("FSLSLBridge") << "ScanAttachments - attachment name cannot be decoded" << LL_ENDL;
+                    }
+
+                    LLSD row;
+                    row["name"] = attName;
+                    try
+                    {
+                        row["count"] = std::stoi(fields[1]);
+                        row["ms"] = (F64)std::stof(fields[2]);
+                        S32 attachPoint = std::stoi(fields[3]);
+                        row["point_name"] = (attachPoint < 1 || attachPoint > 255) ? std::string("---") : LLTrans::getString(LLAvatarAppearance::getAttachmentPointName(attachPoint));
+                    }
+                    catch (const std::exception&)
+                    {
+                        LL_WARNS("FSLSLBridge") << "ScanAttachments - malformed record: " << record << LL_ENDL;
+                        continue;
+                    }
+                    mScanResults.append(row);
+                }
+            }
+        }
+    }
+    else if (tag == "<bridgeScanEnd>")
+    {
+        status = true;
+        size_t tag_size = tag.size();
+        size_t endPos = message.find("</bridgeScanEnd>");
+        if (endPos != std::string::npos)
+        {
+            std::string resultStatus = static_cast<std::string>(message.substr(tag_size, endPos - tag_size));
+            FSFloaterScriptedAttachments::showResults(mScanTargetID, mScanResults, resultStatus);
+        }
+        mScanInProgress = false;
+        mScanResults = LLSD::emptyArray();
+    }
+    // </FS:Horizon>
+
+    // <FS:Horizon> Region Uptime (God Mode tool)
+    else if (tag == "<bridgeRegionUptime>")
+    {
+        status = true;
+        size_t tag_size = tag.size();
+        size_t endPos = message.find("</bridgeRegionUptime>");
+        if (endPos != std::string::npos)
+        {
+            std::string stampString = static_cast<std::string>(message.substr(tag_size, endPos - tag_size));
+            time_t start_time = 0;
+            try
+            {
+                start_time = (time_t)std::stoll(stampString);
+            }
+            catch (const std::exception&)
+            {
+                start_time = 0;
+            }
+
+            if (start_time > 0)
+            {
+                time_t now = time(nullptr);
+                S64 elapsed = (S64)difftime(now, start_time);
+                if (elapsed < 0)
+                {
+                    elapsed = 0;
+                }
+                S32 days = (S32)(elapsed / 86400);
+                S32 hours = (S32)((elapsed % 86400) / 3600);
+                S32 minutes = (S32)((elapsed % 3600) / 60);
+
+                char timeBuf[64];
+                struct tm* start_tm = gmtime(&start_time);
+                if (start_tm)
+                {
+                    strftime(timeBuf, sizeof(timeBuf), "%Y-%m-%d %H:%M:%S UTC", start_tm);
+                }
+                else
+                {
+                    strcpy(timeBuf, "(unknown)");
+                }
+
+                std::string region_name = gAgent.getRegion() ? gAgent.getRegion()->getName() : std::string("(unknown region)");
+                std::string report = llformat("Region Uptime - %s\nStarted: %s\nUptime: %dd %dh %dm",
+                    region_name.c_str(), timeBuf, days, hours, minutes);
+                FSCommon::report_to_nearby_chat(report);
+            }
+            else
+            {
+                FSCommon::report_to_nearby_chat(std::string("Region Uptime - unable to determine region start time."));
+            }
+        }
+    }
+    // </FS:Horizon>
 
     // <FS:PP> Movelock state response
     else if (tag == "<bridgeMovelock ")

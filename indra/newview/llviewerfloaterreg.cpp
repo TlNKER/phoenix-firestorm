@@ -205,6 +205,7 @@
 #include "fsfloaterblocklist.h"
 #include "fsfloatergroup.h"
 #include "fsfloatergrouptitles.h"
+#include "fsfloaterhiddensystemfolders.h" // <FS:Horizon> Hidden System Folders
 #include "fsfloaterimport.h"
 #include "fsfloaterim.h"
 #include "fsfloaterimcontainer.h"
@@ -213,6 +214,8 @@
 #include "fsfloaterposestand.h"
 #include "fsfloaterprotectedfolders.h"
 #include "fsfloaterradar.h"
+#include "fsfloaterregionintel.h" // <FS:Horizon> Region Intel
+#include "fsfloaterscriptedattachments.h" // <FS:Horizon> Scan scripted attachments
 #include "fsfloatersearch.h"
 #include "fsfloatersplashscreensettings.h"
 #include "fsfloaterstatistics.h"
@@ -472,6 +475,7 @@ void LLViewerFloaterReg::registerFloaters()
 
     LLFloaterReg::add("help_browser", "floater_help_browser.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterHelpBrowser>);
     LLFloaterReg::add("edit_hover_height", "floater_edit_hover_height.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterHoverHeight>);
+    LLFloaterReg::add("hidden_system_folders", "floater_hidden_system_folders.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<FSFloaterHiddenSystemFolders>); // <FS:Horizon> Hidden System Folders
     LLFloaterReg::add("hud", "floater_hud.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterHUD>);
 
     // <FS:Ansariel> [FS communication UI]
@@ -672,10 +676,12 @@ void LLViewerFloaterReg::registerFloaters()
 	LLFloaterReg::add("phototools", "floater_phototools.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<FloaterQuickPrefs>); // Corrected line - using string literal "phototools"
     LLFloaterReg::add("phototools_camera", "floater_phototools_camera.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterCamera>);
     LLFloaterReg::add("quickprefs", "floater_quickprefs.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<FloaterQuickPrefs>);
+    LLFloaterReg::add("region_intel", "floater_region_intel.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<FSFloaterRegionIntel>); // <FS:Horizon> Region Intel
     LLFloaterReg::add("region_tracker", "floater_region_tracker.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<ALFloaterRegionTracker>);
     LLFloaterReg::add("search_replace", "floater_search_replace.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterSearchReplace>);
     LLFloaterReg::add("secondary_inventory", "floater_my_inventory.xml", (LLFloaterBuildFunc)&LLSidepanelInventory::createSecondaryInventoryWindow);
     LLFloaterReg::add("script_recover", "floater_script_recover.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterScriptRecover>);
+    LLFloaterReg::add("scripted_attachments", "floater_scripted_attachments.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<FSFloaterScriptedAttachments>); // <FS:Horizon> Scan scripted attachments
     LLFloaterReg::add("sound_explorer", "floater_NACL_explore_sounds.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<NACLFloaterExploreSounds>);
     LLFloaterReg::add("vram_usage", "floater_fs_vram_usage.xml", static_cast<LLFloaterBuildFunc>(&LLFloaterReg::build<FSFloaterVRAMUsage>));
     LLFloaterReg::add("local_mesh_floater", "floater_vj_local_mesh.xml", (LLFloaterBuildFunc)&LLFloaterReg::build<LLFloaterLocalMesh>); // local mesh

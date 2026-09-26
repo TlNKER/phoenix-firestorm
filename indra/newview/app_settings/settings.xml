@@ -19495,6 +19495,19 @@ Change of this parameter will affect the layout of buttons in notification toast
     <key>Backup</key>
     <integer>0</integer>
   </map>
+  <!-- <FS:Horizon> Hidden System Folders (God Mode) -->
+  <key>FSHiddenSystemFolders</key>
+  <map>
+    <key>Comment</key>
+    <string>Names of system/virtual inventory folders the user has chosen to hide from the inventory panel via God Mode > Hidden system folders.</string>
+    <key>Persist</key>
+    <integer>1</integer>
+    <key>Type</key>
+    <string>LLSD</string>
+    <key>Value</key>
+    <array/>
+  </map>
+  <!-- </FS:Horizon> -->
   <!--<FS:HG> FS-1734 seperate name and text styles for moderator-->
   <key>FSHighlightGroupMods</key>
   <map>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- <FS:Horizon> Hidden System Folders -->
+<floater
+ name="hidden_system_folders"
+ title="Hidden System Folders"
+ save_rect="true"
+ save_visibility="true"
+ single_instance="true"
+ reuse_instance="true"
+ layout="topleft"
+ height="260"
+ width="320"
+ min_height="200"
+ min_width="260"
+ can_resize="true">
+  <text
+   follows="left|top|right"
+   height="28"
+   font="SansSerifSmall"
+   left="10"
+   top="6"
+   right="-10"
+   layout="topleft"
+   wrap="true"
+   name="help_text"
+   value="Tick a folder to show it in your inventory, or untick it to hide it." />
+  <scroll_list
+   name="folder_list"
+   tool_tip="System and virtual inventory folders you can choose to show or hide."
+   height="170"
+   right="-10"
+   layout="topleft"
+   follows="all"
+   top_pad="6"
+   left="10"
+   multi_select="false"
+   draw_heading="true"
+   column_padding="0"
+   search_column="1">
+   <scroll_list.columns
+    name="shown"
+    label="Show"
+    width="50"/>
+   <scroll_list.columns
+    name="folder_name"
+    label="Folder"
+    dynamic_width="true"/>
+  </scroll_list>
+  <button
+   follows="bottom|right"
+   height="23"
+   width="80"
+   layout="topleft"
+   left="10"
+   bottom="-10"
+   label="OK"
+   name="ok_btn" />
+  <button
+   follows="bottom|right"
+   height="23"
+   width="80"
+   layout="topleft"
+   left_pad="6"
+   bottom="-10"
+   label="Apply"
+   name="apply_btn" />
+  <button
+   follows="bottom|right"
+   height="23"
+   width="80"
+   layout="topleft"
+   left_pad="6"
+   bottom="-10"
+   label="Cancel"
+   name="cancel_btn" />
+ </floater>
+<!-- </FS:Horizon> -->

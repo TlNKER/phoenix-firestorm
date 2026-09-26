@@ -3561,7 +3561,7 @@ bool LLAppViewer::initConfiguration()
     //
     // Set the name of the window
     //
-    gWindowTitle = "Tinkerstorm";    // <FS:CR>
+    gWindowTitle = "Horizon";    // <FS:CR>
 #if LL_DEBUG
     gWindowTitle += std::string(" [DEBUG]");
 #endif

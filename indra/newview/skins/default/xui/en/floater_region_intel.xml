@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- <FS:Horizon> Region Intel -->
+<floater
+ name="region_intel"
+ title="Region Intel"
+ save_rect="true"
+ save_visibility="true"
+ single_instance="true"
+ reuse_instance="true"
+ layout="topleft"
+ height="360"
+ width="420"
+ min_height="260"
+ min_width="320"
+ can_resize="true">
+  <text_editor
+   left="10"
+   top="10"
+   type="string"
+   length="1"
+   follows="all"
+   font="Monospace"
+   height="330"
+   width="396"
+   layout="topleft"
+   max_length="4096"
+   name="region_intel_output"
+   word_wrap="false"
+   track_end="false"
+   read_only="true">
+  </text_editor>
+ </floater>
+<!-- </FS:Horizon> -->

@@ -35,6 +35,10 @@
 
 // linden library includes
 #include "llavatarnamecache.h"  // IDEVO (I Are Not Men!)
+// <FS:Horizon> Request Sysinfo from top menu
+#include "llfloateravatarpicker.h"
+#include "fsfloaterim.h"
+// </FS:Horizon>
 #include "llcombobox.h"
 #include "llcoros.h"
 #include "llfloaterreg.h"
@@ -165,6 +169,9 @@
 #include "fsdata.h"
 #include "fslslbridge.h"
 #include "fscommon.h"
+#include "fsfloaterscriptedattachments.h" // <FS:Horizon> Scan scripted attachments
+#include "fsfloaterregionintel.h" // <FS:Horizon> Region Intel
+#include "llfloaterregioninfo.h" // <FS:Horizon> Restart Estate Region
 #include "fsfloaterexport.h"
 #include "fsfloatercontacts.h"
 #include "fsfloaterplacedetails.h"
@@ -13300,6 +13307,119 @@ void initialize_menus()
     enable.add("Avatar.IsPicksTabOpen", boost::bind(&picks_tab_visible));
 
     commit.add("Avatar.OpenMarketplace", boost::bind(&LLWeb::loadURLExternal, gSavedSettings.getString("MarketplaceURL")));
+
+// <FS:Horizon> Request Sysinfo from top menu, with an avatar picker
+    commit.add("Horizon.RequestSysinfo", [](LLUICtrl*, const LLSD&)
+    {
+        LLFloaterAvatarPicker::show(
+            [](const uuid_vec_t& ids, const std::vector<LLAvatarName>& names)
+            {
+                if (ids.empty() || ids[0].isNull() || ids[0] == gAgent.getID())
+                {
+                    return;
+                }
+                std::string name = names.empty() ? std::string("Resident") : names[0].getDisplayName();
+                LLUUID session_id = gIMMgr->addSession(name, IM_NOTHING_SPECIAL, ids[0]);
+                if (session_id.notNull())
+                {
+                    FSFloaterIM* im_floater = FSFloaterIM::show(session_id);
+                    if (im_floater)
+                    {
+                        im_floater->sendMsg("/reqsysinfo");
+                    }
+                }
+            },
+            false, // allow_multiple
+            true,  // closeOnSelect
+            false  // skip_agent
+        );
+    });
+// </FS:Horizon>
+
+// <FS:Horizon> Scan scripted attachments from top menu, with an avatar picker
+    commit.add("Horizon.ScanAttachments", [](LLUICtrl*, const LLSD&)
+    {
+        LLFloaterAvatarPicker::show(
+            [](const uuid_vec_t& ids, const std::vector<LLAvatarName>& names)
+            {
+                if (ids.empty() || ids[0].isNull())
+                {
+                    return;
+                }
+                std::string name = names.empty() ? std::string("Resident") : names[0].getDisplayName();
+                FSFloaterScriptedAttachments::showScanning(ids[0], name);
+                FSLSLBridge::instance().viewerToLSL("scanAttachments|" + ids[0].asString());
+            },
+            false, // allow_multiple
+            true,  // closeOnSelect
+            false  // skip_agent
+        );
+    });
+// </FS:Horizon>
+
+// <FS:Horizon> Region Intel - publicly-available region status/rules readout
+    commit.add("Horizon.RegionIntel", [](LLUICtrl*, const LLSD&)
+    {
+        LLFloaterReg::showInstance("region_intel");
+    });
+// </FS:Horizon>
+
+// <FS:Horizon> Region Uptime - ask the LSL Bridge for the region's start time
+    commit.add("Horizon.RegionUptime", [](LLUICtrl*, const LLSD&)
+    {
+        FSLSLBridge::instance().viewerToLSL("getRegionUptime");
+    });
+// </FS:Horizon>
+
+// <FS:Horizon> Restart Estate Region - replicates the "Restart Region" button in the Region/Estate floater's Debug tab
+    commit.add("Horizon.RestartEstateRegion", [](LLUICtrl*, const LLSD&)
+    {
+        LLViewerRegion* region = gAgent.getRegion();
+        bool allow_modify = gAgent.isGodlike() || (region && region->canManageEstate());
+        if (!allow_modify)
+        {
+            FSCommon::report_to_nearby_chat(std::string("Restart Estate Region - you do not have estate manager rights on this region."));
+            return;
+        }
+
+        LLNotificationsUtil::add("ConfirmRestart", LLSD(), LLSD(),
+            [](const LLSD& notification, const LLSD& response)
+            {
+                S32 option = LLNotificationsUtil::getSelectedOption(notification, response);
+                if (option != 0)
+                {
+                    return;
+                }
+
+                LLViewerRegion* confirm_region = gAgent.getRegion();
+                if (!confirm_region)
+                {
+                    return;
+                }
+
+                LLMessageSystem* msg = gMessageSystem;
+                msg->newMessage("EstateOwnerMessage");
+                msg->nextBlockFast(_PREHASH_AgentData);
+                msg->addUUIDFast(_PREHASH_AgentID, gAgent.getID());
+                msg->addUUIDFast(_PREHASH_SessionID, gAgent.getSessionID());
+                msg->addUUIDFast(_PREHASH_TransactionID, LLUUID::null);
+                msg->nextBlock("MethodData");
+                msg->addString("Method", "restart");
+                msg->addUUID("Invoice", LLFloaterRegionInfo::getLastInvoice());
+                msg->nextBlock("ParamList");
+                msg->addString("Parameter", "120");
+                msg->sendReliable(confirm_region->getHost());
+            });
+    });
+// </FS:Horizon>
+
+// <FS:Horizon> Hidden System Folders - lets the user tick/untick which system/virtual
+// inventory folders (Calling Cards, Current Outfit, Favorites, #Firestorm) are shown
+    commit.add("Horizon.HiddenSystemFolders", [](LLUICtrl*, const LLSD&)
+    {
+        LLFloaterReg::showInstance("hidden_system_folders");
+    });
+// </FS:Horizon>
 
 // <AS:Chanayane> Compass floater
     commit.add("Avatar.AlignToggle", [](LLUICtrl*, const LLSD&) {

@@ -7,7 +7,7 @@
 //
 
 // Bridge platform
-string BRIDGE_VERSION = "2.29"; // This should match fslslbridge.cpp
+string BRIDGE_VERSION = "2.31"; // This should match fslslbridge.cpp
 string gLatestURL;
 integer gViewerIsFirestorm;
 integer gTryHandshakeOnce = TRUE;
@@ -527,6 +527,79 @@ default
                 }
 
             }
+
+            else if (cmd == "scanAttachments")
+            {
+                // <FS:Horizon> Scan an avatar's worn attachments for running scripts (God Mode tool)
+                key targetAv = llList2Key(commandList, 1);
+                list attachments = llGetAttachedList(targetAv);
+                integer attCount = llGetListLength(attachments);
+                string firstEntry = llList2String(attachments, 0);
+
+                if (attCount == 1 && (firstEntry == "NOT FOUND" || firstEntry == "NOT ON REGION" || firstEntry == "NO ATTACHMENTS"))
+                {
+                    llOwnerSay("<bridgeScanBegin>" + (string)targetAv + "</bridgeScanBegin>");
+                    llOwnerSay("<bridgeScanEnd>" + firstEntry + "</bridgeScanEnd>");
+                }
+                else
+                {
+                    llOwnerSay("<bridgeScanBegin>" + (string)targetAv + "</bridgeScanBegin>");
+
+                    string chunk = "";
+                    integer sentAny = FALSE;
+                    integer j;
+                    for (j = 0; j < attCount; j++)
+                    {
+                        key attKey = llList2Key(attachments, j);
+                        list details = llGetObjectDetails(attKey, [OBJECT_NAME, OBJECT_TOTAL_SCRIPT_COUNT, OBJECT_SCRIPT_TIME, OBJECT_ATTACHED_POINT]);
+                        if (llGetListLength(details) >= 4)
+                        {
+                            integer scriptCount = llList2Integer(details, 1);
+                            if (scriptCount > 0)
+                            {
+                                string rec = llStringToBase64(llStringTrim(llList2String(details, 0), STRING_TRIM)) + "|" + (string)scriptCount + "|" + (string)(llList2Float(details, 2) * 1000.0) + "|" + (string)llList2Integer(details, 3);
+                                if (chunk != "" && (llStringLength(chunk) + llStringLength(rec) + 1 > 900))
+                                {
+                                    llOwnerSay("<bridgeScanChunk>" + chunk + "</bridgeScanChunk>");
+                                    sentAny = TRUE;
+                                    chunk = rec;
+                                }
+                                else if (chunk == "")
+                                {
+                                    chunk = rec;
+                                }
+                                else
+                                {
+                                    chunk = chunk + ";" + rec;
+                                }
+                            }
+                        }
+                    }
+                    if (chunk != "")
+                    {
+                        llOwnerSay("<bridgeScanChunk>" + chunk + "</bridgeScanChunk>");
+                        sentAny = TRUE;
+                    }
+
+                    if (sentAny)
+                    {
+                        llOwnerSay("<bridgeScanEnd>OK</bridgeScanEnd>");
+                    }
+                    else
+                    {
+                        llOwnerSay("<bridgeScanEnd>NONE</bridgeScanEnd>");
+                    }
+                }
+            }
+            // </FS:Horizon>
+
+            // <FS:Horizon> Region Uptime (God Mode tool)
+            else if (cmd == "getRegionUptime")
+            {
+                integer startTime = (integer)llGetEnv("region_start_time");
+                llOwnerSay("<bridgeRegionUptime>" + (string)startTime + "</bridgeRegionUptime>");
+            }
+            // </FS:Horizon>
 
             else if (cmd == "UseLSLFlightAssist")
             {

@@ -384,6 +384,14 @@ void LLInventoryPanel::initFolderRoot()
     }
     // </FS:Ansariel> Optional hiding of Received Items folder aka Inbox
 
+    // <FS:Horizon> Configurable hidden system folders
+    if (getName() != "Worn Items" && getName() != "inventory_inbox")
+    {
+        updateHiddenSystemFolders(gSavedSettings.getLLSD("FSHiddenSystemFolders"));
+        gSavedSettings.getControl("FSHiddenSystemFolders")->getSignal()->connect(boost::bind(&LLInventoryPanel::updateHiddenSystemFolders, this, _2));
+    }
+    // </FS:Horizon>
+
     // set the filter for the empty folder if the debug setting is on
     if (gSavedSettings.getBOOL("DebugHideEmptySystemFolders"))
     {
@@ -1340,16 +1348,23 @@ LLFolderViewItem* LLInventoryPanel::buildViewsTree(const LLUUID& id,
 if ((objectp->getType() == LLAssetType::AT_CATEGORY) &&
     (objectp->getActualType() != LLAssetType::AT_LINK_FOLDER))
 {
-    // <TINKER:custom-hidden-folders> Hide specific system folders from view
-    const std::string& cat_name = objectp->getName();
-    if (cat_name == "#Firestorm" ||
-        cat_name == "Calling Cards" ||
-        cat_name == "Current Outfit" ||
-        cat_name == "Favorites")
+    // <FS:Horizon> Configurable hidden system folders (replaces old hardcoded hide-list).
+    // "Calling Cards"/"Current Outfit"/"Favorites" are hidden live via the inventory filter
+    // instead (see LLInventoryPanel::updateHiddenSystemFolders); "#Firestorm" isn't a real
+    // LLFolderType (it's a plain FT_NONE folder identified by name only), so it can't be
+    // filtered by type and is still excluded here at view-build time.
+    if (objectp->getName() == ROOT_FIRESTORM_FOLDER)
     {
-        return NULL;
+        const LLSD& hidden_folders = gSavedSettings.getLLSD("FSHiddenSystemFolders");
+        for (LLSD::array_const_iterator hf_it = hidden_folders.beginArray(); hf_it != hidden_folders.endArray(); ++hf_it)
+        {
+            if (hf_it->asString() == ROOT_FIRESTORM_FOLDER)
+            {
+                return NULL;
+            }
+        }
     }
-    // </TINKER:custom-hidden-folders>
+    // </FS:Horizon>
 
     LLInvFVBridge* new_listener = mInvFVBridgeBuilder->createBridge(LLAssetType::AT_CATEGORY,
                                 (mParams.use_marketplace_folders ? LLAssetType::AT_MARKETPLACE_FOLDER : LLAssetType::AT_CATEGORY),
@@ -2203,6 +2218,50 @@ void LLInventoryPanel::updateShowInboxFolder(const LLSD &data)
     }
 }
 // </FS:Ansariel> Optional hiding of Inbox folder
+
+// <FS:Horizon> Configurable hidden system folders (God Mode > Hidden system folders).
+// Applies live to the inventory filter for the folders that have a real LLFolderType
+// ("Calling Cards", "Current Outfit", "Favorites"). "#Firestorm" is handled separately
+// in buildViewsTree() since it isn't a distinct, filterable LLFolderType.
+void LLInventoryPanel::updateHiddenSystemFolders(const LLSD &data)
+{
+    struct HiddenFolderTypeDef
+    {
+        const char* name;
+        LLFolderType::EType type;
+    };
+    static const HiddenFolderTypeDef sTypedHiddenFolders[] =
+    {
+        { "Calling Cards",  LLFolderType::FT_CALLINGCARD },
+        { "Current Outfit", LLFolderType::FT_CURRENT_OUTFIT },
+        { "Favorites",      LLFolderType::FT_FAVORITE },
+    };
+
+    LLInventoryFilter& filter = getFilter();
+    U64 types = filter.getFilterCategoryTypes();
+    for (const HiddenFolderTypeDef& def : sTypedHiddenFolders)
+    {
+        bool hide = false;
+        for (LLSD::array_const_iterator it = data.beginArray(); it != data.endArray(); ++it)
+        {
+            if (it->asString() == def.name)
+            {
+                hide = true;
+                break;
+            }
+        }
+        if (hide)
+        {
+            types &= ~(1ULL << def.type);
+        }
+        else
+        {
+            types |= (1ULL << def.type);
+        }
+    }
+    filter.setFilterCategoryTypes(types);
+}
+// </FS:Horizon>
 
 // DEBUG ONLY
 // static

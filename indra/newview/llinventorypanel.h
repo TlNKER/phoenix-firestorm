@@ -250,6 +250,10 @@ public:
     // <FS:Ansariel> Optional hiding of Inbox folder
     void updateShowInboxFolder(const LLSD &data);
 
+    // <FS:Horizon> Configurable hidden system folders
+    void updateHiddenSystemFolders(const LLSD &data);
+    // </FS:Horizon>
+
     // DEBUG ONLY:
     static void dumpSelectionInformation(void* user_data);
 

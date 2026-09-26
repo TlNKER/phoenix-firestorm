@@ -116,6 +116,12 @@ private:
     LLUUID                  mBridgeUUID;
     LLUUID                  mReattachBridgeUUID; // used when re-attachming the bridge after creation
 
+    // <FS:Horizon> Scan scripted attachments
+    LLUUID                  mScanTargetID;
+    LLSD                    mScanResults;
+    bool                    mScanInProgress = false;
+    // </FS:Horizon>
+
     bool                    mIsFirstCallDone; //initialization conversation
 
     uuid_vec_t              mAllowedDetachables;
