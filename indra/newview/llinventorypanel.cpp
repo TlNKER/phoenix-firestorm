@@ -1181,7 +1181,6 @@ void LLInventoryPanel::setLibraryFolderVisible(bool visible)
 }
 // </FS:TP>
 
-
 LLFolderViewFolder * LLInventoryPanel::createFolderViewFolder(LLInvFVBridge * bridge, bool allow_drop)
 {
     LLFolderViewFolder::Params params(mParams.folder);

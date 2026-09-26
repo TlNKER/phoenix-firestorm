@@ -395,6 +395,13 @@ public:
 
     static LLPartSysData sCloud;
 
+    // <FS:TP> [FIRE-36987] track the signal connections so initCloud() can
+    // disconnect and reconnect cleanly if it runs more than once (there is
+    // a menu option to reload the particle cloud)
+    static boost::signals2::connection sCloudColorStartConnection;
+    static boost::signals2::connection sCloudColorEndConnection;
+    // </FS:TP>
+
     static LLPointer<LLViewerTexture>  sCloudTexture;
 
     static std::vector<LLUUID> sAVsIgnoringARTLimit;

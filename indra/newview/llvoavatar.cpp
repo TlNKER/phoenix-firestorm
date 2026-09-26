@@ -1306,6 +1306,14 @@ static void onCloudColorChanged(const LLSD& new_value);
 // </FS:TP>
 
 LLPartSysData LLVOAvatar::sCloud;
+
+// <FS:TP> [FIRE-36987] track the signal connections so initCloud() can
+// disconnect and reconnect cleanly if it runs more than once (there is
+// a menu option to reload the particle cloud)
+boost::signals2::connection LLVOAvatar::sCloudColorStartConnection;
+boost::signals2::connection LLVOAvatar::sCloudColorEndConnection;
+// </FS:TP>
+
 void LLVOAvatar::initCloud()
 {
     // fancy particle cloud designed by Brent
@@ -1349,21 +1357,25 @@ void LLVOAvatar::initCloud()
     // the user changes either preference later (no restart needed - see
     // applyCloudColor()).
     applyCloudColor();
-    gSavedSettings.getControl("FSCloudColorStart")->getSignal()->connect(
-        boost::bind(&onCloudColorChanged, _2));
-    gSavedSettings.getControl("FSCloudColorEnd")->getSignal()->connect(
-        boost::bind(&onCloudColorChanged, _2));
-    // </FS:TP>
-}
 
-// <FS:TP> [FIRE-36987] Selectable avatar loading/bakefail cloud color
-// Plain-function signal handler - gSavedSettings control signals pass
-// (LLControlVariable* control, const LLSD& new_value, const LLSD& old_value);
-// the new_value itself isn't used since both colors need re-reading either
-// way, so just re-apply from gSavedSettings directly.
-static void onCloudColorChanged(const LLSD& new_value)
-{
-    LLVOAvatar::applyCloudColor();
+    // disconnect any previous connection first, since initCloud() can run
+    // more than once (menu option to reload the particle cloud), then bind
+    // straight to applyCloudColor() - no wrapper needed since the signal's
+    // new_value/old_value aren't used
+    if (sCloudColorStartConnection.connected())
+    {
+        sCloudColorStartConnection.disconnect();
+    }
+    sCloudColorStartConnection = gSavedSettings.getControl("FSCloudColorStart")->getSignal()->connect(
+        boost::bind(&LLVOAvatar::applyCloudColor));
+
+    if (sCloudColorEndConnection.connected())
+    {
+        sCloudColorEndConnection.disconnect();
+    }
+    sCloudColorEndConnection = gSavedSettings.getControl("FSCloudColorEnd")->getSignal()->connect(
+        boost::bind(&LLVOAvatar::applyCloudColor));
+    // </FS:TP>
 }
 
 void LLVOAvatar::applyCloudColor()

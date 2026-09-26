@@ -82,13 +82,18 @@ static const LLOutfitTabFavDateComparator OUTFIT_TAB_FAV_DATE_COMPARATOR;
 // cache to one sort pass (primed/cleared in sortOutfits(), below) means it
 // can never go stale - it simply doesn't exist outside of an in-progress
 // sort, so there's no invalidation logic to get wrong.
-static std::unordered_map<LLUUID, time_t>* sOutfitDateCache = NULL;
+static std::unordered_map<LLUUID, time_t>* sOutfitDateCache = nullptr;
 // </FS:TP>
 
-// Bits of the "OutfitListSortOrder" saved setting.
-static const S32 OUTFIT_SORT_FAVORITES_TO_TOP = 0x1;
-static const S32 OUTFIT_SORT_NEWEST_FIRST     = 0x2;
+// <FS:TP> [FIRE-36105] Bits of the "FSOutfitListSortOrder" saved setting.
+// This is a Firestorm-specific setting, not LL's own "OutfitListSortOrder"
+// (which stays a simple 0/1 toggle so LL's own code keeps reading it as
+// before) - see FSOutfitListSortOrder in settings.xml.
+static constexpr S32 OUTFIT_SORT_FAVORITES_TO_TOP = 0x1;
+static constexpr S32 OUTFIT_SORT_NEWEST_FIRST     = 0x2;
+// </FS:TP>
 
+// <FS:TP> [FIRE-36105] Entirely custom helper. approximates an outfit folders creation date from its contents, with a per-sort cache (sOutfitDateCache) to avoid re-walking items on every comparator call.
 // Returns the creation date of the outfit folder backing this tab, or 0
 // if the folder can't be found for some reason.
 // LLViewerInventoryCategory has no reliable creation date of its own - the
@@ -105,7 +110,7 @@ static time_t get_outfit_tab_creation_date(const LLAccordionCtrlTab* tab)
     LLOutfitAccordionCtrlTab* outfit_tab = (LLOutfitAccordionCtrlTab*)tab;
     const LLUUID folder_id = outfit_tab->getFolderID();
 
-    // <FS:TP> [FIRE-36105] Serve from the active sort's cache, if any
+    // Serve from the active sort's cache, if any
     if (sOutfitDateCache)
     {
         std::unordered_map<LLUUID, time_t>::const_iterator cached = sOutfitDateCache->find(folder_id);
@@ -114,18 +119,16 @@ static time_t get_outfit_tab_creation_date(const LLAccordionCtrlTab* tab)
             return cached->second;
         }
     }
-    // </FS:TP>
 
-    LLInventoryModel::cat_array_t* cats = NULL;
-    LLInventoryModel::item_array_t* items = NULL;
+    LLInventoryModel::cat_array_t* cats = nullptr;
+    LLInventoryModel::item_array_t* items = nullptr;
     gInventory.getDirectDescendentsOf(folder_id, cats, items);
 
     time_t newest = 0;
     if (items)
     {
-        for (LLInventoryModel::item_array_t::const_iterator it = items->begin(); it != items->end(); ++it)
+        for (const LLViewerInventoryItem* item : *items)
         {
-            const LLViewerInventoryItem* item = *it;
             if (item && item->getCreationDate() > newest)
             {
                 newest = item->getCreationDate();
@@ -133,12 +136,11 @@ static time_t get_outfit_tab_creation_date(const LLAccordionCtrlTab* tab)
         }
     }
 
-    // <FS:TP> [FIRE-36105] Populate the active sort's cache, if any
+    // Populate the active sort's cache, if any
     if (sOutfitDateCache)
     {
         (*sOutfitDateCache)[folder_id] = newest;
     }
-    // </FS:TP>
 
     return newest;
 }
@@ -267,8 +269,8 @@ bool LLOutfitsList::postBuild()
 
 void LLOutfitsList::initComparator()
 {
-    S32 mode = gSavedSettings.getS32("OutfitListSortOrder");
-    // <FS:TP> [FIRE-36105] OutfitListSortOrder is now a bitmask so
+    S32 mode = gSavedSettings.getS32("FSOutfitListSortOrder");
+    // <FS:TP> [FIRE-36105] FSOutfitListSortOrder is a bitmask so
     // favorites-to-top and newest-first can be combined independently
     // if (mode == 0)
     // {
@@ -358,7 +360,19 @@ void LLOutfitsList::updateAddedCategory(LLUUID cat_id)
 
     // Start observing the new outfit category.
     LLWearableItemsList* list = tab->getChild<LLWearableItemsList>("wearable_items_list");
-    if (!mCategoriesObserver->addCategory(cat_id, boost::bind(&LLWearableItemsList::updateList, list, cat_id)))
+    // <FS:TP> [FIRE-36105] Also resort when this outfit's contents change, not
+    // just refresh its item list. A brand new outfit has no items (and so no
+    // known creation date, see get_outfit_tab_creation_date()) at the moment
+    // its tab is added here; this is what actually gives it a date once its
+    // items arrive, so it needs to trigger a fresh sort itself rather than
+    // waiting for some unrelated outfit-list change to do it.
+    // if (!mCategoriesObserver->addCategory(cat_id, boost::bind(&LLWearableItemsList::updateList, list, cat_id)))
+    if (!mCategoriesObserver->addCategory(cat_id, [this, list, cat_id]()
+    {
+        list->updateList(cat_id);
+        onOutfitItemsChanged(cat_id);
+    }))
+    // </FS:TP>
     {
         // Remove accordion tab if category could not be added to observer.
         mAccordion->removeCollapsibleCtrl(tab);
@@ -1005,9 +1019,26 @@ void LLOutfitsList::sortOutfits()
     std::unordered_map<LLUUID, time_t> date_cache;
     sOutfitDateCache = &date_cache;
     mAccordion->sort();
-    sOutfitDateCache = NULL;
+    sOutfitDateCache = nullptr;
     // </FS:TP>
 }
+
+// <FS:TP> [FIRE-36105] Called whenever a tracked outfit's contents change
+// (see updateAddedCategory(), above). Only matters for newest-first sorting:
+// that's the only comparator whose result for a given tab can change after
+// the tab was added, since a newly created outfit doesn't have a resolvable
+// creation date (see get_outfit_tab_creation_date()) until it actually has
+// items in it. Alphabetical/favorite-based sorting is settled the moment the
+// tab is added and doesn't need a resort here.
+void LLOutfitsList::onOutfitItemsChanged(const LLUUID& cat_id)
+{
+    S32 mode = gSavedSettings.getS32("FSOutfitListSortOrder");
+    if (mode & OUTFIT_SORT_NEWEST_FIRST)
+    {
+        sortOutfits();
+    }
+}
+// </FS:TP>
 
 void LLOutfitsList::onOutfitRightClick(LLUICtrl* ctrl, S32 x, S32 y, const LLUUID& cat_id)
 {
@@ -1046,21 +1077,21 @@ void LLOutfitsList::onChangeSortOrder(const LLSD& userdata)
     std::string sort_data = userdata.asString();
     if (sort_data == "favorites_to_top")
     {
-        // <FS:TP> [FIRE-36105] OutfitListSortOrder is now a bitmask so
+        // <FS:TP> [FIRE-36105] FSOutfitListSortOrder is a bitmask so
         // favorites-to-top and newest-first can be combined independently
         // at the moment this is a toggle
         // S32 val = gSavedSettings.getS32("OutfitListSortOrder");
         // gSavedSettings.setS32("OutfitListSortOrder", (val ? 0 : 1));
         // this one's a toggle, independent of the alphabetical/newest-first choice
-        S32 val = gSavedSettings.getS32("OutfitListSortOrder");
-        gSavedSettings.setS32("OutfitListSortOrder", val ^ OUTFIT_SORT_FAVORITES_TO_TOP);
+        S32 val = gSavedSettings.getS32("FSOutfitListSortOrder");
+        gSavedSettings.setS32("FSOutfitListSortOrder", val ^ OUTFIT_SORT_FAVORITES_TO_TOP);
 
         initComparator();
     }
     else if (sort_data == "alphabetical" || sort_data == "newest_first")
     {
         // these two are mutually exclusive, so set/clear the bit rather than toggling it
-        S32 val = gSavedSettings.getS32("OutfitListSortOrder");
+        S32 val = gSavedSettings.getS32("FSOutfitListSortOrder");
         if (sort_data == "newest_first")
         {
             val |= OUTFIT_SORT_NEWEST_FIRST;
@@ -1069,7 +1100,7 @@ void LLOutfitsList::onChangeSortOrder(const LLSD& userdata)
         {
             val &= ~OUTFIT_SORT_NEWEST_FIRST;
         }
-        gSavedSettings.setS32("OutfitListSortOrder", val);
+        gSavedSettings.setS32("FSOutfitListSortOrder", val);
 
         initComparator();
     }
@@ -1937,8 +1968,10 @@ void LLOutfitListSortMenu::onUpdateItemsVisibility()
     if (!mMenu) return;
     mMenu->setItemVisible("expand", true);
     mMenu->setItemVisible("collapse", true);
-    mMenu->setItemVisible("sort_alphabetical", true); // </FS:TP> [FIRE-36105] new sort option
-    mMenu->setItemVisible("sort_newest_first", true); // </FS:TP> [FIRE-36105] new sort option
+    // <FS:TP> [FIRE-36105] new sort options
+    mMenu->setItemVisible("sort_alphabetical", true);
+    mMenu->setItemVisible("sort_newest_first", true);
+    // </FS:TP>
     mMenu->setItemVisible("sort_favorites_to_top", true);
     mMenu->setItemVisible("show_entire_outfit_in_search", true);
 }
@@ -1947,7 +1980,7 @@ bool LLOutfitListSortMenu::onEnable(LLSD::String param)
 {
     // <FS:TP> [FIRE-36105] sort_order moved up so it's shared by the new
     // "newest_first"/"alphabetical" cases below too
-    static LLCachedControl<S32> sort_order(gSavedSettings, "OutfitListSortOrder", 0);
+    static LLCachedControl<S32> sort_order(gSavedSettings, "FSOutfitListSortOrder", 0);
 
     if ("favorites_to_top" == param)
     {
