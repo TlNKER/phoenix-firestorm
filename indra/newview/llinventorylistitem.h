@@ -38,6 +38,7 @@
 #include "llstyle.h"
 #include "lliconctrl.h"
 #include "lltextbox.h"
+#include "lluicolor.h" // <FS:Horizon> Set Display Name - for getDisplayNameOverrideColor()'s return type
 
 // newview
 #include "llwearabletype.h"
@@ -206,6 +207,14 @@ protected:
     virtual bool handleToolTip( S32 x, S32 y, MASK mask);
 
     virtual const LLPanelInventoryListItemBase::Params& getDefaultParams() const; // <FS:Ansariel> Better attachment list
+
+    // <FS:Horizon> Set Display Name - color used in setTitle() below for an
+    // item showing a display-name override. Virtual so a subclass used in a
+    // specific context (see LLPanelWearableOutfitItem/FSPanelCOFWearableOutfitListItem
+    // in llwearableitemslist.h) can show a different color there without
+    // duplicating setTitle()'s whole color-selection logic.
+    virtual const LLUIColor& getDisplayNameOverrideColor() const;
+    // </FS:Horizon>
 
     const LLUUID mInventoryItemUUID;
     bool mHovered;

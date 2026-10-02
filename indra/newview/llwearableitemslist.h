@@ -105,6 +105,14 @@ protected:
     LLPanelWearableOutfitItem(LLViewerInventoryItem* item,
                               bool worn_indication_enabled, const Params& params, bool show_widgets = false);
 
+    // <FS:Horizon> Set Display Name - this is the "My Outfits" tab row type
+    // (per the class comment above), so a display-name override shows pink
+    // here instead of the usual light blue (see llinventorylistitem.h/.cpp)
+    // - distinct from FSPanelCOFWearableOutfitListItem below, which inherits
+    // from this class for the "Wearing" tab and reverts the color back.
+    /*virtual*/ const LLUIColor& getDisplayNameOverrideColor() const;
+    // </FS:Horizon>
+
 private:
     LLButton* mAddWearableBtn = nullptr;
     LLButton* mRemoveWearableBtn = nullptr;
@@ -265,6 +273,13 @@ protected:
                               bool worn_indication_enabled, bool show_widgets, const Params& params);
 
     virtual const LLPanelInventoryListItemBase::Params& getDefaultParams() const;
+
+    // <FS:Horizon> Set Display Name - this is the "Wearing" tab row type (per
+    // the class comment above); revert back to the base class's usual color
+    // (light blue) rather than inheriting LLPanelWearableOutfitItem's pink,
+    // since pink is meant for "My Outfits" specifically.
+    /*virtual*/ const LLUIColor& getDisplayNameOverrideColor() const;
+    // </FS:Horizon>
 private:
     LLTextBox*      mWeightCtrl;
 };

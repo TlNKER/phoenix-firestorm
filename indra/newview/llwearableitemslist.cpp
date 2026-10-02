@@ -125,6 +125,19 @@ bool LLPanelWearableOutfitItem::postBuild()
     return true;
 }
 
+// <FS:Horizon> Set Display Name - this is the "My Outfits" list, so a
+// display-name override shows pink here instead of the light-blue used
+// everywhere else in inventory (see LLPanelInventoryListItemBase's default
+// in llinventorylistitem.cpp). FSPanelCOFWearableOutfitListItem below
+// (the "Wearing" list) overrides this again back to light-blue, since it
+// would otherwise inherit this pink as a subclass of this one.
+const LLUIColor& LLPanelWearableOutfitItem::getDisplayNameOverrideColor() const
+{
+    static const LLUIColor color = LLUIColorTable::instance().getColor("InventoryDisplayNameOutfitsColor", LLColor4(1.f, 0.6f, 0.8f, 1.f));
+    return color;
+}
+// </FS:Horizon>
+
 bool LLPanelWearableOutfitItem::handleDoubleClick(S32 x, S32 y, MASK mask)
 {
     if(!mShowWidgets)
@@ -602,6 +615,16 @@ const LLPanelInventoryListItemBase::Params& FSPanelCOFWearableOutfitListItem::ge
     return LLUICtrlFactory::getDefaultParams<FSPanelCOFWearableOutfitListItem>();
 }
 // </FS:Ansariel>
+
+// <FS:Horizon> Set Display Name - this is the "Wearing" list. It subclasses
+// LLPanelWearableOutfitItem ("My Outfits"), which overrides the display-name
+// color to pink - revert back to the normal light-blue (the
+// LLPanelInventoryListItemBase default) here so only "My Outfits" shows pink.
+const LLUIColor& FSPanelCOFWearableOutfitListItem::getDisplayNameOverrideColor() const
+{
+    return LLPanelInventoryListItemBase::getDisplayNameOverrideColor();
+}
+// </FS:Horizon>
 
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////

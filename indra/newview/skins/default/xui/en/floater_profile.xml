@@ -42,14 +42,6 @@
              help_topic="profile_secondlife_tab"
             />
             <panel
-             name="panel_profile_web"
-             label="Feed"
-             layout="topleft"
-             class="panel_profile_web"
-             filename="panel_profile_web.xml"
-             help_topic="profile_web_tab"
-            />
-            <panel
              name="panel_profile_picks"
              label="Picks"
              layout="topleft"
@@ -57,14 +49,7 @@
              filename="panel_profile_picks.xml"
              help_topic="profile_picks_tab"
             />
-            <panel
-             name="panel_profile_classifieds"
-             label="Classifieds"
-             layout="topleft"
-             class="panel_profile_classifieds"
-             filename="panel_profile_classifieds.xml"
-             help_topic="profile_classified_tab"
-            />
+
             <panel
              name="panel_profile_firstlife"
              label="1st Life"
@@ -81,7 +66,38 @@
              filename="panel_profile_notes.xml"
              help_topic="profile_notes_tab"
             />
+			
+
+
         </tab_container>
+		
+		
+        <panel
+         name="hidden_profile_panels"
+         visible="false"
+         width="1"
+         height="1"
+         layout="topleft"
+        >
+            <panel
+             name="panel_profile_web"
+             label="Feed"
+             layout="topleft"
+             class="panel_profile_web"
+             filename="panel_profile_web.xml"
+             help_topic="profile_web_tab"
+            />
+
+            <panel
+             name="panel_profile_classifieds"
+             label="Classifieds"
+             layout="topleft"
+             class="panel_profile_classifieds"
+             filename="panel_profile_classifieds.xml"
+            />
+        </panel>
+		
+		
     </panel>
 </floater>
 

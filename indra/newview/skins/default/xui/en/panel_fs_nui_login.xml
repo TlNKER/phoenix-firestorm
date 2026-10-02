@@ -124,6 +124,7 @@
       height="18"
       label="Remember username"
       name="remember_username_check"
+      visible="false"
       width="204" />
     </layout_panel> <!-- login -->
     <layout_panel
@@ -133,7 +134,8 @@
       name="delete_container"
       layout="topleft"
       width="32"
-      height="86">
+      height="86"
+      visible="false">
     <button
       follows="right|top"
       height="32"
@@ -183,6 +185,7 @@
       label="Remember password"
       top_pad="10"
       name="remember_check"
+      visible="false"
       width="204" />
     <button
       name="password_show_btn"
@@ -195,7 +198,7 @@
       image_pressed="Profile_Group_Visibility_Off_Pressed"
       image_unselected="Profile_Group_Visibility_Off"
       tab_stop="false"
-      visible="true"  />
+      visible="false"  />
     <button
       name="password_hide_btn"
       tool_tip="Hide password text"
@@ -256,7 +259,8 @@
       layout="topleft"
       top_pad="0"
       height="66"
-      width="685">
+      width="685"
+      visible="false">
     <layout_stack
       animate="false"
       clip="false"

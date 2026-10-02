@@ -28,7 +28,7 @@
     animate="false"
     follows="top|left|right"
     clip="false"
-    height="20"
+    height="0"
     right="-3"
     left_pad="0"
     layout="topleft"
@@ -42,12 +42,12 @@
       user_resize="false"
       layout="topleft"
       height="20"
-      width="26"
+      width="0"
       follows="left|top">
       <button
        follows="left|top"
        top="0"
-       width="24"
+       width="0"
        height="20"
        left_delta="2"
        image_overlay="Chat_History"

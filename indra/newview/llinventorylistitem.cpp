@@ -275,6 +275,16 @@ std::string LLPanelInventoryListItemBase::getItemName() const
     return inv_item->getName();
 }
 
+// <FS:Horizon> Set Display Name - default color for every flat-list context
+// except the ones that override this (see llwearableitemslist.h/.cpp for the
+// Outfits-tab override).
+const LLUIColor& LLPanelInventoryListItemBase::getDisplayNameOverrideColor() const
+{
+    static const LLUIColor color = LLUIColorTable::instance().getColor("InventoryDisplayNameColor", LLColor4(0.68f, 0.85f, 1.f, 1.f));
+    return color;
+}
+// </FS:Horizon>
+
 LLAssetType::EType LLPanelInventoryListItemBase::getType() const
 {
     LLViewerInventoryItem* inv_item = getItem();
@@ -493,14 +503,16 @@ void LLPanelInventoryListItemBase::setTitle(const std::string& title,
     // override distinctly from items showing their real name, matching the
     // main inventory tree (see llfolderviewitem.cpp's drawLabel()). Checked
     // after favorite so a favorited item's star-color still wins if both apply.
+    // getDisplayNameOverrideColor() is virtual so the Outfits-tab row type
+    // (LLPanelWearableOutfitItem) can show a different color than everywhere
+    // else - see llwearableitemslist.h/.cpp.
     else
     {
         LLViewerInventoryItem* inv_item = getItem();
         std::string unused;
         if (inv_item && get_inventory_display_name_override(inv_item->getUUID(), unused))
         {
-            static const LLUIColor display_name_color = LLUIColorTable::instance().getColor("InventoryDisplayNameColor", LLColor4(0.68f, 0.85f, 1.f, 1.f));
-            style_params.color = display_name_color;
+            style_params.color = getDisplayNameOverrideColor();
         }
     }
     // </FS:Horizon>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<panel
+  background_opaque="true"
+  background_visible="true"
+  bg_opaque_color="DkGray"
+  chrome="true"
+  follows="top|right"
+  height="19"
+  layout="topleft"
+  left="0"
+  mouse_opaque="false"
+  name="status"
+  tab_stop="false"
+  top="19"
+  width="1000">
+
+    <!-- Disse SKAL være her for at undgå crash, selvom vi ikke bruger dem aktivt -->
+    <panel.string name="packet_loss_tooltip">Packet Loss</panel.string>
+    <panel.string name="bandwidth_tooltip">Bandwidth</panel.string>
+    <panel.string name="time">time</panel.string>
+    <panel.string name="timeTooltip">timeTooltip</panel.string>
+    <panel.string name="buycurrencylabel">L$ [AMT]</panel.string>
+
+    <!-- L$ BALANCE PANEL -->
+    <panel
+      height="18"
+      left="-135"
+      width="65"
+      top="0"
+      follows="right|top"
+      name="balance_bg"
+      visibility_control="FSShowCurrencyBalanceInStatusbar"
+      background_opaque="true"
+      background_visible="true"
+      bg_opaque_color="MouseGray">
+      <text
+        halign="center"
+        font="SansSerifSmall"
+        follows="all"
+        height="18"
+        left="0"
+        name="balance"
+        text_color="CurrencyColor"
+        top="4"
+        value="L$??" 
+        width="60" />
+    </panel>
+  
+    <!-- MUSIC OG VOLUME PANEL -->
+    <panel
+      height="18"
+      left="-65"
+      width="60"
+      top="0"
+      follows="right|top"
+      name="time_and_media_bg"
+      background_opaque="true"
+      background_visible="true"
+      bg_opaque_color="MouseGray">
+      
+      <!-- Skjult TimeText for at undgå fejl #llui/llpanel.cpp(611) -->
+      <text name="TimeText" visible="false" width="0" height="0">time</text>
+      
+      <!-- Music Stream Toggle -->
+      <button
+        follows="right|top"
+        height="16"
+        image_selected="Music_Off"
+        image_unselected="Pause_Off"
+        image_pressed="Pause_Press"
+        image_pressed_selected="Music_Press"
+        is_toggle="true"
+        left="5"
+        top="1"
+        name="stream_toggle_btn"
+        tool_tip="Start/Stop Parcel Audio Stream"
+        width="16" />
+
+      <!-- Volume Button -->
+      <button
+        follows="right|top"
+        height="16"
+        image_selected="AudioMute_Off"
+        image_pressed="Audio_Press"
+        image_unselected="Audio_Off"
+        image_pressed_selected="AudioMute_Press"
+        is_toggle="true"
+        left="30"
+        top="2"
+        name="volume_btn"
+        width="16" />
+        
+       <!-- Skjult FPS for god ordens skyld -->
+       <text name="FPSText" visible="true" width="0" height="0">0</text>
+    </panel>
+</panel>

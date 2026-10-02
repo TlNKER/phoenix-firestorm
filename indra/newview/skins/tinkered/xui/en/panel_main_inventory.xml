@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<panel
+ follows="all"
+ height="423"
+ label="Things"
+ layout="topleft"
+ min_height="300"
+ min_width="240"
+ name="main inventory panel">
+
+  <panel.string
+   name="Itemcount">
+  </panel.string>
+
+  <panel.string
+   name="ItemcountFetching">
+    Fetching [ITEM_COUNT] Elements... [FILTER]
+  </panel.string>
+
+  <panel.string
+   name="ItemcountCompleted">
+    [ITEM_COUNT] Elements [FILTER]
+  </panel.string>
+
+  <panel.string
+   name="ItemcountUnknown">
+    Fetched [ITEM_COUNT] Elements [FILTER]
+  </panel.string>
+
+  <panel.string
+   name="inventory_title">
+    Inventory
+  </panel.string>
+
+  <panel.string
+   name="default_mode_btn">
+    Multi_Folder_Mode
+  </panel.string>
+
+  <panel.string
+   name="single_folder_mode_btn">
+    Single_Folder_Mode
+  </panel.string>
+
+
+  <!-- ========================================================= -->
+  <!-- TOP NAVIGATION / SEARCH                                   -->
+  <!-- ========================================================= -->
+
+  <layout_stack
+   follows="left|top|right"
+   height="25"
+   animate="false"
+   top_pad="4"
+   left="10"
+   orientation="horizontal"
+   name="top_stack">
+
+    <!-- Collapse / Expand buttons: now on the search line -->
+
+    <layout_panel
+     border="false"
+     bevel_style="in"
+     user_resize="false"
+     auto_resize="false"
+     height="25"
+     width="40"
+     name="collapse_expand_buttons">
+
+      <button
+       name="collapse_btn"
+       label="-"
+       width="15"
+       height="16"
+       left="2"
+       top="5"
+       follows="top|left"
+       layout="topleft"/>
+
+      <button
+       name="expand_btn"
+       label="+"
+       width="15"
+       height="16"
+       left_pad="4"
+       top_delta="0"
+       follows="top|left"
+       layout="topleft" />
+
+    </layout_panel>
+
+
+    <!-- Search field -->
+
+    <layout_panel
+      border="false"
+      bevel_style="in"
+      user_resize="false"
+      auto_resize="true"
+      height="25"
+      width="324"
+      name="filter_panel"
+      visible="true">
+
+      <filter_editor
+       text_pad_left="10"
+       follows="left|top|right"
+       height="23"
+       label="Filter Inventory"
+       layout="topleft"
+       left="2"
+       max_length_chars="300"
+       highlight_text_field="true"
+       name="inventory search editor"
+       tool_tip="Type in one or more words to search for, separated by '+' "
+       top="0"
+       width="322" />
+
+    </layout_panel>
+
+  </layout_stack>
+
+
+  <!-- ========================================================= -->
+  <!-- INVENTORY                                                  -->
+  <!-- ========================================================= -->
+
+  <panel
+   follows="all"
+   halign="center"
+   height="387"
+   layout="topleft"
+   left="3"
+   right="-3"
+   name="default_inventory_panel"
+   top_pad="4">
+
+    <tab_container
+       bg_alpha_color="DkGray"
+       bg_opaque_color="DkGray"
+       background_visible="false"
+       background_opaque="false"
+       follows="all"
+       halign="center"
+       height="387"
+       layout="topleft"
+       left="0"
+       name="inventory filter tabs"
+       open_tabs_on_drag_and_drop="false"
+	   tab-height="0"
+       tab_position="top"
+	   hide_tabs="true"
+       top="0">
+
+
+      <!-- MAIN INVENTORY — KEEP -->
+
+      <inventory_panel
+       border="false"
+       bevel_style="none"
+       follows="all"
+       label="Inventory"
+       help_topic="my_inventory_tab"
+       layout="topleft"
+       name="All Items"
+       sort_order_setting="InventorySortOrder"
+       show_item_link_overlays="true"
+       preinitialize_views="false"
+       scroll.reserve_scroll_corner="false">
+
+        <folder
+         double_click_override="true"/>
+
+      </inventory_panel>
+
+
+      <!-- RECENT — HIDDEN -->
+
+      <recent_inventory_panel
+       border="false"
+       bevel_style="none"
+       follows="all"
+       label="Recent"
+       sort_order_setting="RecentItemsSortOrder"
+       help_topic="recent_inventory_tab"
+       layout="topleft"
+       name="Recent Items"
+       show_item_link_overlays="true"
+       preinitialize_views="false"
+       scroll.reserve_scroll_corner="false"
+       visible="false">
+
+        <folder
+         double_click_override="true"/>
+
+      </recent_inventory_panel>
+
+
+      <!-- WORN — HIDDEN -->
+
+      <worn_inventory_panel
+       border="false"
+       bevel_style="none"
+       follows="all"
+       label="Worn"
+       help_topic="worn_inventory_tab"
+       layout="topleft"
+       name="Worn Items"
+       show_item_link_overlays="true"
+       preinitialize_views="false"
+       visible="false">
+
+        <folder
+         double_click_override="true"/>
+
+      </worn_inventory_panel>
+
+
+      <!-- FAVORITES — HIDDEN -->
+
+      <favorites_inventory_panel
+       border="false"
+       bevel_style="none"
+       follows="all"
+       label="Favorites"
+       help_topic="favorites_inventory_tab"
+       layout="topleft"
+       name="Favorites"
+       show_item_link_overlays="true"
+       preinitialize_views="false"
+       scroll.reserve_scroll_corner="false"
+       visible="false">
+
+        <folder
+         double_click_override="true"/>
+
+      </favorites_inventory_panel>
+
+    </tab_container>
+
+  </panel>
+
+
+  <!-- ========================================================= -->
+  <!-- COMBINATION / GALLERY VIEW — HIDDEN                       -->
+  <!-- ========================================================= -->
+
+  <panel
+   follows="all"
+   halign="center"
+   height="338"
+   layout="topleft"
+   left="4"
+   name="combination_view_inventory"
+   top_delta="0"
+   visible="false">
+
+    <layout_stack
+     follows="all"
+     height="338"
+     name="combination_view_stack"
+     animate="false"
+     drag_handle_thickness="6"
+     drag_handle_first_indent="18"
+     drag_handle_second_indent="18"
+     drag_handle_color="PanelGray"
+     drag_handle_shift="5"
+     show_drag_handle="true"
+     top="0"
+     left="0"
+     orientation="vertical">
+
+      <layout_panel
+       border="false"
+       bevel_style="in"
+       user_resize="true"
+       auto_resize="true"
+       height="228"
+       min_width="150"
+       name="comb_gallery_layout">
+
+        <panel
+         class="inventory_gallery"
+         filename="panel_inventory_gallery.xml"
+         left="0"
+         top_pad="0"
+         height="228"
+         name="comb_gallery_view_inv"
+         background_visible="true"
+         follows="all"
+         layout="topleft">
+        </panel>
+
+      </layout_panel>
+
+      <layout_panel
+       border="false"
+       bevel_style="in"
+       user_resize="true"
+       auto_resize="true"
+       height="110"
+       name="comb_inventory_layout">
+
+        <single_folder_inventory_panel
+         name="comb_single_folder_inv"
+         follows="all"
+         left="0"
+         top="0"
+         height="110"
+         layout="topleft"
+         show_item_link_overlays="true"
+         background_visible="true"
+         border="false"
+         bevel_style="none"
+         scroll.reserve_scroll_corner="false">
+
+          <item
+           single_folder_mode="true"
+           folder_indentation="-8"/>
+
+          <folder
+           single_folder_mode="true"
+           folder_indentation="-8"/>
+
+        </single_folder_inventory_panel>
+
+      </layout_panel>
+
+    </layout_stack>
+
+  </panel>
+
+
+  <!-- ========================================================= -->
+  <!-- BOTTOM TOOLBAR — HIDDEN                                  -->
+  <!-- ========================================================= -->
+
+  <panel
+   follows="left|right|bottom"
+   height="25"
+   layout="topleft"
+   bottom="-8"
+   left="4"
+   name="bottom_panel"
+   right="-4"
+   visible="false">
+
+    <panel name="options_gear_btn_panel" visible="false" />
+    <panel name="add_btn_panel" visible="false" />
+    <panel name="new_inventory_panel" visible="false" />
+    <panel name="show_filters_panel" visible="false" />
+    <panel name="view_mode_panel" visible="false" />
+    <panel name="dummy_panel" visible="false" />
+    <panel name="trash_btn_panel" visible="false" />
+
+  </panel>
+
+</panel>
