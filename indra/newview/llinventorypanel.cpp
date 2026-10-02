@@ -385,7 +385,20 @@ void LLInventoryPanel::initFolderRoot()
     // </FS:Ansariel> Optional hiding of Received Items folder aka Inbox
 
     // <FS:Horizon> Configurable hidden system folders
-    if (getName() != "Worn Items" && getName() != "inventory_inbox")
+    // Excluded here, alongside the pre-existing "Worn Items"/"inventory_inbox"
+    // exclusions: the Places floater's dedicated Landmarks/Favorites tabs
+    // ("landmarks_list"/"favorites_list"). Those are single-purpose panels whose
+    // own root folder IS one of the hideable types (Landmarks/Favorites). If the
+    // user hides that type from the *main* inventory tree, applying the same
+    // category-type bitmask here would also blank out the *dedicated* tab for it -
+    // harmlessly while its search box is empty (LLLandmarksPanel::updateShowFolderState
+    // uses SHOW_ALL_FOLDERS then, which bypasses the category-type check entirely),
+    // but the instant you type anything it switches to SHOW_NON_EMPTY_FOLDERS, the
+    // bypass goes away, and the root folder's own now-cleared type bit makes
+    // LLInventoryFilter::checkFolder() reject it - hiding every landmark/favorite
+    // underneath even though nothing actually matched the hide list.
+    if (getName() != "Worn Items" && getName() != "inventory_inbox"
+        && getName() != "landmarks_list" && getName() != "favorites_list")
     {
         updateHiddenSystemFolders(gSavedSettings.getLLSD("FSHiddenSystemFolders"));
         gSavedSettings.getControl("FSHiddenSystemFolders")->getSignal()->connect(boost::bind(&LLInventoryPanel::updateHiddenSystemFolders, this, _2));
@@ -1180,6 +1193,7 @@ void LLInventoryPanel::setLibraryFolderVisible(bool visible)
     }
 }
 // </FS:TP>
+
 
 LLFolderViewFolder * LLInventoryPanel::createFolderViewFolder(LLInvFVBridge * bridge, bool allow_drop)
 {
@@ -2219,9 +2233,12 @@ void LLInventoryPanel::updateShowInboxFolder(const LLSD &data)
 // </FS:Ansariel> Optional hiding of Inbox folder
 
 // <FS:Horizon> Configurable hidden system folders (God Mode > Hidden system folders).
-// Applies live to the inventory filter for the folders that have a real LLFolderType
-// ("Calling Cards", "Current Outfit", "Favorites"). "#Firestorm" is handled separately
-// in buildViewsTree() since it isn't a distinct, filterable LLFolderType.
+// Applies live to the inventory filter for the folders that have a real, distinct
+// LLFolderType. "#Firestorm" doesn't have one (it's a plain FT_NONE folder identified
+// by name only - see buildViewsTree()), so it's toggled live below by directly adding
+// or removing its folder view, the same way the inventory model's own observer adds a
+// live view for a newly-created category (see LLInventoryFavoritesItemsPanel for the
+// precedent this mirrors).
 void LLInventoryPanel::updateHiddenSystemFolders(const LLSD &data)
 {
     struct HiddenFolderTypeDef
@@ -2231,9 +2248,18 @@ void LLInventoryPanel::updateHiddenSystemFolders(const LLSD &data)
     };
     static const HiddenFolderTypeDef sTypedHiddenFolders[] =
     {
+        { "Animations",     LLFolderType::FT_ANIMATION },
+        { "Body Parts",     LLFolderType::FT_BODYPART },
         { "Calling Cards",  LLFolderType::FT_CALLINGCARD },
+        { "Clothing",       LLFolderType::FT_CLOTHING },
         { "Current Outfit", LLFolderType::FT_CURRENT_OUTFIT },
         { "Favorites",      LLFolderType::FT_FAVORITE },
+        { "Landmarks",      LLFolderType::FT_LANDMARK },
+        { "My Outfits",     LLFolderType::FT_MY_OUTFITS },
+        { "Notecards",      LLFolderType::FT_NOTECARD },
+        { "Objects",        LLFolderType::FT_OBJECT },
+        { "Settings",       LLFolderType::FT_SETTINGS },
+        { "Textures",       LLFolderType::FT_TEXTURE },
     };
 
     LLInventoryFilter& filter = getFilter();
@@ -2259,6 +2285,47 @@ void LLInventoryPanel::updateHiddenSystemFolders(const LLSD &data)
         }
     }
     filter.setFilterCategoryTypes(types);
+
+    // "#Firestorm" - name-only folder, can't be filtered by type. Add/remove its live
+    // view directly instead, so toggling it takes effect immediately instead of only on
+    // the next full rebuild of this panel.
+    bool hide_firestorm = false;
+    for (LLSD::array_const_iterator it = data.beginArray(); it != data.endArray(); ++it)
+    {
+        if (it->asString() == ROOT_FIRESTORM_FOLDER)
+        {
+            hide_firestorm = true;
+            break;
+        }
+    }
+
+    const LLUUID firestorm_cat_id = gInventory.findCategoryByName(ROOT_FIRESTORM_FOLDER);
+    if (firestorm_cat_id.notNull() && mFolderRoot.get())
+    {
+        LLFolderViewItem* view_item = getItemByID(firestorm_cat_id);
+        if (hide_firestorm)
+        {
+            if (view_item)
+            {
+                LLFolderViewFolder* parent = view_item->getParentFolder();
+                removeItemID(firestorm_cat_id);
+                view_item->destroyView();
+                if (parent && parent->getViewModelItem())
+                {
+                    parent->getViewModelItem()->dirtyDescendantsFilter();
+                }
+            }
+        }
+        else if (!view_item)
+        {
+            LLViewerInventoryCategory* cat = gInventory.getCategory(firestorm_cat_id);
+            if (cat)
+            {
+                const LLUUID& parent_id = cat->getParentUUID();
+                buildViewsTree(firestorm_cat_id, parent_id, cat, NULL, mFolderRoot.get(), BUILD_ONE_FOLDER);
+            }
+        }
+    }
 }
 // </FS:Horizon>
 

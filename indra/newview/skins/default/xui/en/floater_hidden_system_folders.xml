@@ -8,7 +8,7 @@
  single_instance="true"
  reuse_instance="true"
  layout="topleft"
- height="260"
+ height="420"
  width="320"
  min_height="200"
  min_width="260"
@@ -27,7 +27,7 @@
   <scroll_list
    name="folder_list"
    tool_tip="System and virtual inventory folders you can choose to show or hide."
-   height="170"
+   height="330"
    right="-10"
    layout="topleft"
    follows="all"

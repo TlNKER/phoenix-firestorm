@@ -62,7 +62,21 @@ const std::string  GRID_LOGIN_IDENTIFIER_TYPES = "login_identifier_types";
 const std::string GRID_SLURL_BASE = "slurl_base";
 const std::string GRID_APP_SLURL_BASE = "app_slurl_base";
 
-const std::string DEFAULT_LOGIN_PAGE = "https://phoenixviewer.com/app/loginV3/";
+// <FS:Horizon> The no-OS/Havok build compiles this file instead of
+// fsgridhandler.cpp (see indra/newview/CMakeLists.txt's "if (OPENSIM)" source
+// selection), and the grids.xml-reading code below is permanently #if 0'd out
+// ("disabled for meeting havok sublicense requirements") - that license
+// requires this flavor to never read an arbitrary grid file or support
+// switching grids. So the two real grids (Agni/Second Life and Aditi/Second
+// Life Beta) are added as hardcoded system grids a few lines down, with their
+// login_page always set to this constant - grids.xml's loginpage entry is
+// never consulted for them in this build. Pointing this constant at Horizon's
+// own splash, rather than re-enabling the disabled grids.xml parsing (which
+// would also reintroduce grid switching the Havok sublicense requires to
+// stay off), is what makes the login splash match the OpenSim-enabled build
+// without touching that legal restriction.
+const std::string DEFAULT_LOGIN_PAGE = "https://tinker.sl/horizon/";
+// </FS:Horizon>
 
 const std::string MAIN_GRID_LOGIN_URI = "https://login.agni.lindenlab.com/cgi-bin/login.cgi";
 

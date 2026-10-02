@@ -6,6 +6,15 @@
 
 include(CMakeCopyIfDifferent)
 include(Linking)
+# <FS:Horizon> Allow building/packaging without the Vivox voice binaries.
+# Default ON so every existing configuration keeps shipping Vivox unchanged;
+# a build can opt out with -DUSE_VIVOX:BOOL=FALSE on the configure command
+# line. This only controls whether the SLVoice/vivoxsdk binaries get staged
+# into the packaged build below - it does not touch the llvoicevivox.cpp
+# source, so the viewer still compiles the voice code, it just won't have
+# any Vivox binaries to launch at runtime.
+option(USE_VIVOX "Package the Vivox voice (SLVoice/vivoxsdk) binaries" ON)
+# </FS:Horizon>
 if (USE_DISCORD)
   include(Discord)
 endif ()
@@ -301,6 +310,8 @@ endif(WINDOWS)
 # It's unclear whether this is oversight or intentional, but anyway leave the
 # single copy_if_different command rather than using to_staging_dirs.
 
+# <FS:Horizon> Skip staging the Vivox binaries entirely when USE_VIVOX is off.
+if (USE_VIVOX)
 if( slvoice_src_dir )
     copy_if_different(
             ${slvoice_src_dir}
@@ -316,6 +327,10 @@ to_staging_dirs(
     third_party_targets
     ${vivox_libs}
     )
+else (USE_VIVOX)
+    MESSAGE(STATUS "USE_VIVOX is OFF - not staging SLVoice/vivoxsdk binaries")
+endif (USE_VIVOX)
+# </FS:Horizon>
 
 to_staging_dirs(
     ${release_src_dir}

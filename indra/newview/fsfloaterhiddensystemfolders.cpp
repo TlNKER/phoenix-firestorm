@@ -20,14 +20,24 @@ namespace
 {
     // The set of system/virtual inventory folders this floater can hide. Matched by exact,
     // non-localized inventory folder name - the same names checked by
-    // LLInventoryPanel::updateHiddenSystemFolders() and the "#Firestorm" check in
-    // LLInventoryPanel::buildViewsTree() (indra/newview/llinventorypanel.cpp). Add a folder
-    // here AND wire up its hide behavior there if more folders should become configurable.
+    // LLInventoryPanel::updateHiddenSystemFolders() (indra/newview/llinventorypanel.cpp).
+    // Add a folder here AND to the sTypedHiddenFolders table there (or, for a folder with
+    // no real LLFolderType like "#Firestorm", wire up its own live show/hide) if more
+    // folders should become configurable.
     const char* const HORIZON_HIDEABLE_FOLDERS[] =
     {
+        "Animations",
+        "Body Parts",
         "Calling Cards",
+        "Clothing",
         "Current Outfit",
         "Favorites",
+        "Landmarks",
+        "My Outfits",
+        "Notecards",
+        "Objects",
+        "Settings",
+        "Textures",
         "#Firestorm",
     };
 }

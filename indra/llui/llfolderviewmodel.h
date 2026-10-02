@@ -169,6 +169,22 @@ public:
     virtual bool isItemRenameable() const = 0;
     virtual bool renameItem(const std::string& new_name) = 0;
 
+    // <FS:Horizon> Set Display Name - Shift-F2 inline rename support
+    // (LLFolderView::startRenamingSelectedItem()/finishRenamingItem()).
+    // Default no-op/false so every other LLFolderViewModelItem subclass
+    // across the codebase (categories, outfits, places, people, etc.)
+    // compiles unchanged and simply doesn't support this unless it opts in.
+    // Only LLItemBridge overrides these - see llinventorybridge.cpp/.h.
+    virtual bool isDisplayNameEditable() const { return false; }
+    virtual bool renameDisplayName(const std::string& new_display_name) { return false; }
+
+    // True when a display-name override is currently set for this item -
+    // used purely for color-coding the label (see LLFolderViewItem::drawLabel()
+    // color selection in llfolderviewitem.cpp). Default false for the same
+    // reason as the two methods above; only LLItemBridge overrides it.
+    virtual bool hasDisplayNameOverride() const { return false; }
+    // </FS:Horizon>
+
     virtual bool isItemMovable( void ) const = 0;       // Can be moved to another folder
     virtual void move( LLFolderViewModelItem* parent_listener ) = 0;
 

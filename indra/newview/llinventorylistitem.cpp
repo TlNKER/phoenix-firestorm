@@ -37,6 +37,7 @@
 #include "lltextutil.h"
 
 // newview
+#include "llinventoryfunctions.h"
 #include "llinventoryicon.h"
 #include "llinventorymodel.h"
 #include "llviewerinventory.h"
@@ -93,7 +94,21 @@ void LLPanelInventoryListItemBase::draw()
         LLViewerInventoryItem* inv_item = getItem();
         if (inv_item)
         {
-            updateItem(inv_item->getName(), get_is_item_favorite(inv_item));
+            // <FS:Horizon> Set Display Name - viewer-only override, same
+            // source as the main inventory tree (LLItemBridge::buildDisplayName).
+            // The real item is untouched - the tooltip is explicitly reset to
+            // the real name right after, so hovering still shows it.
+            std::string display_name;
+            if (!get_inventory_display_name_override(inv_item->getUUID(), display_name))
+            {
+                display_name = inv_item->getName();
+            }
+            updateItem(display_name, get_is_item_favorite(inv_item));
+            if (mTitleCtrl)
+            {
+                mTitleCtrl->setToolTip(inv_item->getName());
+            }
+            // </FS:Horizon>
         }
         setNeedsRefresh(false);
     }
@@ -200,7 +215,18 @@ bool LLPanelInventoryListItemBase::postBuild()
     if (inv_item)
     {
         mIconImage = LLInventoryIcon::getIcon(inv_item->getType(), inv_item->getInventoryType(), inv_item->getFlags(), false);
-        updateItem(inv_item->getName(), get_is_item_favorite(inv_item));
+        // <FS:Horizon> Set Display Name - see draw() above for details.
+        std::string display_name;
+        if (!get_inventory_display_name_override(inv_item->getUUID(), display_name))
+        {
+            display_name = inv_item->getName();
+        }
+        updateItem(display_name, get_is_item_favorite(inv_item));
+        if (mTitleCtrl)
+        {
+            mTitleCtrl->setToolTip(inv_item->getName());
+        }
+        // </FS:Horizon>
     }
 
     setNeedsRefresh(true);
@@ -230,13 +256,22 @@ void LLPanelInventoryListItemBase::onMouseLeave(S32 x, S32 y, MASK mask)
     LLPanel::onMouseLeave(x, y, mask);
 }
 
-const std::string& LLPanelInventoryListItemBase::getItemName() const
+std::string LLPanelInventoryListItemBase::getItemName() const
 {
     LLViewerInventoryItem* inv_item = getItem();
     if (NULL == inv_item)
     {
         return LLStringUtil::null;
     }
+    // <FS:Horizon> Set Display Name - keeps sort order (the only current
+    // caller, LLWearableItemNameComparator) consistent with what updateItem()
+    // above actually renders.
+    std::string display_name;
+    if (get_inventory_display_name_override(inv_item->getUUID(), display_name))
+    {
+        return display_name;
+    }
+    // </FS:Horizon>
     return inv_item->getName();
 }
 
@@ -454,6 +489,21 @@ void LLPanelInventoryListItemBase::setTitle(const std::string& title,
             style_params.color = favorite_color;
         }
     }
+    // <FS:Horizon> Set Display Name - color-code items showing a display-name
+    // override distinctly from items showing their real name, matching the
+    // main inventory tree (see llfolderviewitem.cpp's drawLabel()). Checked
+    // after favorite so a favorited item's star-color still wins if both apply.
+    else
+    {
+        LLViewerInventoryItem* inv_item = getItem();
+        std::string unused;
+        if (inv_item && get_inventory_display_name_override(inv_item->getUUID(), unused))
+        {
+            static const LLUIColor display_name_color = LLUIColorTable::instance().getColor("InventoryDisplayNameColor", LLColor4(0.68f, 0.85f, 1.f, 1.f));
+            style_params.color = display_name_color;
+        }
+    }
+    // </FS:Horizon>
 
     LLTextUtil::textboxSetHighlightedVal(
         mTitleCtrl,

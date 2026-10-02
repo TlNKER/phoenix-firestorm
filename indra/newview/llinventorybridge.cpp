@@ -988,6 +988,22 @@ void LLInvFVBridge::getClipboardEntries(bool show_asset_id,
                 {
                     disabled_items.push_back(std::string("Rename"));
                 }
+
+                // <FS:Horizon> Set Display Name
+                // Items only (not folders) for now. Deliberately NOT gated on
+                // isItemRenameable()/isLockedFolder() - this is a local, viewer-only
+                // overlay that never touches the real item, so it works even for
+                // no-mod items and items a locked folder would otherwise block
+                // renaming on.
+                if (obj->getType() != LLAssetType::AT_CATEGORY)
+                {
+                    items.push_back(std::string("Set Display Name"));
+                    if ((flags & FIRST_SELECTED_ITEM) == 0)
+                    {
+                        disabled_items.push_back(std::string("Set Display Name"));
+                    }
+                }
+                // </FS:Horizon>
             }
 
             items.push_back(std::string("thumbnail"));
@@ -2018,6 +2034,43 @@ void LLItemBridge::performAction(LLInventoryModel* model, std::string action)
         return;
     }
     // </FS:MJR> [FIRE-36793]
+    // <FS:Horizon> Set Display Name - viewer-only inventory item display name override.
+    // Prompts for a new display name and stores it locally (gSavedPerAccountSettings);
+    // never calls update_inventory_item(), so the real item name/permissions and the
+    // server are never touched - this works even for no-mod items.
+    else if ("set_display_name" == action)
+    {
+        // Single item only
+        LLViewerInventoryItem* item = static_cast<LLViewerInventoryItem*>(getItem());
+        if (!item) return;
+
+        const LLUUID item_id = item->getUUID();
+
+        LLSD args;
+        args["NAME"] = getDisplayName();
+
+        LLNotificationsUtil::add("SetDisplayName", args, LLSD(),
+            [item_id](const LLSD& notification, const LLSD& response)
+        {
+            S32 opt = LLNotificationsUtil::getSelectedOption(notification, response);
+            if (opt == 0)
+            {
+                std::string new_display_name = response["new_name"].asString();
+                LLStringUtil::trim(new_display_name);
+                set_inventory_display_name_override(item_id, new_display_name);
+
+                // Refresh the on-screen label/sort for this item. This is the same
+                // mechanism LLViewerInventoryItem::rename() uses - it doesn't touch
+                // the item itself, it just tells observers (LLInventoryPanel) to
+                // clear their cached display name and re-pull it, which now picks
+                // up the override via LLItemBridge::buildDisplayName().
+                gInventory.addChangedMask(LLInventoryObserver::LABEL, item_id);
+                gInventory.notifyObservers();
+            }
+        });
+        return;
+    }
+    // </FS:Horizon>
     else if ("show_in_main_panel" == action)
     {
         LLInventoryPanel::openInventoryPanelAndSetSelection(true, mUUID, true);
@@ -2301,7 +2354,21 @@ void LLItemBridge::buildDisplayName() const
 {
     if (getItem())
     {
-        mDisplayName.assign(getItem()->getName());
+        // <FS:Horizon> Set Display Name - viewer-only display name override.
+        // Checked first so it works even for no-mod items; falls through to the
+        // real item name when no override is set. The real item is untouched -
+        // getItem()->getName() (used for in-world/script lookups, tooltips, and
+        // "Copy Name") still returns the actual name regardless of this.
+        std::string override_name;
+        if (get_inventory_display_name_override(getItem()->getUUID(), override_name))
+        {
+            mDisplayName.assign(override_name);
+        }
+        else
+        // </FS:Horizon>
+        {
+            mDisplayName.assign(getItem()->getName());
+        }
     }
     else
     {
@@ -2319,6 +2386,46 @@ void LLItemBridge::buildDisplayName() const
         mParent->requestSort();
     }
 }
+
+// <FS:Horizon> Set Display Name - Shift-F2 inline rename support. Same scope
+// and mechanism as the "Set Display Name" context menu entry in
+// performAction() above: a local, viewer-only overlay that never calls
+// update_inventory_item(), so it works even for no-mod items/locked folders.
+bool LLItemBridge::isDisplayNameEditable() const
+{
+    return getItem() != NULL;
+}
+
+bool LLItemBridge::renameDisplayName(const std::string& new_display_name)
+{
+    LLViewerInventoryItem* item = getItem();
+    if (!item) return false;
+
+    std::string trimmed_name(new_display_name);
+    LLStringUtil::trim(trimmed_name);
+    set_inventory_display_name_override(item->getUUID(), trimmed_name);
+
+    // Refresh the on-screen label/sort for this item - same mechanism the
+    // "Set Display Name" context menu entry and LLViewerInventoryItem::rename()
+    // use: tells observers (LLInventoryPanel) to clear their cached display
+    // name and re-pull it, which now picks up the override via
+    // buildDisplayName() above (or reverts to the real name if the override
+    // was just cleared by an empty new_display_name).
+    gInventory.addChangedMask(LLInventoryObserver::LABEL, item->getUUID());
+    gInventory.notifyObservers();
+    return true;
+}
+
+// Used only to color-code the label (see llfolderviewmodel.h/llfolderviewitem.cpp).
+bool LLItemBridge::hasDisplayNameOverride() const
+{
+    LLViewerInventoryItem* item = getItem();
+    if (!item) return false;
+
+    std::string unused;
+    return get_inventory_display_name_override(item->getUUID(), unused);
+}
+// </FS:Horizon>
 
 // virtual
 LLFontGL::StyleFlags LLItemBridge::getLabelStyle() const

@@ -1396,6 +1396,19 @@
         <key>Value</key>
             <array></array>
         </map>
+     <key>FSInventoryDisplayNameOverrides</key>
+        <map>
+        <key>HideFromEditor</key>
+            <integer>1</integer>
+        <key>Comment</key>
+            <string>FS:Horizon - Viewer-only inventory item display name overrides (item UUID string -> custom display name). Never sent to the server; the real item name and permissions are untouched, so in-world scripts/HUDs doing name-based lookups keep seeing the real name.</string>
+        <key>Persist</key>
+            <integer>1</integer>
+        <key>Type</key>
+            <string>LLSD</string>
+        <key>Value</key>
+            <map></map>
+        </map>
      <key>FSInventoryCustomTabs</key>
         <map>
         <key>HideFromEditor</key>

@@ -137,7 +137,13 @@ public:
     /*virtual*/ void onMouseLeave(S32 x, S32 y, MASK mask);
 
     /** Get the name of a corresponding inventory item */
-    const std::string& getItemName() const;
+    // <FS:Horizon> Set Display Name - returns the viewer-only display name
+    // override when one is set (same source updateItem() renders), so
+    // sorting matches what's actually shown; falls back to the real item
+    // name otherwise. Returned by value since the override is computed on
+    // the fly rather than stored on the item itself.
+    std::string getItemName() const;
+    // </FS:Horizon>
 
     /** Get the asset type of a corresponding inventory item */
     LLAssetType::EType getType() const;

@@ -163,6 +163,11 @@ protected:
     static LLUIColor            sSuffixColor;
     static LLUIColor            sSearchStatusColor;
     static LLUIColor            sFavoriteColor;
+    // <FS:Horizon> Set Display Name - color for items showing a display-name
+    // override instead of their real name (see the drawLabel() color
+    // selection in llfolderviewitem.cpp).
+    static LLUIColor            sDisplayNameColor;
+    // </FS:Horizon>
     // <FS:Ansariel> Special for protected items
     static LLUIColor            sProtectedColor;
 

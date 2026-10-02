@@ -1036,6 +1036,72 @@ bool get_is_category_renameable(const LLInventoryModel* model, const LLUUID& id)
     return false;
 }
 
+// <FS:Horizon> Set Display Name - viewer-only inventory item display name overrides.
+// Stored as a single gSavedPerAccountSettings LLSD map, keyed by item UUID string, so it
+// is local to this viewer/account and is never sent to the server. The real item name
+// and permissions are never touched by this - it only changes what buildDisplayName()
+// renders in the folder view for this item, so in-world scripts/HUDs doing name-based
+// lookups (getItem()->getName()) keep seeing the real name.
+namespace
+{
+    const char* const FS_DISPLAY_NAME_OVERRIDES_SETTING = "FSInventoryDisplayNameOverrides";
+}
+
+bool get_inventory_display_name_override(const LLUUID& item_id, std::string& display_name)
+{
+    const LLSD overrides = gSavedPerAccountSettings.getLLSD(FS_DISPLAY_NAME_OVERRIDES_SETTING);
+    if (!overrides.isMap())
+    {
+        return false;
+    }
+
+    // <FS:Horizon> Resolve to the base item's UUID before looking up. A worn
+    // item shows up in the Appearance/Wearing lists as a SEPARATE inventory
+    // object - a link living in the Current Outfit Folder, with its own
+    // UUID distinct from the item it points to. Without this, an override
+    // set on the real item (e.g. from the main inventory) would never be
+    // found when looked up via its COF link's UUID, so Appearance would
+    // keep showing the real name. getLinkedItemID() returns item_id
+    // unchanged when it isn't a link, so this is a no-op everywhere else.
+    const std::string key = gInventory.getLinkedItemID(item_id).asString();
+    // </FS:Horizon>
+    if (!overrides.has(key))
+    {
+        return false;
+    }
+
+    display_name = overrides[key].asString();
+    return true;
+}
+
+void set_inventory_display_name_override(const LLUUID& item_id, const std::string& display_name)
+{
+    LLSD overrides = gSavedPerAccountSettings.getLLSD(FS_DISPLAY_NAME_OVERRIDES_SETTING);
+    if (!overrides.isMap())
+    {
+        overrides = LLSD::emptyMap();
+    }
+
+    // <FS:Horizon> See get_inventory_display_name_override() above - storing
+    // against the resolved base item's UUID means the override follows the
+    // item everywhere it's linked (COF included), not just wherever it was
+    // set from.
+    const std::string key = gInventory.getLinkedItemID(item_id).asString();
+    // </FS:Horizon>
+    if (display_name.empty())
+    {
+        // Empty input clears the override and reverts to showing the real name.
+        overrides.erase(key);
+    }
+    else
+    {
+        overrides[key] = display_name;
+    }
+
+    gSavedPerAccountSettings.setLLSD(FS_DISPLAY_NAME_OVERRIDES_SETTING, overrides);
+}
+// </FS:Horizon>
+
 void show_task_item_profile(const LLUUID& item_uuid, const LLUUID& object_id)
 {
     // <FS:Ansariel> Optional legacy object properties

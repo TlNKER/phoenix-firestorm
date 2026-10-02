@@ -270,6 +270,14 @@ public:
     virtual time_t getCreationDate() const;
     virtual bool isItemRenameable() const;
     virtual bool renameItem(const std::string& new_name);
+    // <FS:Horizon> Set Display Name - Shift-F2 inline rename support, same
+    // viewer-only override used by the "Set Display Name" context menu
+    // entry (see llinventoryfunctions.h/.cpp and buildDisplayName() below).
+    virtual bool isDisplayNameEditable() const;
+    virtual bool renameDisplayName(const std::string& new_display_name);
+    // For color-coding the label - see llfolderviewmodel.h for details.
+    virtual bool hasDisplayNameOverride() const;
+    // </FS:Horizon>
     virtual bool removeItem();
     virtual bool isItemCopyable(bool can_copy_as_link = true) const;
 // [SL:KB] - Patch: Inventory-Links | Checked: 2013-09-19 (Catznip-3.6)

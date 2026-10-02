@@ -68,6 +68,7 @@ LLUIImagePtr LLFolderViewItem::sFavoriteImg;
 LLUIImagePtr LLFolderViewItem::sFavoriteContentImg;
 LLFontGL* LLFolderViewItem::sSuffixFont = nullptr;
 LLUIColor LLFolderViewItem::sFavoriteColor;
+LLUIColor LLFolderViewItem::sDisplayNameColor; // <FS:Horizon> Set Display Name
 bool LLFolderViewItem::sColorSetInitialized = false;
 
 // only integers can be initialized in header
@@ -239,6 +240,11 @@ LLFolderViewItem::LLFolderViewItem(const LLFolderViewItem::Params& p)
         sSuffixColor = LLUIColorTable::instance().getColor("InventoryItemLinkColor", DEFAULT_WHITE);
         sSearchStatusColor = LLUIColorTable::instance().getColor("InventorySearchStatusColor", DEFAULT_WHITE);
         sFavoriteColor = LLUIColorTable::instance().getColor("InventoryFavoriteColor", DEFAULT_WHITE);
+        // <FS:Horizon> Set Display Name - light blue default so it's visible
+        // out of the box without needing a color defined in every skin;
+        // a skin/color file can still override "InventoryDisplayNameColor".
+        sDisplayNameColor = LLUIColorTable::instance().getColor("InventoryDisplayNameColor", LLColor4(0.68f, 0.85f, 1.f, 1.f));
+        // </FS:Horizon>
         sColorSetInitialized = true;
     }
 
@@ -1164,6 +1170,15 @@ void LLFolderViewItem::draw()
     {
         color = sFavoriteColor;
     }
+    // <FS:Horizon> Set Display Name - color-code items showing a display-name
+    // override distinctly from items showing their real name, so it's
+    // visible at a glance which one you're looking at. Checked after
+    // favorite so a favorited item's star-color still wins if both apply.
+    else if (getViewModelItem() && getViewModelItem()->hasDisplayNameOverride())
+    {
+        color = sDisplayNameColor;
+    }
+    // </FS:Horizon>
     else
     {
         color = mFontColor;

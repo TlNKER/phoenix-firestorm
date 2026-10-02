@@ -170,6 +170,7 @@ LLFolderView::LLFolderView(const Params& p)
     mShowEmptyMessage(p.show_empty_message),
     mShowFolderHierarchy(false),
     mRenameItem( NULL ),
+    mRenameDisplayName( false ), // <FS:Horizon> Set Display Name
     mNeedsScroll( false ),
     mUseLabelSuffix(p.use_label_suffix),
     mSuppressFolderMenu(p.suppress_folder_menu),
@@ -753,7 +754,18 @@ void LLFolderView::finishRenamingItem( void )
     }
     if( mRenameItem )
     {
-        mRenameItem->rename( mRenamer->getText() );
+        // <FS:Horizon> Set Display Name - Shift-F2 inline rename support.
+        // mRenameDisplayName (set in startRenamingSelectedItem() above)
+        // selects which of these the committed text becomes.
+        if (mRenameDisplayName)
+        {
+            mRenameItem->getViewModelItem()->renameDisplayName( mRenamer->getText() );
+        }
+        else
+        // </FS:Horizon>
+        {
+            mRenameItem->rename( mRenamer->getText() );
+        }
     }
 
     closeRenamer();
@@ -1094,7 +1106,9 @@ void LLFolderView::paste()
 }
 
 // public rename functionality - can only start the process
-void LLFolderView::startRenamingSelectedItem( void )
+// <FS:Horizon> Set Display Name - Shift-F2 inline rename support. See the
+// rename_display_name param doc in llfolderview.h.
+void LLFolderView::startRenamingSelectedItem( bool rename_display_name )
 {
     LL_DEBUGS("Inventory") << "Starting inventory renamer" << LL_ENDL;
 
@@ -1107,26 +1121,52 @@ void LLFolderView::startRenamingSelectedItem( void )
     {
         item = mSelectedItems.front();
     }
-    if(getVisible() && getEnabled() && (count == 1) && item && item->getViewModelItem() &&
-       item->getViewModelItem()->isItemRenameable())
+
+    if (!(getVisible() && getEnabled() && (count == 1) && item && item->getViewModelItem()))
     {
-        mRenameItem = item;
-
-        updateRenamerPosition();
-
-
-        mRenamer->setText(item->getName());
-        mRenamer->selectAll();
-        mRenamer->setVisible( true );
-        // set focus will fail unless item is visible
-        mRenamer->setFocus( true );
-        if (!mRenamerTopLostSignalConnection.connected())
-        {
-            mRenamerTopLostSignalConnection = mRenamer->setTopLostCallback(boost::bind(&LLFolderView::onRenamerLost, this));
-        }
-        LLUI::getInstance()->addPopup(mRenamer);
+        return;
     }
+
+    // Display-name rename has its own, deliberately looser gating (same
+    // scope as the "Set Display Name" context menu entry): it's a local,
+    // viewer-only overlay that never touches the real item, so it works even
+    // for no-mod items/locked folders that isItemRenameable() would
+    // otherwise block renaming.
+    std::string initial_text;
+    if (rename_display_name)
+    {
+        if (!item->getViewModelItem()->isDisplayNameEditable())
+        {
+            return;
+        }
+        initial_text = item->getViewModelItem()->getDisplayName();
+    }
+    else
+    {
+        if (!item->getViewModelItem()->isItemRenameable())
+        {
+            return;
+        }
+        initial_text = item->getName();
+    }
+
+    mRenameItem = item;
+    mRenameDisplayName = rename_display_name;
+
+    updateRenamerPosition();
+
+    mRenamer->setText(initial_text);
+    mRenamer->selectAll();
+    mRenamer->setVisible( true );
+    // set focus will fail unless item is visible
+    mRenamer->setFocus( true );
+    if (!mRenamerTopLostSignalConnection.connected())
+    {
+        mRenamerTopLostSignalConnection = mRenamer->setTopLostCallback(boost::bind(&LLFolderView::onRenamerLost, this));
+    }
+    LLUI::getInstance()->addPopup(mRenamer);
 }
+// </FS:Horizon>
 
 bool LLFolderView::handleKeyHere( KEY key, MASK mask )
 {
@@ -1147,7 +1187,10 @@ bool LLFolderView::handleKeyHere( KEY key, MASK mask )
     {
     case KEY_F2:
         mSearchString.clear();
-        startRenamingSelectedItem();
+        // <FS:Horizon> Set Display Name - Shift-F2 edits the display-name
+        // override inline, the same way plain F2 edits the real name.
+        startRenamingSelectedItem(mask == MASK_SHIFT);
+        // </FS:Horizon>
         handled = true;
         break;
 

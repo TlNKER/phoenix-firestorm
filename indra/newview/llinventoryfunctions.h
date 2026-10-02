@@ -67,6 +67,17 @@ bool get_is_category_and_children_removable(LLInventoryModel* model, const LLUUI
 
 bool get_is_category_renameable(const LLInventoryModel* model, const LLUUID& id);
 
+// <FS:Horizon> Set Display Name - viewer-only inventory item display name overrides.
+// Stored locally only (gSavedPerAccountSettings), keyed by item UUID string; never sent
+// to the server, and the real item name/permissions are never touched, so in-world
+// scripts/HUDs doing name-based lookups keep seeing the real name. Works for any item,
+// including no-mod items, since it never calls update_inventory_item().
+// Returns true and fills display_name if an override exists for item_id.
+bool get_inventory_display_name_override(const LLUUID& item_id, std::string& display_name);
+// Sets (or, if display_name is empty, clears) the override for item_id.
+void set_inventory_display_name_override(const LLUUID& item_id, const std::string& display_name);
+// </FS:Horizon>
+
 void show_item_profile(const LLUUID& item_uuid);
 void show_task_item_profile(const LLUUID& item_uuid, const LLUUID& object_id);
 

@@ -201,7 +201,12 @@ public:
     LLFolderViewItem* getNextUnselectedItem();
 
     // Public rename functionality - can only start the process
-    void startRenamingSelectedItem( void );
+    // <FS:Horizon> Set Display Name - Shift-F2 inline rename support.
+    // rename_display_name selects which text gets edited and, on commit,
+    // which gets written: the real item name (false, F2's existing
+    // behavior) or the viewer-only display-name override (true, Shift-F2).
+    void startRenamingSelectedItem( bool rename_display_name = false );
+    // </FS:Horizon>
 
     // LLView functionality
     ///*virtual*/ bool handleKey( KEY key, MASK mask, bool called_from_parent );
@@ -317,6 +322,11 @@ protected:
     // Renaming variables and methods
     LLFolderViewItem*               mRenameItem;  // The item currently being renamed
     LLLineEditor*                   mRenamer;
+    // <FS:Horizon> Set Display Name - true while mRenamer/mRenameItem are open
+    // for a Shift-F2 display-name-override edit rather than a plain F2 real-
+    // name edit; read by finishRenamingItem() to decide what to commit.
+    bool                            mRenameDisplayName;
+    // </FS:Horizon>
 
     LLRect                          mScrollConstraintRect;
 
