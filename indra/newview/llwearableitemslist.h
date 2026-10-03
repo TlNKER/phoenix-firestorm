@@ -106,11 +106,15 @@ protected:
                               bool worn_indication_enabled, const Params& params, bool show_widgets = false);
 
     // <FS:Horizon> Set Display Name - this is the "My Outfits" tab row type
-    // (per the class comment above), so a display-name override shows pink
-    // here instead of the usual light blue (see llinventorylistitem.h/.cpp)
-    // - distinct from FSPanelCOFWearableOutfitListItem below, which inherits
-    // from this class for the "Wearing" tab and reverts the color back.
-    /*virtual*/ const LLUIColor& getDisplayNameOverrideColor() const;
+    // (per the class comment above). A display-name override is conveyed
+    // here by switching to an italic font (bold+italic when the item is
+    // also worn) rather than by color, so the normal worn/unworn color
+    // from default_style/worn_style still shows through - distinct from
+    // FSPanelCOFWearableOutfitListItem below, which inherits from this
+    // class for the "Wearing" tab and reverts back to the usual light-blue
+    // color with no font change (see llinventorylistitem.h/.cpp).
+    /*virtual*/ bool useDisplayNameOverrideColor() const;
+    /*virtual*/ const LLFontGL* getDisplayNameOverrideFont(const LLFontGL* base_font, EItemState item_state) const;
     // </FS:Horizon>
 
 private:
@@ -275,10 +279,12 @@ protected:
     virtual const LLPanelInventoryListItemBase::Params& getDefaultParams() const;
 
     // <FS:Horizon> Set Display Name - this is the "Wearing" tab row type (per
-    // the class comment above); revert back to the base class's usual color
-    // (light blue) rather than inheriting LLPanelWearableOutfitItem's pink,
-    // since pink is meant for "My Outfits" specifically.
-    /*virtual*/ const LLUIColor& getDisplayNameOverrideColor() const;
+    // the class comment above); revert back to the base class's usual
+    // color-only behavior (light blue, no font change) rather than
+    // inheriting LLPanelWearableOutfitItem's italic-font treatment, since
+    // that's meant for "My Outfits" specifically.
+    /*virtual*/ bool useDisplayNameOverrideColor() const;
+    /*virtual*/ const LLFontGL* getDisplayNameOverrideFont(const LLFontGL* base_font, EItemState item_state) const;
     // </FS:Horizon>
 private:
     LLTextBox*      mWeightCtrl;

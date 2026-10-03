@@ -208,12 +208,27 @@ protected:
 
     virtual const LLPanelInventoryListItemBase::Params& getDefaultParams() const; // <FS:Ansariel> Better attachment list
 
-    // <FS:Horizon> Set Display Name - color used in setTitle() below for an
-    // item showing a display-name override. Virtual so a subclass used in a
+    // <FS:Horizon> Set Display Name - hooks used in setTitle() below for an
+    // item showing a display-name override, so a subclass used in a
     // specific context (see LLPanelWearableOutfitItem/FSPanelCOFWearableOutfitListItem
-    // in llwearableitemslist.h) can show a different color there without
-    // duplicating setTitle()'s whole color-selection logic.
+    // in llwearableitemslist.h) can convey that by color, by font, or both,
+    // without duplicating setTitle()'s whole style-selection logic.
+
+    // Whether to color the item using getDisplayNameOverrideColor() below.
+    // Default true (color is the normal way this is shown); a context that
+    // conveys the override some other way (e.g. an italic font) instead
+    // returns false here so the usual worn/unworn color isn't overwritten.
+    virtual bool useDisplayNameOverrideColor() const { return true; }
+
+    // Color used when useDisplayNameOverrideColor() is true.
     virtual const LLUIColor& getDisplayNameOverrideColor() const;
+
+    // Font to use for the item's name. Default returns base_font unchanged
+    // (no font change) - a context that conveys the override via font
+    // (e.g. italic, or bold+italic when item_state is IS_WORN) overrides
+    // this instead. base_font is the style's own font if one is already
+    // set, otherwise the title control's current font.
+    virtual const LLFontGL* getDisplayNameOverrideFont(const LLFontGL* base_font, EItemState item_state) const { return base_font; }
     // </FS:Horizon>
 
     const LLUUID mInventoryItemUUID;

@@ -36,6 +36,13 @@
 #include "lltextbox.h"
 #include "lltextutil.h"
 
+// llrender
+// <FS:Horizon> Set Display Name - for the font-descriptor lookup in
+// setTitle() below (deriving an italic/bold variant of the title's font).
+#include "llfontgl.h"
+#include "llfontregistry.h"
+// </FS:Horizon>
+
 // newview
 #include "llinventoryfunctions.h"
 #include "llinventoryicon.h"
@@ -499,20 +506,31 @@ void LLPanelInventoryListItemBase::setTitle(const std::string& title,
             style_params.color = favorite_color;
         }
     }
-    // <FS:Horizon> Set Display Name - color-code items showing a display-name
-    // override distinctly from items showing their real name, matching the
-    // main inventory tree (see llfolderviewitem.cpp's drawLabel()). Checked
-    // after favorite so a favorited item's star-color still wins if both apply.
-    // getDisplayNameOverrideColor() is virtual so the Outfits-tab row type
-    // (LLPanelWearableOutfitItem) can show a different color than everywhere
-    // else - see llwearableitemslist.h/.cpp.
+    // <FS:Horizon> Set Display Name - distinctly mark items showing a
+    // display-name override, matching the main inventory tree (see
+    // llfolderviewitem.cpp's drawLabel()). Checked after favorite so a
+    // favorited item's star-color still wins if both apply. How this is
+    // conveyed (color, font, or both) is virtual, so the Outfits-tab row
+    // type (LLPanelWearableOutfitItem) can use an italic font and leave the
+    // usual worn/unworn color alone, while everywhere else keeps the
+    // original light-blue color treatment - see llwearableitemslist.h/.cpp.
     else
     {
         LLViewerInventoryItem* inv_item = getItem();
         std::string unused;
         if (inv_item && get_inventory_display_name_override(inv_item->getUUID(), unused))
         {
-            style_params.color = getDisplayNameOverrideColor();
+            if (useDisplayNameOverrideColor())
+            {
+                style_params.color = getDisplayNameOverrideColor();
+            }
+
+            const LLFontGL* base_font = style_params.font.isProvided() ? style_params.font() : mTitleCtrl->getFont();
+            const LLFontGL* override_font = getDisplayNameOverrideFont(base_font, item_state);
+            if (override_font && override_font != base_font)
+            {
+                style_params.font = override_font;
+            }
         }
     }
     // </FS:Horizon>

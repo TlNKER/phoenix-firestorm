@@ -1,5 +1,5 @@
 Warning: no --id argument or AUTOBUILD_BUILD_ID environment variable specified;
-    using a value from the UTC date and time (262741840), which may not be unique
+    using a value from the UTC date and time (262751504), which may not be unique
  'C:\Cygwin64\bin\bash.exe' '../scripts/configure_firestorm.sh' '--build' '--version' '--no-opensim' '--version' '--platform windows'
        PLATFORM: windows
             KDU: false
@@ -30,11 +30,11 @@ Versioning...
 /cygdrive/c/FS_Build/horizon-build /cygdrive/c/FS_Build/horizon-build/build-vc170-64
 abort: no repository found in '/cygdrive/c/FS_Build/horizon-build' (.hg not found)
 Channel: Firestorm-private-dandelion
-Version: 7.2.5. [23f9038472]
+Version: 7.2.5. [91d5f3d109]
 /cygdrive/c/FS_Build/horizon-build/build-vc170-64
 Building windows...
 MSBuild version 17.14.51+25f168cee for .NET Framework
-Build started 10/1/2026 8:40:11 PM.
+Build started 10/2/2026 5:04:07 PM.
 
 Project "C:\FS_Build\horizon-build\build-vc170-64\Firestorm.sln" on node 1 (Build target(s)).
 ValidateSolutionConfiguration:
@@ -365,7 +365,7 @@ CustomBuild:
   Option: bundleid = com.secondlife.indra.viewer
   Option: platform = windows
   Option: velopack = OFF
-  Option: version = ['7', '2', '5', '262741839']
+  Option: version = ['7', '2', '5', '262751503']
   ================ Creating base package
   Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
   Processing dictionaries => app_settings\dictionaries ... 22 files
@@ -695,118 +695,9 @@ InitializeBuildStatus:
 CustomBuild:
   All outputs are up-to-date.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Fo"llui.dir\Release\\" /Fd"C:\FS_Build\horizon-build\build-vc170-64\llui\Release\llui.pdb" /external:W0 /TP /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /Zo /c "C:\FS_Build\horizon-build\indra\llui\llfolderview.cpp" "C:\FS_Build\horizon-build\indra\llui\llfolderviewitem.cpp" "C:\FS_Build\horizon-build\indra\llui\llfolderviewmodel.cpp"
-  llfolderview.cpp
-  llfolderviewitem.cpp
-  llfolderviewmodel.cpp
+  All outputs are up-to-date.
 Lib:
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llui\Release\llui.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llui.dir\Release\fsregistrarutils.obj
-  llui.dir\Release\llaccordionctrl.obj
-  llui.dir\Release\llaccordionctrltab.obj
-  llui.dir\Release\llbadge.obj
-  llui.dir\Release\llbadgeholder.obj
-  llui.dir\Release\llbadgeowner.obj
-  llui.dir\Release\llbutton.obj
-  llui.dir\Release\llchatentry.obj
-  llui.dir\Release\llchatmentionhelper.obj
-  llui.dir\Release\llcheckboxctrl.obj
-  llui.dir\Release\llclipboard.obj
-  llui.dir\Release\llcombobox.obj
-  llui.dir\Release\llcommandmanager.obj
-  llui.dir\Release\llconsole.obj
-  llui.dir\Release\llcontainerview.obj
-  llui.dir\Release\llctrlselectioninterface.obj
-  llui.dir\Release\lldockablefloater.obj
-  llui.dir\Release\lldockcontrol.obj
-  llui.dir\Release\lldraghandle.obj
-  llui.dir\Release\lleditmenuhandler.obj
-  llui.dir\Release\llemojidictionary.obj
-  llui.dir\Release\llemojihelper.obj
-  llui.dir\Release\llf32uictrl.obj
-  llui.dir\Release\llfiltereditor.obj
-  llui.dir\Release\llflashtimer.obj
-  llui.dir\Release\llflatlistview.obj
-  llui.dir\Release\llfloater.obj
-  llui.dir\Release\llfloaterreg.obj
-  llui.dir\Release\llfloaterreglistener.obj
-  llui.dir\Release\llflyoutbutton.obj
-  llui.dir\Release\llfocusmgr.obj
-  llui.dir\Release\llfolderview.obj
-  llui.dir\Release\llfolderviewitem.obj
-  llui.dir\Release\llfolderviewmodel.obj
-  llui.dir\Release\lliconctrl.obj
-  llui.dir\Release\llkeywords.obj
-  llui.dir\Release\lllayoutstack.obj
-  llui.dir\Release\lllineeditor.obj
-  llui.dir\Release\llloadingindicator.obj
-  llui.dir\Release\lllocalcliprect.obj
-  llui.dir\Release\llmenubutton.obj
-  llui.dir\Release\llmenugl.obj
-  llui.dir\Release\llmodaldialog.obj
-  llui.dir\Release\llmultifloater.obj
-  llui.dir\Release\llmultislider.obj
-  llui.dir\Release\llmultisliderctrl.obj
-  llui.dir\Release\llnotifications.obj
-  llui.dir\Release\llnotificationslistener.obj
-  llui.dir\Release\llnotificationsutil.obj
-  llui.dir\Release\llpanel.obj
-  llui.dir\Release\llprogressbar.obj
-  llui.dir\Release\llradiogroup.obj
-  llui.dir\Release\llresizebar.obj
-  llui.dir\Release\llresizehandle.obj
-  llui.dir\Release\llresmgr.obj
-  llui.dir\Release\llrngwriter.obj
-  llui.dir\Release\llscrollbar.obj
-  llui.dir\Release\llscrollcontainer.obj
-  llui.dir\Release\llscrollingpanellist.obj
-  llui.dir\Release\llscrolllistcell.obj
-  llui.dir\Release\llscrolllistcolumn.obj
-  llui.dir\Release\llscrolllistctrl.obj
-  llui.dir\Release\llscrolllistitem.obj
-  llui.dir\Release\llsearcheditor.obj
-  llui.dir\Release\llslider.obj
-  llui.dir\Release\llsliderctrl.obj
-  llui.dir\Release\llspellcheck.obj
-  llui.dir\Release\llspinctrl.obj
-  llui.dir\Release\llstatbar.obj
-  llui.dir\Release\llstatgraph.obj
-  llui.dir\Release\llstatview.obj
-  llui.dir\Release\llstyle.obj
-  llui.dir\Release\lltabcontainer.obj
-  llui.dir\Release\lltextbase.obj
-  llui.dir\Release\lltextbox.obj
-  llui.dir\Release\lltexteditor.obj
-  llui.dir\Release\lltextparser.obj
-  llui.dir\Release\lltextutil.obj
-  llui.dir\Release\lltextvalidate.obj
-  llui.dir\Release\lltimectrl.obj
-  llui.dir\Release\lltrans.obj
-  llui.dir\Release\lltransutil.obj
-  llui.dir\Release\lltoggleablemenu.obj
-  llui.dir\Release\lltoolbar.obj
-  llui.dir\Release\lltooltip.obj
-  llui.dir\Release\llui.obj
-  llui.dir\Release\lluicolor.obj
-  llui.dir\Release\lluicolortable.obj
-  llui.dir\Release\lluictrl.obj
-  llui.dir\Release\lluictrlfactory.obj
-  llui.dir\Release\lluistring.obj
-  llui.dir\Release\lluiusage.obj
-  llui.dir\Release\llundo.obj
-  llui.dir\Release\llurlaction.obj
-  llui.dir\Release\llurlentry.obj
-  llui.dir\Release\llurlmatch.obj
-  llui.dir\Release\llurlregistry.obj
-  llui.dir\Release\llviewborder.obj
-  llui.dir\Release\llviewinject.obj
-  llui.dir\Release\llviewmodel.obj
-  llui.dir\Release\llview.obj
-  llui.dir\Release\llviewquery.obj
-  llui.dir\Release\llviewereventrecorder.obj
-  llui.dir\Release\llvirtualtrackball.obj
-  llui.dir\Release\llwindowshade.obj
-  llui.dir\Release\llxuiparser.obj
-  llui.dir\Release\llxyvector.obj
+  All outputs are up-to-date.
   llui.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llui\Release\llui.lib
 FinalizeBuildStatus:
   Deleting file "llui.dir\Release\llui.tlog\unsuccessfulbuild".
@@ -842,116 +733,40 @@ CustomBuild:
   All outputs are up-to-date.
 ClCompile:
   All outputs are up-to-date.
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\daeexport.cpp" "C:\FS_Build\horizon-build\indra\newview\fsfloaterexport.cpp" "C:\FS_Build\horizon-build\indra\newview\fsfloaterpartialinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\fsfloatersearch.cpp" "C:\FS_Build\horizon-build\indra\newview\fsinventorycustomtabs.cpp" "C:\FS_Build\horizon-build\indra\newview\fsnewitemctrl.cpp" "C:\FS_Build\horizon-build\indra\newview\fspanelface.cpp" "C:\FS_Build\horizon-build\indra\newview\fspanelprefs.cpp" "C:\FS_Build\horizon-build\indra\newview\llagentwearables.cpp" "C:\FS_Build\horizon-build\indra\newview\llappearancemgr.cpp" "C:\FS_Build\horizon-build\indra\newview\llavataractions.cpp" "C:\FS_Build\horizon-build\indra\newview\llestateinfomodel.cpp" "C:\FS_Build\horizon-build\indra\newview\llfavoritesbar.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloateravatartextures.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterbuyland.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterchangeitemthumbnail.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatereditenvironmentbase.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatereditextdaycycle.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterenvironmentadjust.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterexperienceprofile.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterexperiences.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterfixedenvironment.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatergesture.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatergltfasseteditor.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterland.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatermarketplacelistings.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatermyenvironment.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloateropenobject.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterpreference.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterregioninfo.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterreporter.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloaterscriptrecover.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatersellland.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatertools.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatertopobjects.cpp" "C:\FS_Build\horizon-build\indra\newview\llfolderviewmodelinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llgltffolderitem.cpp" "C:\FS_Build\horizon-build\indra\newview\llgltffoldermodel.cpp" "C:\FS_Build\horizon-build\indra\newview\llinspecttexture.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorybridge.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryfilter.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryfunctions.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorygallery.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorygallerymenu.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorylistitem.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorymodel.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorymodelbackgroundfetch.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryobserver.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorypanel.cpp" "C:\FS_Build\horizon-build\indra\newview\llmaterialeditor.cpp" "C:\FS_Build\horizon-build\indra\newview\llmeshrepository.cpp" "C:\FS_Build\horizon-build\indra\newview\lloutfitgallery.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelclassified.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelcontents.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneldirbrowser.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneleditsky.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneleditwater.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneleditwearable.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelenvironment.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelface.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelgroupcreate.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelgroupgeneral.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanellandaudio.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanellandmarks.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanellandmedia.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmaininventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmarketplaceinbox.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmarketplaceinboxinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmediasettingsgeneral.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmediasettingspermissions.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelmediasettingssecurity.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelobject.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelobjectinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelopenregionsettings.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneloutfitedit.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelpeoplemenus.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelplaceinfo.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelplaces.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelprofile.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelprofileclassifieds.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelprofilepicks.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelvolume.cpp" "C:\FS_Build\horizon-build\indra\newview\llplacesfolderview.cpp" "C:\FS_Build\horizon-build\indra\newview\llplacesinventorybridge.cpp" "C:\FS_Build\horizon-build\indra\newview\llplacesinventorypanel.cpp" "C:\FS_Build\horizon-build\indra\newview\llselectmgr.cpp" "C:\FS_Build\horizon-build\indra\newview\llsettingspicker.cpp" "C:\FS_Build\horizon-build\indra\newview\llsidepanelappearance.cpp" "C:\FS_Build\horizon-build\indra\newview\llsidepanelinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llstartup.cpp" "C:\FS_Build\horizon-build\indra\newview\llstatusbar.cpp" "C:\FS_Build\horizon-build\indra\newview\lltexturectrl.cpp" "C:\FS_Build\horizon-build\indra\newview\lltooldraganddrop.cpp" "C:\FS_Build\horizon-build\indra\newview\llversioninfo.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerassetupload.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerattachmenu.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerfloaterreg.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerinput.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewermessage.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerregion.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewertexteditor.cpp" "C:\FS_Build\horizon-build\indra\newview\omnifilter.cpp" "C:\FS_Build\horizon-build\indra\newview\particleeditor.cpp"
-  daeexport.cpp
-  fsfloaterexport.cpp
-  fsfloaterpartialinventory.cpp
-  fsfloatersearch.cpp
-  fsinventorycustomtabs.cpp
-  fsnewitemctrl.cpp
-  fspanelface.cpp
-  fspanelprefs.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\fsfloaterwearablefavorites.cpp" "C:\FS_Build\horizon-build\indra\newview\llagentwearables.cpp" "C:\FS_Build\horizon-build\indra\newview\llappearancelistener.cpp" "C:\FS_Build\horizon-build\indra\newview\llappearancemgr.cpp" "C:\FS_Build\horizon-build\indra\newview\llavataractions.cpp" "C:\FS_Build\horizon-build\indra\newview\llcofwearables.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatersidepanelcontainer.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorybridge.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryfunctions.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryitemslist.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorylistener.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorylistitem.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorymodel.cpp" "C:\FS_Build\horizon-build\indra\newview\lloutfitgallery.cpp" "C:\FS_Build\horizon-build\indra\newview\lloutfitslist.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelblockedlist.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneloutfitedit.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneloutfitsinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelwearing.cpp" "C:\FS_Build\horizon-build\indra\newview\llsaveoutfitcombobtn.cpp" "C:\FS_Build\horizon-build\indra\newview\llsidepanelappearance.cpp" "C:\FS_Build\horizon-build\indra\newview\llstartup.cpp" "C:\FS_Build\horizon-build\indra\newview\llversioninfo.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerfloaterreg.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerwearable.cpp" "C:\FS_Build\horizon-build\indra\newview\llvoavatar.cpp" "C:\FS_Build\horizon-build\indra\newview\llwearableitemslist.cpp" "C:\FS_Build\horizon-build\indra\newview\rlvhandler.cpp"
+  fsfloaterwearablefavorites.cpp
   llagentwearables.cpp
+  llappearancelistener.cpp
   llappearancemgr.cpp
   llavataractions.cpp
-  llestateinfomodel.cpp
-  llfavoritesbar.cpp
-  llfloateravatartextures.cpp
-  llfloaterbuyland.cpp
-  llfloaterchangeitemthumbnail.cpp
-  llfloatereditenvironmentbase.cpp
-  llfloatereditextdaycycle.cpp
-  llfloaterenvironmentadjust.cpp
-  llfloaterexperienceprofile.cpp
-  llfloaterexperiences.cpp
-  llfloaterfixedenvironment.cpp
-  llfloatergesture.cpp
-  llfloatergltfasseteditor.cpp
-  llfloaterland.cpp
-  llfloatermarketplacelistings.cpp
-  llfloatermyenvironment.cpp
-  llfloateropenobject.cpp
-  llfloaterpreference.cpp
-  llfloaterregioninfo.cpp
-  llfloaterreporter.cpp
-  llfloaterscriptrecover.cpp
-  llfloatersellland.cpp
-  llfloatertools.cpp
-  llfloatertopobjects.cpp
-  llfolderviewmodelinventory.cpp
-  llgltffolderitem.cpp
-  llgltffoldermodel.cpp
-  llinspecttexture.cpp
+  llcofwearables.cpp
+  llfloatersidepanelcontainer.cpp
   llinventorybridge.cpp
-  llinventoryfilter.cpp
   llinventoryfunctions.cpp
-  llinventorygallery.cpp
-  llinventorygallerymenu.cpp
+  llinventoryitemslist.cpp
+  llinventorylistener.cpp
   llinventorylistitem.cpp
   llinventorymodel.cpp
-  llinventorymodelbackgroundfetch.cpp
-  llinventoryobserver.cpp
-  llinventorypanel.cpp
-  llmaterialeditor.cpp
-  llmeshrepository.cpp
   lloutfitgallery.cpp
-  llpanelclassified.cpp
-  llpanelcontents.cpp
-  llpaneldirbrowser.cpp
-  llpaneleditsky.cpp
-  llpaneleditwater.cpp
-  llpaneleditwearable.cpp
-  llpanelenvironment.cpp
-  llpanelface.cpp
-  llpanelgroupcreate.cpp
-  llpanelgroupgeneral.cpp
-  llpanellandaudio.cpp
-  llpanellandmarks.cpp
-  llpanellandmedia.cpp
-  llpanelmaininventory.cpp
-  llpanelmarketplaceinbox.cpp
-  llpanelmarketplaceinboxinventory.cpp
-  llpanelmediasettingsgeneral.cpp
-  llpanelmediasettingspermissions.cpp
-  llpanelmediasettingssecurity.cpp
-  llpanelobject.cpp
-  llpanelobjectinventory.cpp
-  llpanelopenregionsettings.cpp
+  lloutfitslist.cpp
+  llpanelblockedlist.cpp
   llpaneloutfitedit.cpp
-  llpanelpeoplemenus.cpp
-  llpanelplaceinfo.cpp
-  llpanelplaces.cpp
-  llpanelprofile.cpp
-  llpanelprofileclassifieds.cpp
-  llpanelprofilepicks.cpp
-  llpanelvolume.cpp
-  llplacesfolderview.cpp
-  llplacesinventorybridge.cpp
-  llplacesinventorypanel.cpp
-  llselectmgr.cpp
-  llsettingspicker.cpp
+  llpaneloutfitsinventory.cpp
+  llpanelwearing.cpp
+  llsaveoutfitcombobtn.cpp
   llsidepanelappearance.cpp
-  llsidepanelinventory.cpp
   llstartup.cpp
-  llstatusbar.cpp
-  lltexturectrl.cpp
-  lltooldraganddrop.cpp
   llversioninfo.cpp
-  llviewerassetupload.cpp
-  llviewerattachmenu.cpp
   llviewerfloaterreg.cpp
-  llviewerinput.cpp
   llviewerinventory.cpp
-  llviewermessage.cpp
-  llviewerregion.cpp
-  llviewertexteditor.cpp
-  omnifilter.cpp
-  particleeditor.cpp
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj /bigobj "C:\FS_Build\horizon-build\indra\newview\llappviewer.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewermenu.cpp"
-  llappviewer.cpp
+  llviewerwearable.cpp
+  llvoavatar.cpp
+  llwearableitemslist.cpp
+  rlvhandler.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj /bigobj "C:\FS_Build\horizon-build\indra\newview\llviewermenu.cpp"
   llviewermenu.cpp
   All outputs are up-to-date.
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /D "LL_VIEWER_CHANNEL=Firestorm-Horizon" /D LL_VIEWER_VERSION_MAJOR=7 /D LL_VIEWER_VERSION_MINOR=2 /D LL_VIEWER_VERSION_PATCH=5 /D LL_VIEWER_VERSION_BUILD=262741839 /D "FS_VIEWER_VERSION_GITHASH=\"23f9038472\"" /D "LLBUILD_CONFIG=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\llappviewerwin32.cpp" "C:\FS_Build\horizon-build\indra\newview\llvelopack.cpp"
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /D "LL_VIEWER_CHANNEL=Firestorm-Horizon" /D LL_VIEWER_VERSION_MAJOR=7 /D LL_VIEWER_VERSION_MINOR=2 /D LL_VIEWER_VERSION_PATCH=5 /D LL_VIEWER_VERSION_BUILD=262751503 /D "FS_VIEWER_VERSION_GITHASH=\"91d5f3d109\"" /D "LLBUILD_CONFIG=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\llappviewerwin32.cpp" "C:\FS_Build\horizon-build\indra\newview\llvelopack.cpp"
   llappviewerwin32.cpp
   llvelopack.cpp
 ResourceCompile:
@@ -1801,9 +1616,9 @@ Link:
   "firestorm-bin.dir\Release\llvelopack.obj"
   "firestorm-bin.dir\Release\llwindebug.obj"
   Generating code
-  29111 of 438952 functions ( 6.6%) were compiled, the rest were copied from previous compilation.
-    11 functions were new in current compilation
-    4346 functions had inline decision re-evaluated but remain unchanged
+  678 of 438955 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    2655 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   firestorm-bin.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\newview\Release\firestorm-bin.exe
 FinalizeBuildStatus:
@@ -1886,7 +1701,7 @@ CustomBuild:
   Option: actions = ['copy', 'package']
   Option: bundleid = com.secondlife.indra.viewer
   Option: platform = windows
-  Option: version = ['7', '2', '5', '262741839']
+  Option: version = ['7', '2', '5', '262751503']
   ================ Creating base package
   Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
   Processing dictionaries => app_settings\dictionaries ... 22 files
@@ -1913,16 +1728,16 @@ CustomBuild:
   Processing *.lsltxt => fs_resources\*.lsltxt ... 1 files
   Processing *.dae => fs_resources\*.dae ... 2 files
   Processing skins.xml => skins\skins.xml ... 1 files
-  Processing */*.jpg => skins\*/textures\*/*.jpg ... 25 files
-  Processing */*.tga => skins\*/textures\*/*.tga ... 112 files
-  Processing */*.png => skins\*/textures\*/*.png ... 3562 files
-  Processing *.tga => skins\*/textures\*.tga ... 371 files
+  Processing */*.jpg => skins\*/textures\*/*.jpg ... 26 files
+  Processing */*.tga => skins\*/textures\*/*.tga ... 118 files
+  Processing */*.png => skins\*/textures\*/*.png ... 4075 files
+  Processing *.tga => skins\*/textures\*.tga ... 372 files
   Processing *.j2c => skins\*/textures\*.j2c ... 54 files
   Processing *.jpg => skins\*/textures\*.jpg ... 1 files
   Processing *.png => skins\*/textures\*.png ... 66 files
-  Processing textures.xml => skins\*/textures\textures.xml ... 8 files
-  Processing */xui/*/*.xml => skins\*/xui/*/*.xml ... 8225 files
-  Processing */xui/*/widgets/*.xml => skins\*/xui/*/widgets/*.xml ... 342 files
+  Processing textures.xml => skins\*/textures\textures.xml ... 9 files
+  Processing */xui/*/*.xml => skins\*/xui/*/*.xml ... 8260 files
+  Processing */xui/*/widgets/*.xml => skins\*/xui/*/widgets/*.xml ... 349 files
   Processing */themes/*/colors.xml => skins\*/themes/*/colors.xml ... 18 files
   Processing */*.tga => skins\*/themes/*/textures\*/*.tga ... 29 files
   Processing */*.jpg => skins\*/themes/*/textures\*/*.jpg ... 10 files
@@ -1930,7 +1745,7 @@ CustomBuild:
   Processing *.tga => skins\*/themes/*/textures\*.tga ... 1134 files
   Processing *.j2c => skins\*/themes/*/textures\*.j2c ... 181 files
   Processing *.png => skins\*/themes/*/textures\*.png ... 173 files
-  Processing */*.xml => skins\*/*.xml ... 15 files
+  Processing */*.xml => skins\*/*.xml ... 16 files
   Processing */*/*.html => skins\*/html\*/*/*.html ... 27 files
   Processing ..\build_data.json => build_data.json ... 1 files
   Processing Release/firestorm-bin.exe => Firestorm-Horizon.exe ... 1 files
@@ -2101,7 +1916,7 @@ Build FAILED.
     0 Warning(s)
     1 Error(s)
 
-Time Elapsed 00:06:38.84
+Time Elapsed 00:04:26.22
 Build failed!
 ERROR: building configuration {'configure': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'build': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'default': False, 'name': 'ReleaseFS_NoOS'} returned 1
 For more information: try re-running your command with --verbose or --debug

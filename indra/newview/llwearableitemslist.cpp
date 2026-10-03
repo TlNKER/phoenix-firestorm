@@ -51,6 +51,12 @@
 #include "llresmgr.h"
 #include "llviewerinventory.h"
 
+// <FS:Horizon> Set Display Name - for the italic/bold font lookup in
+// getDisplayNameOverrideFont() below.
+#include "llfontgl.h"
+#include "llfontregistry.h"
+// </FS:Horizon>
+
 bool LLFindOutfitItems::operator()(LLInventoryCategory* cat,
                                    LLInventoryItem* item)
 {
@@ -125,16 +131,36 @@ bool LLPanelWearableOutfitItem::postBuild()
     return true;
 }
 
-// <FS:Horizon> Set Display Name - this is the "My Outfits" list, so a
-// display-name override shows pink here instead of the light-blue used
-// everywhere else in inventory (see LLPanelInventoryListItemBase's default
-// in llinventorylistitem.cpp). FSPanelCOFWearableOutfitListItem below
-// (the "Wearing" list) overrides this again back to light-blue, since it
-// would otherwise inherit this pink as a subclass of this one.
-const LLUIColor& LLPanelWearableOutfitItem::getDisplayNameOverrideColor() const
+// <FS:Horizon> Set Display Name - this is the "My Outfits" list. A
+// display-name override is shown here by switching to an italic font
+// (bold+italic when the item is also worn) instead of a color change, so
+// the normal worn/unworn color from default_style/worn_style still shows
+// through. FSPanelCOFWearableOutfitListItem below (the "Wearing" list)
+// reverts both of these back to the base class's color-only behavior
+// (light blue, no font change), since it would otherwise inherit this
+// italic treatment as a subclass of this one.
+bool LLPanelWearableOutfitItem::useDisplayNameOverrideColor() const
 {
-    static const LLUIColor color = LLUIColorTable::instance().getColor("InventoryDisplayNameOutfitsColor", LLColor4(1.f, 0.6f, 0.8f, 1.f));
-    return color;
+    return false;
+}
+
+const LLFontGL* LLPanelWearableOutfitItem::getDisplayNameOverrideFont(const LLFontGL* base_font, EItemState item_state) const
+{
+    if (!base_font)
+    {
+        return base_font;
+    }
+
+    const LLFontDescriptor& base_desc = base_font->getFontDesc();
+    U8 style = base_desc.getStyle() | LLFontGL::ITALIC;
+    if (item_state == IS_WORN)
+    {
+        style |= LLFontGL::BOLD;
+    }
+
+    LLFontDescriptor italic_desc(base_desc.getName(), base_desc.getSize(), style);
+    const LLFontGL* italic_font = LLFontGL::getFont(italic_desc);
+    return italic_font ? italic_font : base_font;
 }
 // </FS:Horizon>
 
@@ -617,12 +643,18 @@ const LLPanelInventoryListItemBase::Params& FSPanelCOFWearableOutfitListItem::ge
 // </FS:Ansariel>
 
 // <FS:Horizon> Set Display Name - this is the "Wearing" list. It subclasses
-// LLPanelWearableOutfitItem ("My Outfits"), which overrides the display-name
-// color to pink - revert back to the normal light-blue (the
-// LLPanelInventoryListItemBase default) here so only "My Outfits" shows pink.
-const LLUIColor& FSPanelCOFWearableOutfitListItem::getDisplayNameOverrideColor() const
+// LLPanelWearableOutfitItem ("My Outfits"), which conveys a display-name
+// override via an italic font instead of color - revert both back to the
+// normal color-only behavior (the LLPanelInventoryListItemBase default,
+// light blue) here, so only "My Outfits" shows the italic treatment.
+bool FSPanelCOFWearableOutfitListItem::useDisplayNameOverrideColor() const
 {
-    return LLPanelInventoryListItemBase::getDisplayNameOverrideColor();
+    return LLPanelInventoryListItemBase::useDisplayNameOverrideColor();
+}
+
+const LLFontGL* FSPanelCOFWearableOutfitListItem::getDisplayNameOverrideFont(const LLFontGL* base_font, EItemState item_state) const
+{
+    return LLPanelInventoryListItemBase::getDisplayNameOverrideFont(base_font, item_state);
 }
 // </FS:Horizon>
 
