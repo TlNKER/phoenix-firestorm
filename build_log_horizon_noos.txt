@@ -1,5 +1,5 @@
 Warning: no --id argument or AUTOBUILD_BUILD_ID environment variable specified;
-    using a value from the UTC date and time (262751504), which may not be unique
+    using a value from the UTC date and time (262890559), which may not be unique
  'C:\Cygwin64\bin\bash.exe' '../scripts/configure_firestorm.sh' '--build' '--version' '--no-opensim' '--version' '--platform windows'
        PLATFORM: windows
             KDU: false
@@ -30,11 +30,11 @@ Versioning...
 /cygdrive/c/FS_Build/horizon-build /cygdrive/c/FS_Build/horizon-build/build-vc170-64
 abort: no repository found in '/cygdrive/c/FS_Build/horizon-build' (.hg not found)
 Channel: Firestorm-private-dandelion
-Version: 7.2.5. [91d5f3d109]
+Version: 7.2.5. [7e44c00324]
 /cygdrive/c/FS_Build/horizon-build/build-vc170-64
 Building windows...
 MSBuild version 17.14.51+25f168cee for .NET Framework
-Build started 10/2/2026 5:04:07 PM.
+Build started 10/16/2026 7:59:43 AM.
 
 Project "C:\FS_Build\horizon-build\build-vc170-64\Firestorm.sln" on node 1 (Build target(s)).
 ValidateSolutionConfiguration:
@@ -80,7 +80,105 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llcommon\Release\llcommon.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llcommon.dir\Release\apply.obj
+  llcommon.dir\Release\commoncontrol.obj
+  llcommon.dir\Release\indra_constants.obj
+  llcommon.dir\Release\lazyeventapi.obj
+  llcommon.dir\Release\llapp.obj
+  llcommon.dir\Release\llapr.obj
+  llcommon.dir\Release\llassettype.obj
+  llcommon.dir\Release\llatomic.obj
+  llcommon.dir\Release\llbase32.obj
+  llcommon.dir\Release\llbase64.obj
+  llcommon.dir\Release\llbitpack.obj
+  llcommon.dir\Release\llcallbacklist.obj
+  llcommon.dir\Release\llcleanup.obj
+  llcommon.dir\Release\llcommon.obj
+  llcommon.dir\Release\llcommonutils.obj
+  llcommon.dir\Release\llcoros.obj
+  llcommon.dir\Release\llcrc.obj
+  llcommon.dir\Release\llcriticaldamp.obj
+  llcommon.dir\Release\lldate.obj
+  llcommon.dir\Release\lldeadmantimer.obj
+  llcommon.dir\Release\lldependencies.obj
+  llcommon.dir\Release\lldictionary.obj
+  llcommon.dir\Release\llerror.obj
+  llcommon.dir\Release\llevent.obj
+  llcommon.dir\Release\lleventapi.obj
+  llcommon.dir\Release\lleventcoro.obj
+  llcommon.dir\Release\lleventdispatcher.obj
+  llcommon.dir\Release\lleventfilter.obj
+  llcommon.dir\Release\llevents.obj
+  llcommon.dir\Release\lleventtimer.obj
+  llcommon.dir\Release\llexception.obj
+  llcommon.dir\Release\llfasttimer.obj
+  llcommon.dir\Release\llfile.obj
+  llcommon.dir\Release\llfindlocale.obj
+  llcommon.dir\Release\llfixedbuffer.obj
+  llcommon.dir\Release\llformat.obj
+  llcommon.dir\Release\llframetimer.obj
+  llcommon.dir\Release\llheartbeat.obj
+  llcommon.dir\Release\llheteromap.obj
+  llcommon.dir\Release\llinitparam.obj
+  llcommon.dir\Release\llinitdestroyclass.obj
+  llcommon.dir\Release\llinstancetracker.obj
+  llcommon.dir\Release\llkeybind.obj
+  llcommon.dir\Release\llleap.obj
+  llcommon.dir\Release\llleaplistener.obj
+  llcommon.dir\Release\llliveappconfig.obj
+  llcommon.dir\Release\lllivefile.obj
+  llcommon.dir\Release\llmd5.obj
+  llcommon.dir\Release\llmemory.obj
+  llcommon.dir\Release\llmemorystream.obj
+  llcommon.dir\Release\llmetrics.obj
+  llcommon.dir\Release\llmetricperformancetester.obj
+  llcommon.dir\Release\llmortician.obj
+  llcommon.dir\Release\llmutex.obj
+  llcommon.dir\Release\llpointer.obj
+  llcommon.dir\Release\llptrto.obj
+  llcommon.dir\Release\llpredicate.obj
+  llcommon.dir\Release\llprocess.obj
+  llcommon.dir\Release\llprocessor.obj
+  llcommon.dir\Release\llprocinfo.obj
+  llcommon.dir\Release\llqueuedthread.obj
+  llcommon.dir\Release\llrand.obj
+  llcommon.dir\Release\llrefcount.obj
+  llcommon.dir\Release\llrun.obj
+  llcommon.dir\Release\llsd.obj
+  llcommon.dir\Release\llsdjson.obj
+  llcommon.dir\Release\llsdparam.obj
+  llcommon.dir\Release\llsdserialize.obj
+  llcommon.dir\Release\llsdserialize_xml.obj
+  llcommon.dir\Release\llsdutil.obj
+  llcommon.dir\Release\llsingleton.obj
+  llcommon.dir\Release\llstacktrace.obj
+  llcommon.dir\Release\llstreamqueue.obj
+  llcommon.dir\Release\llstreamtools.obj
+  llcommon.dir\Release\llstring.obj
+  llcommon.dir\Release\llstringtable.obj
+  llcommon.dir\Release\llsys.obj
+  llcommon.dir\Release\lltempredirect.obj
+  llcommon.dir\Release\llthread.obj
+  llcommon.dir\Release\llthreadsafequeue.obj
+  llcommon.dir\Release\lltimer.obj
+  llcommon.dir\Release\lltrace.obj
+  llcommon.dir\Release\lltraceaccumulators.obj
+  llcommon.dir\Release\lltracerecording.obj
+  llcommon.dir\Release\lltracethreadrecorder.obj
+  llcommon.dir\Release\lluri.obj
+  llcommon.dir\Release\lluriparser.obj
+  llcommon.dir\Release\lluuid.obj
+  llcommon.dir\Release\llwatchdog.obj
+  llcommon.dir\Release\llworkerthread.obj
+  llcommon.dir\Release\hbxxh.obj
+  llcommon.dir\Release\u64.obj
+  llcommon.dir\Release\threadpool.obj
+  llcommon.dir\Release\workqueue.obj
+  llcommon.dir\Release\StackWalker.obj
+  llcommon.dir\Release\ndexceptions.obj
+  llcommon.dir\Release\ndlogthrottle.obj
+  llcommon.dir\Release\ndetw.obj
+  llcommon.dir\Release\tea.obj
   llcommon.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llcommon\Release\llcommon.lib
 FinalizeBuildStatus:
   Deleting file "llcommon.dir\Release\llcommon.tlog\unsuccessfulbuild".
@@ -99,7 +197,28 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llcorehttp\Release\llcorehttp.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llcorehttp.dir\Release\bufferarray.obj
+  llcorehttp.dir\Release\bufferstream.obj
+  llcorehttp.dir\Release\httpcommon.obj
+  llcorehttp.dir\Release\llhttpconstants.obj
+  llcorehttp.dir\Release\httpheaders.obj
+  llcorehttp.dir\Release\httpoptions.obj
+  llcorehttp.dir\Release\httprequest.obj
+  llcorehttp.dir\Release\httpresponse.obj
+  llcorehttp.dir\Release\httpstats.obj
+  llcorehttp.dir\Release\_httplibcurl.obj
+  llcorehttp.dir\Release\_httpopcancel.obj
+  llcorehttp.dir\Release\_httpoperation.obj
+  llcorehttp.dir\Release\_httpoprequest.obj
+  llcorehttp.dir\Release\_httpopsetget.obj
+  llcorehttp.dir\Release\_httpopsetpriority.obj
+  llcorehttp.dir\Release\_httppolicy.obj
+  llcorehttp.dir\Release\_httppolicyclass.obj
+  llcorehttp.dir\Release\_httppolicyglobal.obj
+  llcorehttp.dir\Release\_httpreplyqueue.obj
+  llcorehttp.dir\Release\_httprequestqueue.obj
+  llcorehttp.dir\Release\_httpservice.obj
+  llcorehttp.dir\Release\_refcounted.obj
   llcorehttp.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llcorehttp\Release\llcorehttp.lib
 FinalizeBuildStatus:
   Deleting file "llcorehttp.dir\Release\llcorehttp.tlog\unsuccessfulbuild".
@@ -118,7 +237,12 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llfilesystem\Release\llfilesystem.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llfilesystem.dir\Release\lldir.obj
+  llfilesystem.dir\Release\lldiriterator.obj
+  llfilesystem.dir\Release\lllfsthread.obj
+  llfilesystem.dir\Release\lldiskcache.obj
+  llfilesystem.dir\Release\llfilesystem.obj
+  llfilesystem.dir\Release\lldir_win32.obj
   llfilesystem.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llfilesystem\Release\llfilesystem.lib
 FinalizeBuildStatus:
   Deleting file "llfilesystem.dir\Release\llfilesystem.tlog\unsuccessfulbuild".
@@ -137,7 +261,39 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llmath\Release\llmath.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llmath.dir\Release\llbbox.obj
+  llmath.dir\Release\llbboxlocal.obj
+  llmath.dir\Release\llcalc.obj
+  llmath.dir\Release\llcalcparser.obj
+  llmath.dir\Release\llcamera.obj
+  llmath.dir\Release\llcoordframe.obj
+  llmath.dir\Release\llline.obj
+  llmath.dir\Release\llmatrix3a.obj
+  llmath.dir\Release\llmatrix4a.obj
+  llmath.dir\Release\llmodularmath.obj
+  llmath.dir\Release\lloctree.obj
+  llmath.dir\Release\llperlin.obj
+  llmath.dir\Release\llquaternion.obj
+  llmath.dir\Release\llrigginginfo.obj
+  llmath.dir\Release\llrect.obj
+  llmath.dir\Release\llsphere.obj
+  llmath.dir\Release\llvector4a.obj
+  llmath.dir\Release\llvolume.obj
+  llmath.dir\Release\llvolumemgr.obj
+  llmath.dir\Release\llvolumeoctree.obj
+  llmath.dir\Release\llsdutil_math.obj
+  llmath.dir\Release\m3math.obj
+  llmath.dir\Release\m4math.obj
+  llmath.dir\Release\raytrace.obj
+  llmath.dir\Release\v2math.obj
+  llmath.dir\Release\v3color.obj
+  llmath.dir\Release\v3dmath.obj
+  llmath.dir\Release\v3math.obj
+  llmath.dir\Release\v4color.obj
+  llmath.dir\Release\v4coloru.obj
+  llmath.dir\Release\v4math.obj
+  llmath.dir\Release\xform.obj
+  llmath.dir\Release\ndoctreelog.obj
   llmath.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llmath\Release\llmath.lib
 FinalizeBuildStatus:
   Deleting file "llmath.dir\Release\llmath.tlog\unsuccessfulbuild".
@@ -156,7 +312,7 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llmeshoptimizer\Release\llmeshoptimizer.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llmeshoptimizer.dir\Release\llmeshoptimizer.obj
   llmeshoptimizer.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llmeshoptimizer\Release\llmeshoptimizer.lib
 FinalizeBuildStatus:
   Deleting file "llmeshoptimizer.dir\Release\llmeshoptimizer.tlog\unsuccessfulbuild".
@@ -175,7 +331,79 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llmessage\Release\llmessage.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llmessage.dir\Release\fscorehttputil.obj
+  llmessage.dir\Release\llassetstorage.obj
+  llmessage.dir\Release\llavatarname.obj
+  llmessage.dir\Release\llavatarnamecache.obj
+  llmessage.dir\Release\llbuffer.obj
+  llmessage.dir\Release\llbufferstream.obj
+  llmessage.dir\Release\llcachename.obj
+  llmessage.dir\Release\llchainio.obj
+  llmessage.dir\Release\llcircuit.obj
+  llmessage.dir\Release\llclassifiedflags.obj
+  llmessage.dir\Release\llcoproceduremanager.obj
+  llmessage.dir\Release\llcorehttputil.obj
+  llmessage.dir\Release\lldatapacker.obj
+  llmessage.dir\Release\lldispatcher.obj
+  llmessage.dir\Release\llexperiencecache.obj
+  llmessage.dir\Release\llgenericstreamingmessage.obj
+  llmessage.dir\Release\llhost.obj
+  llmessage.dir\Release\llhttpnode.obj
+  llmessage.dir\Release\llhttpsdhandler.obj
+  llmessage.dir\Release\llinstantmessage.obj
+  llmessage.dir\Release\lliobuffer.obj
+  llmessage.dir\Release\lliohttpserver.obj
+  llmessage.dir\Release\lliopipe.obj
+  llmessage.dir\Release\lliosocket.obj
+  llmessage.dir\Release\llioutil.obj
+  llmessage.dir\Release\llmessagebuilder.obj
+  llmessage.dir\Release\llmessageconfig.obj
+  llmessage.dir\Release\llmessagereader.obj
+  llmessage.dir\Release\llmessagetemplate.obj
+  llmessage.dir\Release\llmessagetemplateparser.obj
+  llmessage.dir\Release\llmessagethrottle.obj
+  llmessage.dir\Release\llnamevalue.obj
+  llmessage.dir\Release\llnullcipher.obj
+  llmessage.dir\Release\llpacketack.obj
+  llmessage.dir\Release\llpacketbuffer.obj
+  llmessage.dir\Release\llpacketring.obj
+  llmessage.dir\Release\llpartdata.obj
+  llmessage.dir\Release\llproxy.obj
+  llmessage.dir\Release\llpumpio.obj
+  llmessage.dir\Release\llsdappservices.obj
+  llmessage.dir\Release\llsdhttpserver.obj
+  llmessage.dir\Release\llsdmessagebuilder.obj
+  llmessage.dir\Release\llsdmessagereader.obj
+  llmessage.dir\Release\llservicebuilder.obj
+  llmessage.dir\Release\llservice.obj
+  llmessage.dir\Release\llstoredmessage.obj
+  llmessage.dir\Release\lltemplatemessagebuilder.obj
+  llmessage.dir\Release\lltemplatemessagedispatcher.obj
+  llmessage.dir\Release\lltemplatemessagereader.obj
+  llmessage.dir\Release\llthrottle.obj
+  llmessage.dir\Release\lltransfermanager.obj
+  llmessage.dir\Release\lltransfersourceasset.obj
+  llmessage.dir\Release\lltransfersourcefile.obj
+  llmessage.dir\Release\lltransfertargetfile.obj
+  llmessage.dir\Release\lltransfertargetvfile.obj
+  llmessage.dir\Release\lltrustedmessageservice.obj
+  llmessage.dir\Release\lluseroperation.obj
+  llmessage.dir\Release\llxfer.obj
+  llmessage.dir\Release\llxfer_file.obj
+  llmessage.dir\Release\llxfermanager.obj
+  llmessage.dir\Release\llxfer_mem.obj
+  llmessage.dir\Release\llxfer_vfile.obj
+  llmessage.dir\Release\llxorcipher.obj
+  llmessage.dir\Release\machine.obj
+  llmessage.dir\Release\message.obj
+  llmessage.dir\Release\message_prehash.obj
+  llmessage.dir\Release\message_string_table.obj
+  llmessage.dir\Release\net.obj
+  llmessage.dir\Release\partsyspacket.obj
+  llmessage.dir\Release\patch_code.obj
+  llmessage.dir\Release\patch_dct.obj
+  llmessage.dir\Release\patch_idct.obj
+  llmessage.dir\Release\sound_ids.obj
   llmessage.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llmessage\Release\llmessage.lib
 FinalizeBuildStatus:
   Deleting file "llmessage.dir\Release\llmessage.tlog\unsuccessfulbuild".
@@ -194,7 +422,13 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llplugin\Release\llplugin.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llplugin.dir\Release\llpluginclassmedia.obj
+  llplugin.dir\Release\llplugininstance.obj
+  llplugin.dir\Release\llpluginmessage.obj
+  llplugin.dir\Release\llpluginmessagepipe.obj
+  llplugin.dir\Release\llpluginprocesschild.obj
+  llplugin.dir\Release\llpluginprocessparent.obj
+  llplugin.dir\Release\llpluginsharedmemory.obj
   llplugin.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llplugin\Release\llplugin.lib
 FinalizeBuildStatus:
   Deleting file "llplugin.dir\Release\llplugin.tlog\unsuccessfulbuild".
@@ -213,7 +447,10 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llxml\Release\llxml.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llxml.dir\Release\llcontrol.obj
+  llxml.dir\Release\llxmlnode.obj
+  llxml.dir\Release\llxmlparser.obj
+  llxml.dir\Release\llxmltree.obj
   llxml.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llxml\Release\llxml.lib
 FinalizeBuildStatus:
   Deleting file "llxml.dir\Release\llxml.tlog\unsuccessfulbuild".
@@ -231,7 +468,13 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Link:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llplugin\slplugin\Release\SLPlugin.exe" /NOLOGO /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release" /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release/Release" ..\Release\llplugin.lib ..\..\llmessage\Release\llmessage.lib ..\..\llcommon\Release\llcommon.lib ..\..\llcorehttp\Release\llcorehttp.lib ..\..\packages\lib\release\libcurl.lib ..\..\packages\lib\release\libssl.lib ..\..\packages\lib\release\libcrypto.lib Crypt32.lib ..\..\packages\lib\release\nghttp2.lib ..\..\llxml\Release\llxml.lib ..\..\llmath\Release\llmath.lib ..\..\llmeshoptimizer\Release\llmeshoptimizer.lib ..\..\packages\lib\release\meshoptimizer.lib ..\..\llfilesystem\Release\llfilesystem.lib "..\..\packages\lib\release\apr-1.lib" "..\..\packages\lib\release\aprutil-1.lib" ..\..\packages\lib\release\zlib.lib ..\..\packages\lib\release\libboost_fiber.lib ..\..\packages\lib\release\libboost_context.lib ..\..\packages\lib\release\libboost_filesystem.lib ..\..\packages\lib\release\libboost_program_options.lib ..\..\packages\lib\release\libboost_thread.lib ..\..\packages\lib\release\libboost_url.lib ..\..\packages\lib\release\libboost_wave.lib shell32.lib mswsock.lib winmm.lib wldap32.lib gdi32.lib ole32.lib dbghelp.lib rpcrt4.lib legacy_stdio_definitions.lib ..\..\packages\lib\release\libexpat.lib wsock32.lib ws2_32.lib psapi.lib netapi32.lib advapi32.lib user32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/FS_Build/horizon-build/build-vc170-64/llplugin/slplugin/Release/SLPlugin.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"SLPlugin.dir\Release\SLPlugin.iobj" /TLBID:1 /IMPLIB:"C:/FS_Build/horizon-build/build-vc170-64/llplugin/slplugin/Release/SLPlugin.lib" /MACHINE:X64  /machine:x64 /IGNORE:4099 SLPlugin.dir\Release\slplugin.obj
+     Creating library C:/FS_Build/horizon-build/build-vc170-64/llplugin/slplugin/Release/SLPlugin.lib and object C:/FS_Build/horizon-build/build-vc170-64/llplugin/slplugin/Release/SLPlugin.exp
+  Generating code
+  0 of 11047 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
   SLPlugin.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llplugin\slplugin\Release\SLPlugin.exe
 FinalizeBuildStatus:
   Deleting file "SLPlugin.dir\Release\SLPlugin.tlog\unsuccessfulbuild".
@@ -251,7 +494,12 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Link:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llwebrtc\Release\llwebrtc.dll" /NOLOGO /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release" /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release/Release" secur32.lib winmm.lib dmoguids.lib wmcodecdspuuid.lib msdmo.lib strmiids.lib iphlpapi.lib libcmt.lib ..\packages\lib\release\webrtc.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/FS_Build/horizon-build/build-vc170-64/llwebrtc/Release/llwebrtc.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"llwebrtc.dir\Release\llwebrtc.iobj" /TLBID:1 /IMPLIB:"C:/FS_Build/horizon-build/build-vc170-64/llwebrtc/Release/llwebrtc.lib" /MACHINE:X64  /machine:x64 /IGNORE:4099 /DLL llwebrtc.dir\Release\llwebrtc.obj
+     Creating library C:/FS_Build/horizon-build/build-vc170-64/llwebrtc/Release/llwebrtc.lib and object C:/FS_Build/horizon-build/build-vc170-64/llwebrtc/Release/llwebrtc.exp
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 2811 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
   llwebrtc.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llwebrtc\Release\llwebrtc.dll
 PostBuildEvent:
   setlocal
@@ -282,7 +530,7 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\media_plugins\base\Release\media_plugin_base.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 media_plugin_base.dir\Release\media_plugin_base.obj
   media_plugin_base.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\media_plugins\base\Release\media_plugin_base.lib
 FinalizeBuildStatus:
   Deleting file "media_plugin_base.dir\Release\media_pl.500F7740.tlog\unsuccessfulbuild".
@@ -300,7 +548,14 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Link:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\media_plugins\cef\Release\media_plugin_cef.dll" /NOLOGO /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release" /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release/Release" ..\base\Release\media_plugin_base.lib ..\..\llplugin\Release\llplugin.lib ..\..\llmessage\Release\llmessage.lib ..\..\llcorehttp\Release\llcorehttp.lib ..\..\packages\lib\release\libcurl.lib ..\..\packages\lib\release\libssl.lib ..\..\packages\lib\release\libcrypto.lib Crypt32.lib ..\..\packages\lib\release\nghttp2.lib ..\..\llxml\Release\llxml.lib ..\..\llmath\Release\llmath.lib ..\..\llmeshoptimizer\Release\llmeshoptimizer.lib ..\..\packages\lib\release\meshoptimizer.lib ..\..\llfilesystem\Release\llfilesystem.lib ..\..\llcommon\Release\llcommon.lib "..\..\packages\lib\release\apr-1.lib" "..\..\packages\lib\release\aprutil-1.lib" ..\..\packages\lib\release\zlib.lib ..\..\packages\lib\release\libboost_fiber.lib ..\..\packages\lib\release\libboost_context.lib ..\..\packages\lib\release\libboost_filesystem.lib ..\..\packages\lib\release\libboost_program_options.lib ..\..\packages\lib\release\libboost_thread.lib ..\..\packages\lib\release\libboost_url.lib ..\..\packages\lib\release\libboost_wave.lib shell32.lib mswsock.lib winmm.lib wldap32.lib gdi32.lib ole32.lib dbghelp.lib rpcrt4.lib legacy_stdio_definitions.lib ..\..\packages\lib\release\libexpat.lib wsock32.lib ws2_32.lib psapi.lib netapi32.lib advapi32.lib user32.lib opengl32.lib libcef.lib libcef_dll_wrapper.lib dullahan.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCMT /MANIFEST:NO /PDB:"C:/FS_Build/horizon-build/build-vc170-64/media_plugins/cef/Release/media_plugin_cef.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"media_plugin_cef.dir\Release\media_plugin_cef.iobj" /TLBID:1 /IMPLIB:"C:/FS_Build/horizon-build/build-vc170-64/media_plugins/cef/Release/media_plugin_cef.lib" /MACHINE:X64  /machine:x64 /IGNORE:4099 /IGNORE:4099 /DLL media_plugin_cef.dir\Release\media_plugin_cef.obj
+  media_plugin_cef.dir\Release\windows_volume_catcher.obj
+     Creating library C:/FS_Build/horizon-build/build-vc170-64/media_plugins/cef/Release/media_plugin_cef.lib and object C:/FS_Build/horizon-build/build-vc170-64/media_plugins/cef/Release/media_plugin_cef.exp
+  Generating code
+  0 of 11026 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
   media_plugin_cef.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\media_plugins\cef\Release\media_plugin_cef.dll
 FinalizeBuildStatus:
   Deleting file "media_plugin_cef.dir\Release\media_plugin_cef.tlog\unsuccessfulbuild".
@@ -319,7 +574,13 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Link:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\media_plugins\libvlc\Release\media_plugin_libvlc.dll" /NOLOGO /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release" /LIBPATH:"C:/FS_Build/horizon-build/build-vc170-64/packages/lib/release/Release" ..\base\Release\media_plugin_base.lib ..\..\llplugin\Release\llplugin.lib ..\..\llmessage\Release\llmessage.lib ..\..\llcorehttp\Release\llcorehttp.lib ..\..\packages\lib\release\libcurl.lib ..\..\packages\lib\release\libssl.lib ..\..\packages\lib\release\libcrypto.lib Crypt32.lib ..\..\packages\lib\release\nghttp2.lib ..\..\llxml\Release\llxml.lib ..\..\llmath\Release\llmath.lib ..\..\llmeshoptimizer\Release\llmeshoptimizer.lib ..\..\packages\lib\release\meshoptimizer.lib ..\..\llfilesystem\Release\llfilesystem.lib ..\..\llcommon\Release\llcommon.lib "..\..\packages\lib\release\apr-1.lib" "..\..\packages\lib\release\aprutil-1.lib" ..\..\packages\lib\release\zlib.lib ..\..\packages\lib\release\libboost_fiber.lib ..\..\packages\lib\release\libboost_context.lib ..\..\packages\lib\release\libboost_filesystem.lib ..\..\packages\lib\release\libboost_program_options.lib ..\..\packages\lib\release\libboost_thread.lib ..\..\packages\lib\release\libboost_url.lib ..\..\packages\lib\release\libboost_wave.lib shell32.lib mswsock.lib winmm.lib wldap32.lib gdi32.lib ole32.lib dbghelp.lib rpcrt4.lib legacy_stdio_definitions.lib ..\..\packages\lib\release\libexpat.lib wsock32.lib ws2_32.lib psapi.lib netapi32.lib advapi32.lib user32.lib opengl32.lib ..\..\packages\lib\release\libvlc.lib ..\..\packages\lib\release\libvlccore.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCMT /MANIFEST:NO /PDB:"C:/FS_Build/horizon-build/build-vc170-64/media_plugins/libvlc/Release/media_plugin_libvlc.pdb" /SUBSYSTEM:CONSOLE /LARGEADDRESSAWARE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"media_plugin_libvlc.dir\Release\media_plugin_libvlc.iobj" /TLBID:1 /IMPLIB:"C:/FS_Build/horizon-build/build-vc170-64/media_plugins/libvlc/Release/media_plugin_libvlc.lib" /MACHINE:X64  /machine:x64 /IGNORE:4099 /DLL media_plugin_libvlc.dir\Release\media_plugin_libvlc.obj
+     Creating library C:/FS_Build/horizon-build/build-vc170-64/media_plugins/libvlc/Release/media_plugin_libvlc.lib and object C:/FS_Build/horizon-build/build-vc170-64/media_plugins/libvlc/Release/media_plugin_libvlc.exp
+  Generating code
+  0 of 10142 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
   media_plugin_libvlc.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\media_plugins\libvlc\Release\media_plugin_libvlc.dll
 FinalizeBuildStatus:
   Deleting file "media_plugin_libvlc.dir\Release\media_pl.7328D0CC.tlog\unsuccessfulbuild".
@@ -365,7 +626,7 @@ CustomBuild:
   Option: bundleid = com.secondlife.indra.viewer
   Option: platform = windows
   Option: velopack = OFF
-  Option: version = ['7', '2', '5', '262751503']
+  Option: version = ['7', '2', '5', '262890559']
   ================ Creating base package
   Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
   Processing dictionaries => app_settings\dictionaries ... 22 files
@@ -507,7 +768,22 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llappearance\Release\llappearance.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llappearance.dir\Release\llavatarappearance.obj
+  llappearance.dir\Release\llavatarjoint.obj
+  llappearance.dir\Release\llavatarjointmesh.obj
+  llappearance.dir\Release\lldriverparam.obj
+  llappearance.dir\Release\lllocaltextureobject.obj
+  llappearance.dir\Release\llpolyskeletaldistortion.obj
+  llappearance.dir\Release\llpolymesh.obj
+  llappearance.dir\Release\llpolymorph.obj
+  llappearance.dir\Release\lltexglobalcolor.obj
+  llappearance.dir\Release\lltexlayer.obj
+  llappearance.dir\Release\lltexlayerparams.obj
+  llappearance.dir\Release\llwearable.obj
+  llappearance.dir\Release\llwearabledata.obj
+  llappearance.dir\Release\llwearabletype.obj
+  llappearance.dir\Release\llviewervisualparam.obj
+  llappearance.dir\Release\llavatarappearancedefines.obj
   llappearance.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llappearance\Release\llappearance.lib
 FinalizeBuildStatus:
   Deleting file "llappearance.dir\Release\llappearance.tlog\unsuccessfulbuild".
@@ -526,7 +802,15 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llaudio\Release\llaudio.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llaudio.dir\Release\llaudioengine.obj
+  llaudio.dir\Release\lllistener.obj
+  llaudio.dir\Release\llaudiodecodemgr.obj
+  llaudio.dir\Release\llvorbisencode.obj
+  llaudio.dir\Release\llaudioengine_fmodstudio.obj
+  llaudio.dir\Release\lllistener_fmodstudio.obj
+  llaudio.dir\Release\llstreamingaudio_fmodstudio.obj
+  llaudio.dir\Release\llaudioengine_openal.obj
+  llaudio.dir\Release\lllistener_openal.obj
   llaudio.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llaudio\Release\llaudio.lib
 FinalizeBuildStatus:
   Deleting file "llaudio.dir\Release\llaudio.tlog\unsuccessfulbuild".
@@ -545,7 +829,25 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llcharacter\Release\llcharacter.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llcharacter.dir\Release\llanimationstates.obj
+  llcharacter.dir\Release\llbvhloader.obj
+  llcharacter.dir\Release\llcharacter.obj
+  llcharacter.dir\Release\lleditingmotion.obj
+  llcharacter.dir\Release\llgesture.obj
+  llcharacter.dir\Release\llhandmotion.obj
+  llcharacter.dir\Release\llheadrotmotion.obj
+  llcharacter.dir\Release\lljoint.obj
+  llcharacter.dir\Release\lljointsolverrp3.obj
+  llcharacter.dir\Release\llkeyframefallmotion.obj
+  llcharacter.dir\Release\llkeyframemotion.obj
+  llcharacter.dir\Release\llkeyframestandmotion.obj
+  llcharacter.dir\Release\llkeyframewalkmotion.obj
+  llcharacter.dir\Release\llmotioncontroller.obj
+  llcharacter.dir\Release\llmotion.obj
+  llcharacter.dir\Release\llmultigesture.obj
+  llcharacter.dir\Release\llpose.obj
+  llcharacter.dir\Release\lltargetingmotion.obj
+  llcharacter.dir\Release\llvisualparam.obj
   llcharacter.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llcharacter\Release\llcharacter.lib
 FinalizeBuildStatus:
   Deleting file "llcharacter.dir\Release\llcharacter.tlog\unsuccessfulbuild".
@@ -564,7 +866,17 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llimage\Release\llimage.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llimage.dir\Release\llimagebmp.obj
+  llimage.dir\Release\llimage.obj
+  llimage.dir\Release\llimagedimensionsinfo.obj
+  llimage.dir\Release\llimagedxt.obj
+  llimage.dir\Release\llimagefilter.obj
+  llimage.dir\Release\llimagej2c.obj
+  llimage.dir\Release\llimagejpeg.obj
+  llimage.dir\Release\llimagepng.obj
+  llimage.dir\Release\llimagetga.obj
+  llimage.dir\Release\llimageworker.obj
+  llimage.dir\Release\llpngwrapper.obj
   llimage.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llimage\Release\llimage.lib
 FinalizeBuildStatus:
   Deleting file "llimage.dir\Release\llimage.tlog\unsuccessfulbuild".
@@ -583,7 +895,7 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llimagej2coj\Release\llimagej2coj.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llimagej2coj.dir\Release\llimagej2coj.obj
   llimagej2coj.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llimagej2coj\Release\llimagej2coj.lib
 FinalizeBuildStatus:
   Deleting file "llimagej2coj.dir\Release\llimagej2coj.tlog\unsuccessfulbuild".
@@ -602,7 +914,24 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llinventory\Release\llinventory.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llinventory.dir\Release\llcategory.obj
+  llinventory.dir\Release\lleconomy.obj
+  llinventory.dir\Release\llfoldertype.obj
+  llinventory.dir\Release\llinventory.obj
+  llinventory.dir\Release\llinventorydefines.obj
+  llinventory.dir\Release\llinventorysettings.obj
+  llinventory.dir\Release\llinventorytype.obj
+  llinventory.dir\Release\lllandmark.obj
+  llinventory.dir\Release\llnotecard.obj
+  llinventory.dir\Release\llparcel.obj
+  llinventory.dir\Release\llpermissions.obj
+  llinventory.dir\Release\llsaleinfo.obj
+  llinventory.dir\Release\llsettingsbase.obj
+  llinventory.dir\Release\llsettingsdaycycle.obj
+  llinventory.dir\Release\llsettingssky.obj
+  llinventory.dir\Release\llsettingswater.obj
+  llinventory.dir\Release\lltransactionflags.obj
+  llinventory.dir\Release\lluserrelations.obj
   llinventory.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llinventory\Release\llinventory.lib
 FinalizeBuildStatus:
   Deleting file "llinventory.dir\Release\llinventory.tlog\unsuccessfulbuild".
@@ -621,7 +950,7 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\viewer_components\login\Release\lllogin.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 lllogin.dir\Release\lllogin.obj
   lllogin.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\viewer_components\login\Release\lllogin.lib
 FinalizeBuildStatus:
   Deleting file "lllogin.dir\Release\lllogin.tlog\unsuccessfulbuild".
@@ -640,7 +969,12 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llphysicsextensionsos\Release\llphysicsextensionsos.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llphysicsextensionsos.dir\Release\llconvexdecomposition.obj
+  llphysicsextensionsos.dir\Release\llconvexdecompositionvhacd.obj
+  llphysicsextensionsos.dir\Release\llpathinglib.obj
+  llphysicsextensionsos.dir\Release\LLPathingLibStubImpl.obj
+  llphysicsextensionsos.dir\Release\llphysicsextensions.obj
+  llphysicsextensionsos.dir\Release\LLPhysicsExtensionsStubImpl.obj
   llphysicsextensionsos.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llphysicsextensionsos\Release\llphysicsextensionsos.lib
 FinalizeBuildStatus:
   Deleting file "llphysicsextensionsos.dir\Release\llphysic.376AB818.tlog\unsuccessfulbuild".
@@ -659,7 +993,21 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llprimitive\Release\llprimitive.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llprimitive.dir\Release\lldaeloader.obj
+  llprimitive.dir\Release\llgltfmaterial.obj
+  llprimitive.dir\Release\llmaterialid.obj
+  llprimitive.dir\Release\llmaterial.obj
+  llprimitive.dir\Release\llmaterialtable.obj
+  llprimitive.dir\Release\llmediaentry.obj
+  llprimitive.dir\Release\llmodel.obj
+  llprimitive.dir\Release\llmodelloader.obj
+  llprimitive.dir\Release\llprimitive.obj
+  llprimitive.dir\Release\llprimtexturelist.obj
+  llprimitive.dir\Release\lltextureanim.obj
+  llprimitive.dir\Release\lltextureentry.obj
+  llprimitive.dir\Release\lltreeparams.obj
+  llprimitive.dir\Release\llvolumemessage.obj
+  llprimitive.dir\Release\material_codes.obj
   llprimitive.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llprimitive\Release\llprimitive.lib
 FinalizeBuildStatus:
   Deleting file "llprimitive.dir\Release\llprimitive.tlog\unsuccessfulbuild".
@@ -678,7 +1026,30 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llrender\Release\llrender.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llrender.dir\Release\llcubemap.obj
+  llrender.dir\Release\llcubemaparray.obj
+  llrender.dir\Release\llfontbitmapcache.obj
+  llrender.dir\Release\llfontfreetype.obj
+  llrender.dir\Release\llfontfreetypesvg.obj
+  llrender.dir\Release\llfontgl.obj
+  llrender.dir\Release\llfontvertexbuffer.obj
+  llrender.dir\Release\llfontregistry.obj
+  llrender.dir\Release\llgl.obj
+  llrender.dir\Release\llglslshader.obj
+  llrender.dir\Release\llgltexture.obj
+  llrender.dir\Release\llimagegl.obj
+  llrender.dir\Release\llpostprocess.obj
+  llrender.dir\Release\llrender.obj
+  llrender.dir\Release\llrender2dutils.obj
+  llrender.dir\Release\llrendernavprim.obj
+  llrender.dir\Release\llrendersphere.obj
+  llrender.dir\Release\llrendertarget.obj
+  llrender.dir\Release\llshadermgr.obj
+  llrender.dir\Release\lltexture.obj
+  llrender.dir\Release\lltexturemanagerbridge.obj
+  llrender.dir\Release\lluiimage.obj
+  llrender.dir\Release\llvertexbuffer.obj
+  llrender.dir\Release\llglcommonfunc.obj
   llrender.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llrender\Release\llrender.lib
 FinalizeBuildStatus:
   Deleting file "llrender.dir\Release\llrender.tlog\unsuccessfulbuild".
@@ -697,7 +1068,113 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llui\Release\llui.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llui.dir\Release\fsregistrarutils.obj
+  llui.dir\Release\llaccordionctrl.obj
+  llui.dir\Release\llaccordionctrltab.obj
+  llui.dir\Release\llbadge.obj
+  llui.dir\Release\llbadgeholder.obj
+  llui.dir\Release\llbadgeowner.obj
+  llui.dir\Release\llbutton.obj
+  llui.dir\Release\llchatentry.obj
+  llui.dir\Release\llchatmentionhelper.obj
+  llui.dir\Release\llcheckboxctrl.obj
+  llui.dir\Release\llclipboard.obj
+  llui.dir\Release\llcombobox.obj
+  llui.dir\Release\llcommandmanager.obj
+  llui.dir\Release\llconsole.obj
+  llui.dir\Release\llcontainerview.obj
+  llui.dir\Release\llctrlselectioninterface.obj
+  llui.dir\Release\lldockablefloater.obj
+  llui.dir\Release\lldockcontrol.obj
+  llui.dir\Release\lldraghandle.obj
+  llui.dir\Release\lleditmenuhandler.obj
+  llui.dir\Release\llemojidictionary.obj
+  llui.dir\Release\llemojihelper.obj
+  llui.dir\Release\llf32uictrl.obj
+  llui.dir\Release\llfiltereditor.obj
+  llui.dir\Release\llflashtimer.obj
+  llui.dir\Release\llflatlistview.obj
+  llui.dir\Release\llfloater.obj
+  llui.dir\Release\llfloaterreg.obj
+  llui.dir\Release\llfloaterreglistener.obj
+  llui.dir\Release\llflyoutbutton.obj
+  llui.dir\Release\llfocusmgr.obj
+  llui.dir\Release\llfolderview.obj
+  llui.dir\Release\llfolderviewitem.obj
+  llui.dir\Release\llfolderviewmodel.obj
+  llui.dir\Release\lliconctrl.obj
+  llui.dir\Release\llkeywords.obj
+  llui.dir\Release\lllayoutstack.obj
+  llui.dir\Release\lllineeditor.obj
+  llui.dir\Release\llloadingindicator.obj
+  llui.dir\Release\lllocalcliprect.obj
+  llui.dir\Release\llmenubutton.obj
+  llui.dir\Release\llmenugl.obj
+  llui.dir\Release\llmodaldialog.obj
+  llui.dir\Release\llmultifloater.obj
+  llui.dir\Release\llmultislider.obj
+  llui.dir\Release\llmultisliderctrl.obj
+  llui.dir\Release\llnotifications.obj
+  llui.dir\Release\llnotificationslistener.obj
+  llui.dir\Release\llnotificationsutil.obj
+  llui.dir\Release\llpanel.obj
+  llui.dir\Release\llprogressbar.obj
+  llui.dir\Release\llradiogroup.obj
+  llui.dir\Release\llresizebar.obj
+  llui.dir\Release\llresizehandle.obj
+  llui.dir\Release\llresmgr.obj
+  llui.dir\Release\llrngwriter.obj
+  llui.dir\Release\llscrollbar.obj
+  llui.dir\Release\llscrollcontainer.obj
+  llui.dir\Release\llscrollingpanellist.obj
+  llui.dir\Release\llscrolllistcell.obj
+  llui.dir\Release\llscrolllistcolumn.obj
+  llui.dir\Release\llscrolllistctrl.obj
+  llui.dir\Release\llscrolllistitem.obj
+  llui.dir\Release\llsearcheditor.obj
+  llui.dir\Release\llslider.obj
+  llui.dir\Release\llsliderctrl.obj
+  llui.dir\Release\llspellcheck.obj
+  llui.dir\Release\llspinctrl.obj
+  llui.dir\Release\llstatbar.obj
+  llui.dir\Release\llstatgraph.obj
+  llui.dir\Release\llstatview.obj
+  llui.dir\Release\llstyle.obj
+  llui.dir\Release\lltabcontainer.obj
+  llui.dir\Release\lltextbase.obj
+  llui.dir\Release\lltextbox.obj
+  llui.dir\Release\lltexteditor.obj
+  llui.dir\Release\lltextparser.obj
+  llui.dir\Release\lltextutil.obj
+  llui.dir\Release\lltextvalidate.obj
+  llui.dir\Release\lltimectrl.obj
+  llui.dir\Release\lltrans.obj
+  llui.dir\Release\lltransutil.obj
+  llui.dir\Release\lltoggleablemenu.obj
+  llui.dir\Release\lltoolbar.obj
+  llui.dir\Release\lltooltip.obj
+  llui.dir\Release\llui.obj
+  llui.dir\Release\lluicolor.obj
+  llui.dir\Release\lluicolortable.obj
+  llui.dir\Release\lluictrl.obj
+  llui.dir\Release\lluictrlfactory.obj
+  llui.dir\Release\lluistring.obj
+  llui.dir\Release\lluiusage.obj
+  llui.dir\Release\llundo.obj
+  llui.dir\Release\llurlaction.obj
+  llui.dir\Release\llurlentry.obj
+  llui.dir\Release\llurlmatch.obj
+  llui.dir\Release\llurlregistry.obj
+  llui.dir\Release\llviewborder.obj
+  llui.dir\Release\llviewinject.obj
+  llui.dir\Release\llviewmodel.obj
+  llui.dir\Release\llview.obj
+  llui.dir\Release\llviewquery.obj
+  llui.dir\Release\llviewereventrecorder.obj
+  llui.dir\Release\llvirtualtrackball.obj
+  llui.dir\Release\llwindowshade.obj
+  llui.dir\Release\llxuiparser.obj
+  llui.dir\Release\llxyvector.obj
   llui.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llui\Release\llui.lib
 FinalizeBuildStatus:
   Deleting file "llui.dir\Release\llui.tlog\unsuccessfulbuild".
@@ -716,7 +1193,17 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llwindow\Release\llwindow.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llwindow.dir\Release\llcursortypes.obj
+  llwindow.dir\Release\llkeyboard.obj
+  llwindow.dir\Release\llkeyboardheadless.obj
+  llwindow.dir\Release\llwindowheadless.obj
+  llwindow.dir\Release\llwindowcallbacks.obj
+  llwindow.dir\Release\llwindow.obj
+  llwindow.dir\Release\llwindowwin32.obj
+  llwindow.dir\Release\lldxhardware.obj
+  llwindow.dir\Release\llkeyboardwin32.obj
+  llwindow.dir\Release\lldragdropwin32.obj
+  llwindow.dir\Release\llmousehandler.obj
   llwindow.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llwindow\Release\llwindow.lib
 FinalizeBuildStatus:
   Deleting file "llwindow.dir\Release\llwindow.tlog\unsuccessfulbuild".
@@ -733,40 +1220,11 @@ CustomBuild:
   All outputs are up-to-date.
 ClCompile:
   All outputs are up-to-date.
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\fsfloaterwearablefavorites.cpp" "C:\FS_Build\horizon-build\indra\newview\llagentwearables.cpp" "C:\FS_Build\horizon-build\indra\newview\llappearancelistener.cpp" "C:\FS_Build\horizon-build\indra\newview\llappearancemgr.cpp" "C:\FS_Build\horizon-build\indra\newview\llavataractions.cpp" "C:\FS_Build\horizon-build\indra\newview\llcofwearables.cpp" "C:\FS_Build\horizon-build\indra\newview\llfloatersidepanelcontainer.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorybridge.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryfunctions.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventoryitemslist.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorylistener.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorylistitem.cpp" "C:\FS_Build\horizon-build\indra\newview\llinventorymodel.cpp" "C:\FS_Build\horizon-build\indra\newview\lloutfitgallery.cpp" "C:\FS_Build\horizon-build\indra\newview\lloutfitslist.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelblockedlist.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneloutfitedit.cpp" "C:\FS_Build\horizon-build\indra\newview\llpaneloutfitsinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llpanelwearing.cpp" "C:\FS_Build\horizon-build\indra\newview\llsaveoutfitcombobtn.cpp" "C:\FS_Build\horizon-build\indra\newview\llsidepanelappearance.cpp" "C:\FS_Build\horizon-build\indra\newview\llstartup.cpp" "C:\FS_Build\horizon-build\indra\newview\llversioninfo.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerfloaterreg.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerinventory.cpp" "C:\FS_Build\horizon-build\indra\newview\llviewerwearable.cpp" "C:\FS_Build\horizon-build\indra\newview\llvoavatar.cpp" "C:\FS_Build\horizon-build\indra\newview\llwearableitemslist.cpp" "C:\FS_Build\horizon-build\indra\newview\rlvhandler.cpp"
-  fsfloaterwearablefavorites.cpp
-  llagentwearables.cpp
-  llappearancelistener.cpp
-  llappearancemgr.cpp
-  llavataractions.cpp
-  llcofwearables.cpp
-  llfloatersidepanelcontainer.cpp
-  llinventorybridge.cpp
-  llinventoryfunctions.cpp
-  llinventoryitemslist.cpp
-  llinventorylistener.cpp
-  llinventorylistitem.cpp
-  llinventorymodel.cpp
-  lloutfitgallery.cpp
-  lloutfitslist.cpp
-  llpanelblockedlist.cpp
-  llpaneloutfitedit.cpp
-  llpaneloutfitsinventory.cpp
-  llpanelwearing.cpp
-  llsaveoutfitcombobtn.cpp
-  llsidepanelappearance.cpp
-  llstartup.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\llversioninfo.cpp"
   llversioninfo.cpp
-  llviewerfloaterreg.cpp
-  llviewerinventory.cpp
-  llviewerwearable.cpp
-  llvoavatar.cpp
-  llwearableitemslist.cpp
-  rlvhandler.cpp
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj /bigobj "C:\FS_Build\horizon-build\indra\newview\llviewermenu.cpp"
-  llviewermenu.cpp
   All outputs are up-to-date.
-  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /D "LL_VIEWER_CHANNEL=Firestorm-Horizon" /D LL_VIEWER_VERSION_MAJOR=7 /D LL_VIEWER_VERSION_MINOR=2 /D LL_VIEWER_VERSION_PATCH=5 /D LL_VIEWER_VERSION_BUILD=262751503 /D "FS_VIEWER_VERSION_GITHASH=\"91d5f3d109\"" /D "LLBUILD_CONFIG=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\llappviewerwin32.cpp" "C:\FS_Build\horizon-build\indra\newview\llvelopack.cpp"
+  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\FS_Build\horizon-build\build-vc170-64\newview" /I"C:\FS_Build\horizon-build\indra\llaudio" /I"C:\FS_Build\horizon-build\indra\llcommon" /I"C:\FS_Build\horizon-build\indra\llmath" /I"C:\FS_Build\horizon-build\indra\llmeshoptimizer" /I"C:\FS_Build\horizon-build\indra\llmessage" /I"C:\FS_Build\horizon-build\indra\llfilesystem" /I"C:\FS_Build\horizon-build\indra\llcorehttp" /I"C:\FS_Build\horizon-build\indra\llxml" /I"C:\FS_Build\horizon-build\indra\llcharacter" /I"C:\FS_Build\horizon-build\indra\llimage" /I"C:\FS_Build\horizon-build\indra\llinventory" /I"C:\FS_Build\horizon-build\indra\llplugin" /I"C:\FS_Build\horizon-build\indra\llprimitive" /I"C:\FS_Build\horizon-build\indra\llrender" /I"C:\FS_Build\horizon-build\indra\llwindow" /I"C:\FS_Build\horizon-build\indra\llphysicsextensionsos" /I"C:\FS_Build\horizon-build\indra\llui" /I"C:\FS_Build\horizon-build\indra\llwebrtc" /I"C:\FS_Build\horizon-build\indra\viewer_components\login" /I"C:\FS_Build\horizon-build\indra\llappearance" /Zi /nologo /W3 /WX /diagnostics:column /MP /O2 /Ob2 /Oi /Ot /Oy- /GL /D _UNICODE /D UNICODE /D WIN32 /D _WINDOWS /D EBUG /D LL_RELEASE=1 /D LL_RELEASE_FOR_DOWNLOAD=1 /D NDEBUG /D _SECURE_STL=0 /D _HAS_ITERATOR_DEBUGGING=0 /D LL_WINDOWS=1 /D UNICODE /D _UNICODE /D WINVER=0x0601 /D _WIN32_WINNT=0x0601 /D LL_OS_DRAGDROP_ENABLED=1 /D LIB_NDOF=1 /D USE_AVX2_OPTIMIZATION /D ADDRESS_SIZE=64 /D BOOST_BIND_GLOBAL_PLACEHOLDERS /D GLM_FORCE_DEFAULT_ALIGNED_GENTYPES=1 /D GLM_ENABLE_EXPERIMENTAL=1 /D SSE2NEON_SUPPRESS_WARNINGS=1 /D USE_LTO /D WIN32_LEAN_AND_MEAN /D NOMINMAX /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_OBSOLETE_NO_WARNINGS /D _WINSOCK_DEPRECATED_NO_WARNINGS /D APR_DECLARE_STATIC=1 /D APU_DECLARE_STATIC=1 /D API_DECLARE_STATIC=1 /D XML_STATIC=1 /D LL_OPENAL=1 /D LL_FMODSTUDIO=1 /D HUNSPELL_STATIC=1 /D "CMAKE_INTDIR=\"Release\"" /D "LL_VIEWER_CHANNEL=Firestorm-Horizon" /D LL_VIEWER_VERSION_MAJOR=7 /D LL_VIEWER_VERSION_MINOR=2 /D LL_VIEWER_VERSION_PATCH=5 /D LL_VIEWER_VERSION_BUILD=262890559 /D "FS_VIEWER_VERSION_GITHASH=\"7e44c00324\"" /D "LLBUILD_CONFIG=\"Release\"" /EHsc /MD /GS /arch:AVX2 /fp:precise /Zc:wchar_t /Zc:forScope /GR /std:c++20 /permissive- /Yu"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /Fp"C:/FS_Build/horizon-build/build-vc170-64/newview/firestorm-bin.dir/Release//cmake_pch.pch" /Fo"firestorm-bin.dir\Release\\" /Fd"firestorm-bin.dir\Release\vc143.pdb" /external:W0 /TP /FI"C:/FS_Build/horizon-build/build-vc170-64/newview/CMakeFiles/firestorm-bin.dir/Release/cmake_pch.hxx" /errorReport:queue  /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/apr-1" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/zlib-ng" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/meshoptimizer" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/nghttp2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/AL" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/fmodstudio" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/openjpeg" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/libpng16" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/freetype2" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/collada/1.4" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/vhacd" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/hunspell" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/glod" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/discord-rpc" /external:I "C:/FS_Build/horizon-build/build-vc170-64/packages/include/Growl" /Zo /c /bigobj "C:\FS_Build\horizon-build\indra\newview\llappviewerwin32.cpp" "C:\FS_Build\horizon-build\indra\newview\llvelopack.cpp"
   llappviewerwin32.cpp
   llvelopack.cpp
 ResourceCompile:
@@ -1616,9 +2074,9 @@ Link:
   "firestorm-bin.dir\Release\llvelopack.obj"
   "firestorm-bin.dir\Release\llwindebug.obj"
   Generating code
-  678 of 438955 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    3 functions were new in current compilation
-    2655 functions had inline decision re-evaluated but remain unchanged
+  21 of 439025 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1852 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   firestorm-bin.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\newview\Release\firestorm-bin.exe
 FinalizeBuildStatus:
@@ -1638,7 +2096,7 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\cmake\Release\cmake.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 cmake.dir\Release\cmake_dummy.obj
   cmake.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\cmake\Release\cmake.lib
 FinalizeBuildStatus:
   Deleting file "cmake.dir\Release\cmake.tlog\unsuccessfulbuild".
@@ -1657,7 +2115,9 @@ CustomBuild:
 ClCompile:
   All outputs are up-to-date.
 Lib:
-  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\FS_Build\horizon-build\build-vc170-64\llcrashlogger\Release\llcrashlogger.lib" /NOLOGO /MACHINE:X64 /LTCG  /machine:x64 llcrashlogger.dir\Release\llcrashlogger.obj
+  llcrashlogger.dir\Release\llcrashlock.obj
+  llcrashlogger.dir\Release\llcrashlookup.obj
   llcrashlogger.vcxproj -> C:\FS_Build\horizon-build\build-vc170-64\llcrashlogger\Release\llcrashlogger.lib
 FinalizeBuildStatus:
   Deleting file "llcrashlogger.dir\Release\llcrashlogger.tlog\unsuccessfulbuild".
@@ -1701,7 +2161,7 @@ CustomBuild:
   Option: actions = ['copy', 'package']
   Option: bundleid = com.secondlife.indra.viewer
   Option: platform = windows
-  Option: version = ['7', '2', '5', '262751503']
+  Option: version = ['7', '2', '5', '262890559']
   ================ Creating base package
   Processing ../../scripts/messages/message_template.msg => app_settings/message_template.msg ... 1 files
   Processing dictionaries => app_settings\dictionaries ... 22 files
@@ -1916,7 +2376,7 @@ Build FAILED.
     0 Warning(s)
     1 Error(s)
 
-Time Elapsed 00:04:26.22
+Time Elapsed 00:04:13.38
 Build failed!
 ERROR: building configuration {'configure': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'build': {'command': None, 'options': ['--version', '--platform windows'], 'arguments': None, 'filters': None}, 'default': False, 'name': 'ReleaseFS_NoOS'} returned 1
 For more information: try re-running your command with --verbose or --debug

@@ -718,7 +718,7 @@ Learn about [https://community.secondlife.com/knowledgebase/joining-and-particip
         </panel>
 
 <!-- ============================== CONTACT SETS tab ======================= -->
-
+<!-- <FS:Horizon> Hidden - not used, same treatment as the Recent tab above.
         <panel
          background_opaque="false"
          background_visible="false"
@@ -743,6 +743,7 @@ Learn about [https://community.secondlife.com/knowledgebase/joining-and-particip
              top="0"
              right="-1" />
         </panel>
+</FS:Horizon> -->
 
     </tab_container>
 </panel>
